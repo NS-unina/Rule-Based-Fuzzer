@@ -1,4 +1,3 @@
-import json
 import sys
 from Observation import *
 
@@ -14,6 +13,9 @@ class ManagerObs:
     """
 
     def __init__(self, config_file):
+        """
+        :param config_file: config file path
+        """
         with open(self.OBSERVATION_CONFIG, encoding='utf-8') as json_obs:
             self.obs_json = json.load(json_obs)
         with open(config_file, encoding='utf-8') as json_config_input:
@@ -26,7 +28,13 @@ class ManagerObs:
         self.FS = len(self.fuzz_list["fuzz_list"])
         #self.NK = len(self.keyword_list["Keyword"])
         self.obs_array = []
+        self.__instantiate_adapters()
 
+
+    def __instantiate_adapters(self):
+        """
+        Instantiate the observation classes
+        """
         try:
             # I instantiate the classes present in the configuration file
             for k in self.obs_json["Observation"]["Adapter"]:
@@ -38,7 +46,6 @@ class ManagerObs:
                 self.obs_array.append(instance)
             print(self.obs_array)
             self.RC = len(self.obs_array)
-
         except ValueError:
             print("ERROR: The \"Observation.json\" configuration file contains an unimplemented class")
             print(ValueError) #DEBUG

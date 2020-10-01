@@ -26,7 +26,7 @@ class Mitmproxy:
     def __run(self):
         opts = options.Options(listen_host=self.proxy_field["listen_host"], listen_port=self.proxy_field["listen_port"])
         pconf = proxy.config.ProxyConfig(opts)
-        m = DumpMaster(opts)
+        m = DumpMaster(opts, with_termlog=False)
         m.server = proxy.server.ProxyServer(pconf)
         m.addons.add(Interceptor(self.url, self.output_name))
         try:

@@ -12,7 +12,10 @@ class Intruder:
     #KEYWORD_CONFIG = 'config/keyword.json'
     OUT_FILE_PATH = 'results/results.json'
 
-    def __init__(self, file_name_path="results/test.json"):
+    def __init__(self, file_name_path):
+        """
+        :param file_name_path: repeater configuration file
+        """
         with open(file_name_path, encoding='utf-8') as json_request:
             self.request_json = json.load(json_request)
         with open(self.FUZZ_LIST_CONFIG, encoding='utf-8') as json_fuzz:
@@ -103,20 +106,18 @@ class Intruder:
                 clear_payload_req = self.clear_param(tmp_payload_req, '$', '')
 
                 # COSTRUISCO I DICT DI RICHIESTA E RISPOSTA
-                tmp_dict = self.build_output_file(request, clear_url, clear_cookie, clear_payload_req, number)
+                tmp_dict = self.build_output_file(request, clear_url, clear_cookie, clear_payload_req)
                 req_res_dict.append({"Request": tmp_dict[0], "Response": tmp_dict[1]})
                 Utils.print_progress_bar(number, total_len, prefix='Progress:', suffix='Complete', length=50)
 
-    def build_output_file(self, request, url, cookie, payload_req, number):
+    def build_output_file(self, request, url, cookie, payload_req):
         request_dict = copy.deepcopy(request["PlaceholderRequest"]["Request"])
-        request_dict["number"] = number
         request_dict["url"] = url
         request_dict["headers"]["Cookie"] = cookie
         request_dict["payload request"] = payload_req
         try:
             response = self.send_request(request_dict["method"], request_dict["url"], request_dict["headers"])
             response_dict = dict()
-            response_dict["number"] = number
             response_dict["url"] = response.request.url
             response_dict["status_code"] = response.status_code
             response_dict["header"] = Utils.convert_utf8(response.headers)
