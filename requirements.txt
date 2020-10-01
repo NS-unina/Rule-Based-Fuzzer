@@ -1,3 +1,4 @@
+ansicon==1.89.0
 blessed==1.17.6
 blinker==1.4
 Brotli==1.0.7
@@ -6,6 +7,8 @@ cffi==1.14.2
 chardet==3.0.4
 click==7.1.2
 cryptography==2.9.2
+fire==0.3.1
+Flask==1.1.2
 h11==0.10.0
 h2==2.6.2
 hpack==3.0.0
@@ -14,8 +17,12 @@ hyperframe==3.2.0
 hyperlink==20.0.1
 idna==2.10
 inquirer==2.7.0
+itsdangerous==1.1.0
+Jinja2==2.11.2
+jinxed==1.0.1
 kaitaistruct==0.8
 ldap3==2.7
+MarkupSafe==1.1.1
 mitmproxy==5.2
 numpy==1.19.1
 passlib==1.7.2
@@ -25,6 +32,7 @@ publicsuffix2==2.20191221
 pyasn1==0.4.8
 pycparser==2.20
 pydivert==2.1.0
+Pygments==2.7.1
 pyOpenSSL==19.1.0
 pyparsing==2.4.7
 pyperclip==1.8.0
@@ -36,10 +44,12 @@ ruamel.yaml==0.16.10
 ruamel.yaml.clib==0.2.0
 six==1.15.0
 sortedcontainers==2.1.0
+termcolor==1.1.0
 tornado==6.0.4
 typing-extensions==3.7.4.2
 urllib3==1.25.10
 urwid==2.0.1
 wcwidth==0.2.5
+Werkzeug==1.0.1
 wsproto==0.15.0
 zstandard==0.13.0
