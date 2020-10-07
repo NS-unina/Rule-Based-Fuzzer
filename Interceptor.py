@@ -9,18 +9,12 @@ class Interceptor:
         self.url = url
         self.output_file = output_name
         self.repeater = Repeater(output_name)
-        self.exit_flag = False
 
-    def clientdisconnect(self, layer):
-        if self.exit_flag is True:
-            try:
-                ctx.master.shutdown()
-                print("### RESULTS EXPORTED TO FILE %s ### --> DONE" % self.output_file)
-            except ValueError:
-                print("MITMPROXY: %s" % ValueError)
+    def done(self):
+        print("### RESULTS EXPORTED TO FILE %s ### --> DONE" % self.output_file)
 
     def request(self, flow):
-        if flow.request.url.find(self.url) != -1 and self.exit_flag is False:
+        if flow.request.url.find(self.url) != -1:
             self.print_request(flow)
             flow.intercept()
             while True:
@@ -35,21 +29,17 @@ class Interceptor:
             while True:
                 choice = input("Exit? [Y/N]")
                 if choice.lower() == 'y':
+                    flow.resume()
                     self.repeater.finalizing_out()
-                    self.exit_flag = True
+                    ctx.master.shutdown()
                     break
                 if choice.lower() == "n":
                     break
-
             flow.resume()
-            print("\n")
-
 
     def response(self, flow):
-        if flow.request.url.find(self.url) != -1 and self.exit_flag is False:
+        if flow.request.url.find(self.url) != -1:
             self.print_response(flow)
-        print("ASPETTO")
-        print(flow)
 
     @staticmethod
     def print_request(flow):

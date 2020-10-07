@@ -6,7 +6,7 @@ import re
 class Observation:
 
     @abc.abstractmethod
-    def evaluation(self, data):
+    def evaluation(self, *arg):
         pass
 
 
@@ -15,41 +15,119 @@ class StatusCode(Observation):
     def __init__(self, params):
         self.params = params
 
-    def evaluation(self, response):
-        print("STATUS EVAL")
+    def evaluation(self, *arg):
+        """
+        arg[0]: intruder_request
+        arg[1]: intruder_response
+        arg[2]: repeater_request
+        arg[3]: repeater_response
+        """
+        response = arg[1]  # RESPONSE
+        results = dict()
         if len(self.params) != 0:
             for p in self.params:
                 if p == response["status_code"]:
-                    print("%s è presente" %p)
-                else:
-                    print("%s non è presente" %p)
-        else:
-            print("NON CI SONO PARAMETRI")
+                    results.update({p: "is present"})
+
+        return {"StatusCode": {
+            "results": results
+        }}
 
 
 class SearchKeyword(Observation):
     KEYWORD_CONFIG = 'config/keyword.json'
+    FUZZ_LIST_CONFIG = 'config/fuzz_list.json'
 
     def __init__(self, params):
         self.params = params
         with open(self.KEYWORD_CONFIG, encoding='utf-8') as json_keyword:
             self.keyword_list = json.load(json_keyword)
+        with open(self.FUZZ_LIST_CONFIG, encoding='utf-8') as json_fuzz:
+            self.fuzz_list = json.load(json_fuzz)
 
-    def evaluation(self, response):
-        print("SearchKeyword eval")
+    def prepare_keywords(self, valid_response):
+        new_keyword_list = []
         for k in self.keyword_list["Keyword"]:
+            result = re.search(re.escape(k), valid_response["html"], re.MULTILINE)
+            if result is None:
+                new_keyword_list.append(k)
+        return new_keyword_list
+
+    def evaluation(self, *arg):
+        """
+        arg[0]: intruder_request
+        arg[1]: intruder_response
+        arg[2]: repeater_request
+        arg[3]: repeater_response
+        """
+        response = arg[1]
+        intruder_request = arg[0]
+        results = dict()
+        keyword_list = self.prepare_keywords(arg[3])
+        attack_payload = self.payload_search(intruder_request)
+        # CONTROLLO SE LE KEYWORD SONO RIFLESSE NELLA RISPOSTA
+        results = self.keywords_search(keyword_list, response, results)
+        # CONTROLLO SE I PARAMETRI SONO RIFLESSI NELLA RISPOSTA
+        results = self.keywords_search(self.params, response, results)
+        # CONTROLLO SE IL PAYLOAD E' RIFLESSO NELLA RISPOSTA
+        if attack_payload is not None:
+            results = self.keywords_search(attack_payload, response, results)
+        return {"SearchKeyword": {
+            "results": results
+        }}
+
+    def payload_search(self, request):
+        result = []
+        for f in self.fuzz_list["fuzz_list"]:
+            result_url = re.search(f, request["url"])
+            result_cookie = re.search(f, request["headers"]["Cookie"])
+            result_post = re.search(f, request["payload request"])
+            if (result_url is not None) or (result_cookie is not None) or (result_post is not None):
+                result.append(f)
+                break
+        if len(result) == 0:
+            return None
+        else:
+            return result
+
+    def keywords_search(self, keyword_list, response, results):
+        """
+        :param keyword_list: lista di keyword su cui iterare
+        :param response: http response
+        :param results: dict results
+        :return:
+        """
+        for k in keyword_list:
             match = re.search(re.escape(k), response["html"])
             if match is not None:
-                print("%s è stata trovata" %k)
-            else:
-                print("%s non è stata trovata" %k)
+                results.update({k: "is reflected"})
+                if match is not None:
+                    results.update({k: "is reflected"})
+        return results
 
 
 class TimeDelay(Observation):
+    PERCENTAGE_TIME = 30
 
     def __init__(self, params):
         self.params = params
 
-    def evaluation(self, response):
-        print("TimeDelay eval")
-        print(self.params)
+    def evaluation(self, *arg):
+        """
+        arg[0]: intruder_request
+        arg[1]: intruder_response
+        arg[2]: repeater_request
+        arg[3]: repeater_response
+        """
+        response_time = arg[3]["time_elapsed"]
+        valid_time = arg[1]["time_elapsed"]
+        # TODO: DA CAMBIARE LA CONDIZIONE
+        if response_time > valid_time:
+            results = "is delayed"
+        else:
+            results = "is not delayed"
+        return {
+            "TimeDelay": {
+                "results": results
+            }
+        }
