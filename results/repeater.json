@@ -1,0 +1,822 @@
+{
+    "id_fuzz_1": {
+        "Request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-500Error/Case03-InjectionInCalc-String-BooleanExploit-WithErrors.jsp?username=textvalue",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=5B35EE8963919A7A7F698A730DD3A75B"
+            },
+            "payload request": ""
+        },
+        "Response": {
+            "URL": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-500Error/Case03-InjectionInCalc-String-BooleanExploit-WithErrors.jsp?username=textvalue",
+            "status_code": 200,
+            "header": {
+                "Server": "Apache-Coyote/1.1",
+                "Content-Type": "text/html;charset=ISO-8859-1",
+                "Transfer-Encoding": "chunked",
+                "Date": "Mon, 09 Nov 2020 18:15:26 GMT"
+            },
+            "time_elapsed": "0:00:00.005019",
+            "content_length": 350,
+            "html": "\r\n\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\r\n<title>Case 3 - Injection into string values in a calculation page with erroneous responses</title>\r\n</head>\r\n<body>\r\n\r\nNo Match.\n\r\n\r\n</body>\r\n</html>"
+        },
+        "PlaceholderRequest": {
+            "method": "GET",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-500Error/Case03-InjectionInCalc-String-BooleanExploit-WithErrors.jsp?username=$textvalue$",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=$5B35EE8963919A7A7F698A730DD3A75B$"
+            },
+            "payload request": ""
+        }
+    },
+    "id_fuzz_2": {
+        "Request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-500Error/Case04-InjectionInUpdate-String-CommandInjection-WithErrors.jsp?msg=textvalue",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=5B35EE8963919A7A7F698A730DD3A75B"
+            },
+            "payload request": ""
+        },
+        "Response": {
+            "URL": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-500Error/Case04-InjectionInUpdate-String-CommandInjection-WithErrors.jsp?msg=textvalue",
+            "status_code": 200,
+            "header": {
+                "Server": "Apache-Coyote/1.1",
+                "Content-Type": "text/html;charset=ISO-8859-1",
+                "Transfer-Encoding": "chunked",
+                "Date": "Mon, 09 Nov 2020 18:15:26 GMT"
+            },
+            "time_elapsed": "0:00:00.006013",
+            "content_length": 351,
+            "html": "\r\n\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\r\n<title>Case 4 - Injection into string values in an update page with erroneous responses</title>\r\n</head>\r\n<body>\r\n\r\nQuery executed\n\r\n\r\n</body>\r\n</html>"
+        },
+        "PlaceholderRequest": {
+            "method": "GET",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-500Error/Case04-InjectionInUpdate-String-CommandInjection-WithErrors.jsp?msg=$textvalue$",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=$5B35EE8963919A7A7F698A730DD3A75B$"
+            },
+            "payload request": ""
+        }
+    },
+    "id_fuzz_3": {
+        "Request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Error/Case09-InjectionInUpdate-Numeric-CommandInjection-With200Errors.jsp?msgid=1",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=5B35EE8963919A7A7F698A730DD3A75B"
+            },
+            "payload request": ""
+        },
+        "Response": {
+            "URL": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Error/Case09-InjectionInUpdate-Numeric-CommandInjection-With200Errors.jsp?msgid=1",
+            "status_code": 200,
+            "header": {
+                "Server": "Apache-Coyote/1.1",
+                "Content-Type": "text/html;charset=ISO-8859-1",
+                "Transfer-Encoding": "chunked",
+                "Date": "Mon, 09 Nov 2020 18:15:26 GMT"
+            },
+            "time_elapsed": "0:00:00.005244",
+            "content_length": 352,
+            "html": "\r\n\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\r\n<title>Case 9 - Injection into numeric values in an update page with erroneous responses</title>\r\n</head>\r\n<body>\r\n\r\nQuery executed\n\r\n\r\n</body>\r\n</html>"
+        },
+        "PlaceholderRequest": {
+            "method": "GET",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Error/Case09-InjectionInUpdate-Numeric-CommandInjection-With200Errors.jsp?msgid=$1$",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=$5B35EE8963919A7A7F698A730DD3A75B$"
+            },
+            "payload request": ""
+        }
+    },
+    "id_fuzz_4": {
+        "Request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Error/Case10-InjectionInSearchOrderBy-Numeric-BinaryDeliberateRuntimeError-With200Errors.jsp?orderby=1",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=5B35EE8963919A7A7F698A730DD3A75B"
+            },
+            "payload request": ""
+        },
+        "Response": {
+            "URL": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Error/Case10-InjectionInSearchOrderBy-Numeric-BinaryDeliberateRuntimeError-With200Errors.jsp?orderby=1",
+            "status_code": 200,
+            "header": {
+                "Server": "Apache-Coyote/1.1",
+                "Content-Type": "text/html;charset=ISO-8859-1",
+                "Transfer-Encoding": "chunked",
+                "Date": "Mon, 09 Nov 2020 18:15:26 GMT"
+            },
+            "time_elapsed": "0:00:00.003232",
+            "content_length": 785,
+            "html": "\r\n\r\n\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\r\n<title>Case 10 - Injection into an order by clause (numeric) in a search page with erroneous responses</title>\r\n</head>\r\n<body>\r\n\r\nThe list of messages:\n<TABLE>\n<TR>\n<TD>\n<B>\nMsgId\n</B>\n</TD>\n<TD>\n<B>\nTitle\n</B>\n</TD>\n<TD>\n<B>\nMessage\n</B>\n</TD>\n</TR>\n<TR>\n<TD>\n1\n</TD>\n<TD>\nWelcome to the web site\n</TD>\n<TD>\nHello World\n</TD>\n</TR>\n<TR>\n<TD>\n2\n</TD>\n<TD>\nRemember to change your password\n</TD>\n<TD>\nInvest in your security!\n</TD>\n</TR>\n<TR>\n<TD>\n3\n</TD>\n<TD>\nYour account is about to expire\n</TD>\n<TD>\nPlease renew it in the next two weeks\n</TD>\n</TR>\n</TABLE>\n\r\n\r\n</body>\r\n</html>"
+        },
+        "PlaceholderRequest": {
+            "method": "GET",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Error/Case10-InjectionInSearchOrderBy-Numeric-BinaryDeliberateRuntimeError-With200Errors.jsp?orderby=$1$",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=$5B35EE8963919A7A7F698A730DD3A75B$"
+            },
+            "payload request": ""
+        }
+    },
+    "id_fuzz_5": {
+        "Request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Valid/Case04-InjectionInUpdate-String-CommandInjection-WithDifferent200Responses.jsp?msg=textvalue",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=5B35EE8963919A7A7F698A730DD3A75B"
+            },
+            "payload request": ""
+        },
+        "Response": {
+            "URL": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Valid/Case04-InjectionInUpdate-String-CommandInjection-WithDifferent200Responses.jsp?msg=textvalue",
+            "status_code": 200,
+            "header": {
+                "Server": "Apache-Coyote/1.1",
+                "Content-Type": "text/html;charset=ISO-8859-1",
+                "Transfer-Encoding": "chunked",
+                "Date": "Mon, 09 Nov 2020 18:15:26 GMT"
+            },
+            "time_elapsed": "0:00:00.005314",
+            "content_length": 357,
+            "html": "\r\n\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\r\n<title>Case 4 - Injection into string values in an update page with different valid responses</title>\r\n</head>\r\n<body>\r\n\r\nQuery executed\n\r\n\r\n</body>\r\n</html>"
+        },
+        "PlaceholderRequest": {
+            "method": "GET",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Valid/Case04-InjectionInUpdate-String-CommandInjection-WithDifferent200Responses.jsp?msg=$textvalue$",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=$5B35EE8963919A7A7F698A730DD3A75B$"
+            },
+            "payload request": ""
+        }
+    },
+    "id_fuzz_6": {
+        "Request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Valid/Case05-InjectionInSearchOrderBy-String-BinaryDeliberateRuntimeError-WithDifferent200Responses.jsp?orderby=msgid",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=5B35EE8963919A7A7F698A730DD3A75B"
+            },
+            "payload request": ""
+        },
+        "Response": {
+            "URL": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Valid/Case05-InjectionInSearchOrderBy-String-BinaryDeliberateRuntimeError-WithDifferent200Responses.jsp?orderby=msgid",
+            "status_code": 200,
+            "header": {
+                "Server": "Apache-Coyote/1.1",
+                "Content-Type": "text/html;charset=ISO-8859-1",
+                "Transfer-Encoding": "chunked",
+                "Date": "Mon, 09 Nov 2020 18:15:26 GMT"
+            },
+            "time_elapsed": "0:00:00.003303",
+            "content_length": 789,
+            "html": "\r\n\r\n\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\r\n<title>Case 5 - Injection into an order by clause (any type) in a search page with different valid responses</title>\r\n</head>\r\n<body>\r\n\r\nThe list of messages:\n<TABLE>\n<TR>\n<TD>\n<B>\nMsgId\n</B>\n</TD>\n<TD>\n<B>\nTitle\n</B>\n</TD>\n<TD>\n<B>\nMessage\n</B>\n</TD>\n</TR>\n<TR>\n<TD>\n1\n</TD>\n<TD>\nWelcome to the web site\n</TD>\n<TD>\ntextvalue\n</TD>\n</TR>\n<TR>\n<TD>\n2\n</TD>\n<TD>\nRemember to change your password\n</TD>\n<TD>\nInvest in your security!\n</TD>\n</TR>\n<TR>\n<TD>\n3\n</TD>\n<TD>\nYour account is about to expire\n</TD>\n<TD>\nPlease renew it in the next two weeks\n</TD>\n</TR>\n</TABLE>\n\r\n\r\n</body>\r\n</html>"
+        },
+        "PlaceholderRequest": {
+            "method": "GET",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Valid/Case05-InjectionInSearchOrderBy-String-BinaryDeliberateRuntimeError-WithDifferent200Responses.jsp?orderby=$msgid$",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=$5B35EE8963919A7A7F698A730DD3A75B$"
+            },
+            "payload request": ""
+        }
+    },
+    "id_fuzz_7": {
+        "Request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Identical/Case02-InjectionInView-String-Blind-200ValidResponseWithDefaultOnException.jsp?username=user1",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=5B35EE8963919A7A7F698A730DD3A75B"
+            },
+            "payload request": ""
+        },
+        "Response": {
+            "URL": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Identical/Case02-InjectionInView-String-Blind-200ValidResponseWithDefaultOnException.jsp?username=user1",
+            "status_code": 200,
+            "header": {
+                "Server": "Apache-Coyote/1.1",
+                "Content-Type": "text/html;charset=ISO-8859-1",
+                "Transfer-Encoding": "chunked",
+                "Date": "Mon, 09 Nov 2020 18:15:26 GMT"
+            },
+            "time_elapsed": "0:00:00.003518",
+            "content_length": 513,
+            "html": "\r\n\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\r\n<title>Case 2 - Injection into a string value in a private resource view page with default valid response on exception</title>\r\n</head>\r\n<body>\r\n\r\n\r\nThe list of users:\n<TABLE>\n<TR>\n<TD>\n<B>\nUserId\n</B>\n</TD>\n<TD>\n<B>\nUserName\n</B>\n</TD>\n</TR>\n<TR>\n<TD>\n1\n</TD>\n<TD>\nuser1\n</TD>\n</TR>\n</TABLE>\n\r\n\r\n</body>\r\n</html>"
+        },
+        "PlaceholderRequest": {
+            "method": "GET",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Identical/Case02-InjectionInView-String-Blind-200ValidResponseWithDefaultOnException.jsp?username=$user1$",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=$5B35EE8963919A7A7F698A730DD3A75B$"
+            },
+            "payload request": ""
+        }
+    },
+    "id_fuzz_8": {
+        "Request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Identical/Case02-InjectionInView-String-Blind-200ValidResponseWithDefaultOnException.jsp?username=david",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=5B35EE8963919A7A7F698A730DD3A75B"
+            },
+            "payload request": ""
+        },
+        "Response": {
+            "URL": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Identical/Case02-InjectionInView-String-Blind-200ValidResponseWithDefaultOnException.jsp?username=david",
+            "status_code": 200,
+            "header": {
+                "Server": "Apache-Coyote/1.1",
+                "Content-Type": "text/html;charset=ISO-8859-1",
+                "Transfer-Encoding": "chunked",
+                "Date": "Mon, 09 Nov 2020 18:15:26 GMT"
+            },
+            "time_elapsed": "0:00:00.003911",
+            "content_length": 513,
+            "html": "\r\n\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\r\n<title>Case 2 - Injection into a string value in a private resource view page with default valid response on exception</title>\r\n</head>\r\n<body>\r\n\r\n\r\nThe list of users:\n<TABLE>\n<TR>\n<TD>\n<B>\nUserId\n</B>\n</TD>\n<TD>\n<B>\nUserName\n</B>\n</TD>\n</TR>\n<TR>\n<TD>\n2\n</TD>\n<TD>\ndavid\n</TD>\n</TR>\n</TABLE>\n\r\n\r\n</body>\r\n</html>"
+        },
+        "PlaceholderRequest": {
+            "method": "GET",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Identical/Case02-InjectionInView-String-Blind-200ValidResponseWithDefaultOnException.jsp?username=$david$",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=$5B35EE8963919A7A7F698A730DD3A75B$"
+            },
+            "payload request": ""
+        }
+    },
+    "id_fuzz_9": {
+        "Request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Identical/Case03-InjectionInView-Date-Blind-200ValidResponseWithDefaultOnException.jsp?transactionDate=2010-01-01",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=5B35EE8963919A7A7F698A730DD3A75B"
+            },
+            "payload request": ""
+        },
+        "Response": {
+            "URL": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Identical/Case03-InjectionInView-Date-Blind-200ValidResponseWithDefaultOnException.jsp?transactionDate=2010-01-01",
+            "status_code": 200,
+            "header": {
+                "Server": "Apache-Coyote/1.1",
+                "Content-Type": "text/html;charset=ISO-8859-1",
+                "Transfer-Encoding": "chunked",
+                "Date": "Mon, 09 Nov 2020 18:15:26 GMT"
+            },
+            "time_elapsed": "0:00:00.004041",
+            "content_length": 521,
+            "html": "\r\n\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\r\n<title>Case 3 - Injection into a date value in a private resource view page with default valid response on exception</title>\r\n</head>\r\n<body>\r\n\r\n\r\nThe list of transactions:\n<TABLE>\n<TR>\n<TD>\n<B>\ntransactionId\n</B>\n</TD>\n<TD>\n<B>\nSum\n</B>\n</TD>\n</TR>\n<TR>\n<TD>\n132\n</TD>\n<TD>\n1000\n</TD>\n</TR>\n</TABLE>\n\r\n\r\n</body>\r\n</html>"
+        },
+        "PlaceholderRequest": {
+            "method": "GET",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Identical/Case03-InjectionInView-Date-Blind-200ValidResponseWithDefaultOnException.jsp?transactionDate=$2010-01-01$",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=$5B35EE8963919A7A7F698A730DD3A75B$"
+            },
+            "payload request": ""
+        }
+    },
+    "id_fuzz_10": {
+        "Request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Identical/Case03-InjectionInView-Date-Blind-200ValidResponseWithDefaultOnException.jsp?transactionDate=2010-02-02",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=5B35EE8963919A7A7F698A730DD3A75B"
+            },
+            "payload request": ""
+        },
+        "Response": {
+            "URL": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Identical/Case03-InjectionInView-Date-Blind-200ValidResponseWithDefaultOnException.jsp?transactionDate=2010-02-02",
+            "status_code": 200,
+            "header": {
+                "Server": "Apache-Coyote/1.1",
+                "Content-Type": "text/html;charset=ISO-8859-1",
+                "Transfer-Encoding": "chunked",
+                "Date": "Mon, 09 Nov 2020 18:15:26 GMT"
+            },
+            "time_elapsed": "0:00:00.003484",
+            "content_length": 521,
+            "html": "\r\n\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\r\n<title>Case 3 - Injection into a date value in a private resource view page with default valid response on exception</title>\r\n</head>\r\n<body>\r\n\r\n\r\nThe list of transactions:\n<TABLE>\n<TR>\n<TD>\n<B>\ntransactionId\n</B>\n</TD>\n<TD>\n<B>\nSum\n</B>\n</TD>\n</TR>\n<TR>\n<TD>\n895\n</TD>\n<TD>\n8000\n</TD>\n</TR>\n</TABLE>\n\r\n\r\n</body>\r\n</html>"
+        },
+        "PlaceholderRequest": {
+            "method": "GET",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Identical/Case03-InjectionInView-Date-Blind-200ValidResponseWithDefaultOnException.jsp?transactionDate=$2010-02-02$",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=$5B35EE8963919A7A7F698A730DD3A75B$"
+            },
+            "payload request": ""
+        }
+    },
+    "id_fuzz_11": {
+        "Request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-500Error/Case02-InjectionInSearch-String-UnionExploit-WithErrors.jsp",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=5B35EE8963919A7A7F698A730DD3A75B",
+                "Content-Length": "4",
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            "payload request": "msg="
+        },
+        "Response": {
+            "URL": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-500Error/Case02-InjectionInSearch-String-UnionExploit-WithErrors.jsp",
+            "status_code": 200,
+            "header": {
+                "Server": "Apache-Coyote/1.1",
+                "Content-Type": "text/html;charset=ISO-8859-1",
+                "Transfer-Encoding": "chunked",
+                "Date": "Mon, 09 Nov 2020 18:15:26 GMT"
+            },
+            "time_elapsed": "0:00:00.003285",
+            "content_length": 766,
+            "html": "\r\n\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\r\n<title>Case 2 - Injection into a string value in a search page with erroneous responses</title>\r\n</head>\r\n<body>\r\n\r\nThe list of messages:\n<TABLE>\n<TR>\n<TD>\n<B>\nMsgId\n</B>\n</TD>\n<TD>\n<B>\nTitle\n</B>\n</TD>\n<TD>\n<B>\nMessage\n</B>\n</TD>\n</TR>\n<TR>\n<TD>\n1\n</TD>\n<TD>\nWelcome to the web site\n</TD>\n<TD>\ntextvalue\n</TD>\n</TR>\n<TR>\n<TD>\n2\n</TD>\n<TD>\nRemember to change your password\n</TD>\n<TD>\nInvest in your security!\n</TD>\n</TR>\n<TR>\n<TD>\n3\n</TD>\n<TD>\nYour account is about to expire\n</TD>\n<TD>\nPlease renew it in the next two weeks\n</TD>\n</TR>\n</TABLE>\n\r\n\r\n</body>\r\n</html>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-500Error/Case02-InjectionInSearch-String-UnionExploit-WithErrors.jsp",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=$5B35EE8963919A7A7F698A730DD3A75B$",
+                "Content-Length": "4",
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            "payload request": "msg=$$"
+        }
+    },
+    "id_fuzz_12": {
+        "Request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-500Error/Case03-InjectionInCalc-String-BooleanExploit-WithErrors.jsp",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=5B35EE8963919A7A7F698A730DD3A75B",
+                "Content-Length": "9",
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            "payload request": "username="
+        },
+        "Response": {
+            "URL": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-500Error/Case03-InjectionInCalc-String-BooleanExploit-WithErrors.jsp",
+            "status_code": 200,
+            "header": {
+                "Server": "Apache-Coyote/1.1",
+                "Content-Type": "text/html;charset=ISO-8859-1",
+                "Transfer-Encoding": "chunked",
+                "Date": "Mon, 09 Nov 2020 18:15:26 GMT"
+            },
+            "time_elapsed": "0:00:00.002714",
+            "content_length": 350,
+            "html": "\r\n\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\r\n<title>Case 3 - Injection into string values in a calculation page with erroneous responses</title>\r\n</head>\r\n<body>\r\n\r\nNo Match.\n\r\n\r\n</body>\r\n</html>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-500Error/Case03-InjectionInCalc-String-BooleanExploit-WithErrors.jsp",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=$5B35EE8963919A7A7F698A730DD3A75B$",
+                "Content-Length": "9",
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            "payload request": "username=$$"
+        }
+    },
+    "id_fuzz_13": {
+        "Request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-500Error/Case04-InjectionInUpdate-String-CommandInjection-WithErrors.jsp",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=5B35EE8963919A7A7F698A730DD3A75B",
+                "Content-Length": "4",
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            "payload request": "msg="
+        },
+        "Response": {
+            "URL": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-500Error/Case04-InjectionInUpdate-String-CommandInjection-WithErrors.jsp",
+            "status_code": 200,
+            "header": {
+                "Server": "Apache-Coyote/1.1",
+                "Content-Type": "text/html;charset=ISO-8859-1",
+                "Transfer-Encoding": "chunked",
+                "Date": "Mon, 09 Nov 2020 18:15:26 GMT"
+            },
+            "time_elapsed": "0:00:00.012913",
+            "content_length": 351,
+            "html": "\r\n\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\r\n<title>Case 4 - Injection into string values in an update page with erroneous responses</title>\r\n</head>\r\n<body>\r\n\r\nQuery executed\n\r\n\r\n</body>\r\n</html>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-500Error/Case04-InjectionInUpdate-String-CommandInjection-WithErrors.jsp",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=$5B35EE8963919A7A7F698A730DD3A75B$",
+                "Content-Length": "4",
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            "payload request": "msg=$$"
+        }
+    },
+    "id_fuzz_14": {
+        "Request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-500Error/Case18-InjectionInCalc-NumericWithoutQuotes-BooleanExploit-WithErrors.jsp",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=5B35EE8963919A7A7F698A730DD3A75B",
+                "Content-Length": "17",
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            "payload request": "minBalanace=10000"
+        },
+        "Response": {
+            "URL": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-500Error/Case18-InjectionInCalc-NumericWithoutQuotes-BooleanExploit-WithErrors.jsp",
+            "status_code": 200,
+            "header": {
+                "Server": "Apache-Coyote/1.1",
+                "Content-Type": "text/html;charset=ISO-8859-1",
+                "Transfer-Encoding": "chunked",
+                "Date": "Mon, 09 Nov 2020 18:15:26 GMT"
+            },
+            "time_elapsed": "0:00:00.003123",
+            "content_length": 402,
+            "html": "\r\n\r\n\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\r\n<title>Case 18 - Injection into numeric values in a calculation page with erroneous responses and quote validation</title>\r\n</head>\r\n<body>\r\n\r\nSeveral accounts match the criteria.\n\r\n\r\n</body>\r\n</html>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-500Error/Case18-InjectionInCalc-NumericWithoutQuotes-BooleanExploit-WithErrors.jsp",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=$5B35EE8963919A7A7F698A730DD3A75B$",
+                "Content-Length": "17",
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            "payload request": "minBalanace=$10000$"
+        }
+    },
+    "id_fuzz_15": {
+        "Request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-500Error/Case19-InjectionInUpdate-NumericWithoutQuotes-CommandInjection-WithErrors.jsp",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=5B35EE8963919A7A7F698A730DD3A75B",
+                "Content-Length": "7",
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            "payload request": "msgid=1"
+        },
+        "Response": {
+            "URL": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-500Error/Case19-InjectionInUpdate-NumericWithoutQuotes-CommandInjection-WithErrors.jsp",
+            "status_code": 200,
+            "header": {
+                "Server": "Apache-Coyote/1.1",
+                "Content-Type": "text/html;charset=ISO-8859-1",
+                "Transfer-Encoding": "chunked",
+                "Date": "Mon, 09 Nov 2020 18:15:26 GMT"
+            },
+            "time_elapsed": "0:00:00.005734",
+            "content_length": 376,
+            "html": "\r\n\r\n\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\r\n<title>Case 19 - Injection into numeric values in an update page with erroneous responses and quote validation</title>\r\n</head>\r\n<body>\r\n\r\nQuery executed\n\r\n\r\n</body>\r\n</html>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-500Error/Case19-InjectionInUpdate-NumericWithoutQuotes-CommandInjection-WithErrors.jsp",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=$5B35EE8963919A7A7F698A730DD3A75B$",
+                "Content-Length": "7",
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            "payload request": "msgid=$1$"
+        }
+    },
+    "id_fuzz_16": {
+        "Request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-200Valid/Case05-InjectionInSearchOrderBy-String-BinaryDeliberateRuntimeError-WithDifferent200Responses.jsp",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=5B35EE8963919A7A7F698A730DD3A75B",
+                "Content-Length": "13",
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            "payload request": "orderby=msgid"
+        },
+        "Response": {
+            "URL": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-200Valid/Case05-InjectionInSearchOrderBy-String-BinaryDeliberateRuntimeError-WithDifferent200Responses.jsp",
+            "status_code": 200,
+            "header": {
+                "Server": "Apache-Coyote/1.1",
+                "Content-Type": "text/html;charset=ISO-8859-1",
+                "Transfer-Encoding": "chunked",
+                "Date": "Mon, 09 Nov 2020 18:15:26 GMT"
+            },
+            "time_elapsed": "0:00:00.003018",
+            "content_length": 791,
+            "html": "\r\n\r\n\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\r\n<title>Case 5 - Injection into an order by clause (any type) in a search page with different valid responses</title>\r\n</head>\r\n<body>\r\n\r\nThe list of messages:\n<TABLE>\n<TR>\n<TD>\n<B>\nMsgId\n</B>\n</TD>\n<TD>\n<B>\nTitle\n</B>\n</TD>\n<TD>\n<B>\nMessage\n</B>\n</TD>\n</TR>\n<TR>\n<TD>\n1\n</TD>\n<TD>\nWelcome to the web site\n</TD>\n<TD>\nHello World\n</TD>\n</TR>\n<TR>\n<TD>\n2\n</TD>\n<TD>\nRemember to change your password\n</TD>\n<TD>\nInvest in your security!\n</TD>\n</TR>\n<TR>\n<TD>\n3\n</TD>\n<TD>\nYour account is about to expire\n</TD>\n<TD>\nPlease renew it in the next two weeks\n</TD>\n</TR>\n</TABLE>\n\r\n\r\n</body>\r\n</html>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-200Valid/Case05-InjectionInSearchOrderBy-String-BinaryDeliberateRuntimeError-WithDifferent200Responses.jsp",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=$5B35EE8963919A7A7F698A730DD3A75B$",
+                "Content-Length": "13",
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            "payload request": "orderby=$msgid$"
+        }
+    },
+    "id_fuzz_17": {
+        "Request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-200Valid/Case06-InjectionInView-Numeric-PermissionBypass-WithDifferent200Responses.jsp",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=5B35EE8963919A7A7F698A730DD3A75B",
+                "Content-Length": "15",
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            "payload request": "transactionId=1"
+        },
+        "Response": {
+            "URL": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-200Valid/Case06-InjectionInView-Numeric-PermissionBypass-WithDifferent200Responses.jsp",
+            "status_code": 200,
+            "header": {
+                "Server": "Apache-Coyote/1.1",
+                "Content-Type": "text/html;charset=ISO-8859-1",
+                "Transfer-Encoding": "chunked",
+                "Date": "Mon, 09 Nov 2020 18:15:26 GMT"
+            },
+            "time_elapsed": "0:00:00.003027",
+            "content_length": 538,
+            "html": "\r\n\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\r\n<title>Case 6 - Injection into a numeric value in a private resource view page with different valid responses</title>\r\n</head>\r\n<body>\r\n\r\nThe list of transactions:\n<TABLE>\n<TR>\n<TD>\n<B>\ntransactionId\n</B>\n</TD>\n<TD>\n<B>\nsum\n</B>\n</TD>\n<TD>\n<B>\ndescription\n</B>\n</TD>\n<TD>\n<B>\ntransactionDate\n</B>\n</TD>\n</TR>\n</TABLE>\n\r\n\r\n</body>\r\n</html>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-200Valid/Case06-InjectionInView-Numeric-PermissionBypass-WithDifferent200Responses.jsp",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=$5B35EE8963919A7A7F698A730DD3A75B$",
+                "Content-Length": "15",
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            "payload request": "transactionId=$1$"
+        }
+    },
+    "id_fuzz_18": {
+        "Request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-200Valid/Case16-InjectionInView-NumericWithoutQuotes-PermissionBypass-WithDifferent200Responses.jsp",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=5B35EE8963919A7A7F698A730DD3A75B",
+                "Content-Length": "15",
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            "payload request": "transactionId=1"
+        },
+        "Response": {
+            "URL": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-200Valid/Case16-InjectionInView-NumericWithoutQuotes-PermissionBypass-WithDifferent200Responses.jsp",
+            "status_code": 200,
+            "header": {
+                "Server": "Apache-Coyote/1.1",
+                "Content-Type": "text/html;charset=ISO-8859-1",
+                "Transfer-Encoding": "chunked",
+                "Date": "Mon, 09 Nov 2020 18:15:26 GMT"
+            },
+            "time_elapsed": "0:00:00.003161",
+            "content_length": 562,
+            "html": "\r\n\r\n\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\r\n<title>Case 16 - Injection into a numeric value in a private resource view page with different valid responses and quote validation</title>\r\n</head>\r\n<body>\r\n\r\nThe list of transactions:\n<TABLE>\n<TR>\n<TD>\n<B>\ntransactionId\n</B>\n</TD>\n<TD>\n<B>\nsum\n</B>\n</TD>\n<TD>\n<B>\ndescription\n</B>\n</TD>\n<TD>\n<B>\ntransactionDate\n</B>\n</TD>\n</TR>\n</TABLE>\n\r\n\r\n</body>\r\n</html>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-200Valid/Case16-InjectionInView-NumericWithoutQuotes-PermissionBypass-WithDifferent200Responses.jsp",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=$5B35EE8963919A7A7F698A730DD3A75B$",
+                "Content-Length": "15",
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            "payload request": "transactionId=$1$"
+        }
+    },
+    "id_fuzz_19": {
+        "Request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-200Valid/Case17-InjectionInSearch-NumericWithoutQuotes-UnionExploit-WithDifferent200Responses.jsp",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=5B35EE8963919A7A7F698A730DD3A75B",
+                "Content-Length": "7",
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            "payload request": "msgId=1"
+        },
+        "Response": {
+            "URL": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-200Valid/Case17-InjectionInSearch-NumericWithoutQuotes-UnionExploit-WithDifferent200Responses.jsp",
+            "status_code": 200,
+            "header": {
+                "Server": "Apache-Coyote/1.1",
+                "Content-Type": "text/html;charset=ISO-8859-1",
+                "Transfer-Encoding": "chunked",
+                "Date": "Mon, 09 Nov 2020 18:15:26 GMT"
+            },
+            "time_elapsed": "0:00:00.003070",
+            "content_length": 579,
+            "html": "\r\n\r\n\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\r\n<title>Case 17 - Injection into a numeric value in a search page with different valid responses and quote validation</title>\r\n</head>\r\n<body>\r\n\r\nThe list of messages:\n<TABLE>\n<TR>\n<TD>\n<B>\nMsgId\n</B>\n</TD>\n<TD>\n<B>\nTitle\n</B>\n</TD>\n<TD>\n<B>\nMessage\n</B>\n</TD>\n</TR>\n<TR>\n<TD>\n1\n</TD>\n<TD>\nWelcome to the web site\n</TD>\n<TD>\nHello World\n</TD>\n</TR>\n</TABLE>\n\r\n\r\n</body>\r\n</html>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-200Valid/Case17-InjectionInSearch-NumericWithoutQuotes-UnionExploit-WithDifferent200Responses.jsp",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=$5B35EE8963919A7A7F698A730DD3A75B$",
+                "Content-Length": "7",
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            "payload request": "msgId=$1$"
+        }
+    },
+    "id_fuzz_20": {
+        "Request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-200Valid/Case18-InjectionInCalc-NumericWithoutQuotes-BooleanExploit-WithDifferent200Responses.jsp",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=5B35EE8963919A7A7F698A730DD3A75B",
+                "Content-Length": "17",
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            "payload request": "minBalanace=10000"
+        },
+        "Response": {
+            "URL": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-200Valid/Case18-InjectionInCalc-NumericWithoutQuotes-BooleanExploit-WithDifferent200Responses.jsp",
+            "status_code": 200,
+            "header": {
+                "Server": "Apache-Coyote/1.1",
+                "Content-Type": "text/html;charset=ISO-8859-1",
+                "Transfer-Encoding": "chunked",
+                "Date": "Mon, 09 Nov 2020 18:15:26 GMT"
+            },
+            "time_elapsed": "0:00:00.003103",
+            "content_length": 408,
+            "html": "\r\n\r\n\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\r\n<title>Case 18 - Injection into numeric values in a calculation page with different valid responses and quote validation</title>\r\n</head>\r\n<body>\r\n\r\nSeveral accounts match the criteria.\n\r\n\r\n</body>\r\n</html>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8080/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-200Valid/Case18-InjectionInCalc-NumericWithoutQuotes-BooleanExploit-WithDifferent200Responses.jsp",
+            "headers": {
+                "User-Agent": "python-requests/2.24.0",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Cookie": "JSESSIONID=$5B35EE8963919A7A7F698A730DD3A75B$",
+                "Content-Length": "17",
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            "payload request": "minBalanace=$10000$"
+        }
+    }
+}

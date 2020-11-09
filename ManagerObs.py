@@ -6,9 +6,9 @@ from Observation import *
 class ManagerObs:
     OBSERVATION_CONFIG = 'config/observation.json'
     FUZZ_LIST_CONFIG = 'config/fuzz_list.json'
-    OUT_FILE_PATH = 'results/observ_results.json'
-    REPEATER_CONFIG_FILE = 'results/test.json'
-    CSV_OUT_PATH = "results/observation.csv"
+    OUT_FILE_PATH = 'results/observer.json'
+    REPEATER_CONFIG_FILE = 'results/repeater.json'
+    CSV_OUT_PATH = "results/observer.csv"
     """
     #FS: NUMERO DI FUZZ STRING UTILIZZATE
     #RC: NUMERO DI RESPONSE CONDITION: OSSERVAZIONI FATTE SU UNA RICHIESTA HTTP
@@ -34,7 +34,6 @@ class ManagerObs:
         self.header_csv_obs = []
         self.__instantiate_adapters()
 
-
     def __instantiate_adapters(self):
         """
         Instantiate the observation classes
@@ -52,7 +51,7 @@ class ManagerObs:
             print("ERROR: The \"Observation.json\" configuration file contains an unimplemented class")
             exit()
 
-    def evaluation(self):
+    def evaluation(self, csv_out_path, json_out_path):
         for id_fuzz in self.intruder_json:
             # evaluation on response attack
             for k in self.intruder_json[id_fuzz]["Results"]:
@@ -68,35 +67,35 @@ class ManagerObs:
                     results.update({"ERROR": "ERROR"})
                 k.update({"Observation": results})
 
-        #self.finalize_out(self.intruder_json)
-        self.finalize_out_csv(self.intruder_json)
+        self.finalize_out(self.intruder_json, json_out_path)
+        self.finalize_out_csv(self.intruder_json, csv_out_path)
 
-    def finalize_out(self, json_out):
-        with open(self.OUT_FILE_PATH, 'w', encoding="utf-8") as f:
+    def finalize_out(self, json_out, csv_out_path):
+        with open(csv_out_path, 'w', encoding="utf-8") as f:
             json.dump(json_out, f, indent=4, ensure_ascii=False)
             print("### LOG EXPORTED ###")
 
-    def finalize_out_csv(self, json_out):
-        f = csv.writer(open(self.CSV_OUT_PATH, "w"))
-        tmp_header = ["id_fuzz", "#", "URL", "Method"]
-        row_header = tmp_header + self.header_csv_obs
-        f.writerow(row_header)
+    def finalize_out_csv(self, json_out, csv_out_path):
+        f = csv.writer(open(csv_out_path, "w", newline=""))
+        row_header = ["id_fuzz", "#", "URL", "Method"]
+        first_iter = False
         num = 1
+        row_matrix = []
         for id_fuzz in json_out:
             for r in json_out[id_fuzz]["Results"]:
-                row_list = [id_fuzz, num, r["Request"]["url"],  r["Request"]["method"]]
+                row_list = [num, id_fuzz, r["Request"]["url"],  r["Request"]["method"]]
                 obs_value = []
-                for o in r["Observation"]:
-                    results_obs = r["Observation"][o]["results"]
-                    string_value = ""
-                    if isinstance(results_obs, dict):
-                        for res in results_obs:
-                            string_value = string_value + str(res) + " " + results_obs[res] + " "
-                    else:
-                        string_value = results_obs
-                    obs_value.append(string_value)
+                for k, v in r["Observation"].items():
+                    if first_iter is False:
+                        row_header.append(k)
+                    obs_value.append(v)
+                # FLAG UTILE PER CREARE UNA SOLA VOLTA L'HEADER ROW
+                first_iter = True
                 row_list = row_list + obs_value
-                f.writerow(row_list)
+                row_matrix.append(row_list)
                 num = num + 1
+        f.writerow(row_header)
+        for r in row_matrix:
+            f.writerow(r)
         print("### CSV FILE EXPORTED ###")
 

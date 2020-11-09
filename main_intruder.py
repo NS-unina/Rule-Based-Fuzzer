@@ -3,11 +3,12 @@ from Intruder import Intruder
 
 
 # ENTRY POINT INTRUDER
-def run(file):
+def run(inp, out):
     """
-    :param file: repeater output file
+    :param out:
+    :param inp: repeater output file
     """
-    i = Intruder(file)
+    i = Intruder(inp, out)
     i.run_intruder()
 
 

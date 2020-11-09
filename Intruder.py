@@ -13,10 +13,10 @@ TODO: BUG parametri post con lo spazio non vengono identificati
 
 class Intruder:
     FUZZ_LIST_CONFIG = 'config/fuzz_list.json'
-    OUT_FILE_PATH = 'results/results.json'
+    #OUT_FILE_PATH = 'results/intruder.json'
     TIMEOUT_VALUE = 30 #SECOND
 
-    def __init__(self, repeater_file_path):
+    def __init__(self, repeater_file_path, out_file_path):
         """
         :param file_name_path: repeater configuration file
         """
@@ -27,6 +27,7 @@ class Intruder:
                 self.fuzz_list = json.load(json_fuzz, encoding="utf-8")
         except FileNotFoundError as e:
             exit(e)
+        self.out_file_path = out_file_path
         self.s = Session()
 
     def __scan_placeholders(self, pattern, string):
@@ -162,6 +163,6 @@ class Intruder:
         return response
 
     def finalize_out(self, json_dict):
-        with open(self.OUT_FILE_PATH, 'w', encoding="utf-8") as f:
+        with open(self.out_file_path, 'w', encoding="utf-8") as f:
             json.dump(json_dict, f, indent=4, ensure_ascii=False)
             print("### LOG EXPORTED ###")

@@ -1,4 +1,5 @@
 import abc
+from datetime import *
 import json
 import re
 
@@ -23,15 +24,13 @@ class StatusCode(Observation):
         arg[3]: repeater_response
         """
         response = arg[1]  # RESPONSE
-        results = dict()
+        """results = dict()
         if len(self.params) != 0:
             for p in self.params:
                 if p == response["status_code"]:
-                    results.update({p: "is present"})
+                    results.update({p: "is present"})"""
 
-        return {"StatusCode": {
-            "results": results
-        }}
+        return {"StatusCode": response["status_code"]}
 
 
 class SearchKeyword(Observation):
@@ -63,7 +62,8 @@ class SearchKeyword(Observation):
         response = arg[1]
         intruder_request = arg[0]
         results = dict()
-        keyword_list = self.prepare_keywords(arg[3])
+        #keyword_list = self.prepare_keywords(arg[3])
+        keyword_list = self.keyword_list["Keyword"]
         attack_payload = self.payload_search(intruder_request)
         # CONTROLLO SE LE KEYWORD SONO RIFLESSE NELLA RISPOSTA
         results = self.keywords_search(keyword_list, response, results)
@@ -72,9 +72,7 @@ class SearchKeyword(Observation):
         # CONTROLLO SE IL PAYLOAD E' RIFLESSO NELLA RISPOSTA
         if attack_payload is not None:
             results = self.keywords_search(attack_payload, response, results)
-        return {"SearchKeyword": {
-            "results": results
-        }}
+        return results
 
     def payload_search(self, request):
         result = []
@@ -100,9 +98,9 @@ class SearchKeyword(Observation):
         for k in keyword_list:
             match = re.search(re.escape(k), response["html"])
             if match is not None:
-                results.update({k: "is reflected"})
-                if match is not None:
-                    results.update({k: "is reflected"})
+                results.update({"SearchKeyword_"+k: "1"})
+            else:
+                results.update({"SearchKeyword_"+k: "0"})
         return results
 
 
@@ -119,15 +117,45 @@ class TimeDelay(Observation):
         arg[2]: repeater_request
         arg[3]: repeater_response
         """
-        response_time = arg[3]["time_elapsed"]
-        valid_time = arg[1]["time_elapsed"]
-        # TODO: DA CAMBIARE LA CONDIZIONE
-        if response_time > valid_time:
-            results = "is delayed"
+        response_time = datetime.strptime(arg[3]["time_elapsed"], "%H:%M:%S.%f").time()
+        response_time_int = int(response_time.strftime("%H%M%S%f"))
+
+        valid_time = datetime.strptime(arg[1]["time_elapsed"], "%H:%M:%S.%f").time()
+        valid_time_int = int(valid_time.strftime("%H%M%S%f"))
+
+        if response_time_int > valid_time_int + ((valid_time_int * self.PERCENTAGE_TIME)/100):
+            # Revealed
+            results = "1"
         else:
-            results = "is not delayed"
+            # NOT Revealed
+            results = "0"
         return {
-            "TimeDelay": {
-                "results": results
-            }
+            "TimeDelay": results
+        }
+
+
+class ContentLength(Observation):
+    PERCENTAGE_LENGTH = 30
+
+    def __init__(self, params):
+        self.params = params
+
+    def evaluation(self, *arg):
+        """
+           arg[0]: intruder_request
+           arg[1]: intruder_response
+           arg[2]: repeater_request
+           arg[3]: repeater_response
+        """
+        valid_cl = arg[3]["content_length"]
+        fuzz_cl = arg[1]["content_length"]
+        if fuzz_cl > valid_cl * ((valid_cl * self.PERCENTAGE_LENGTH)/100):
+            # Revealed
+            results = "1"
+        else:
+            # NOT Revealed
+            results = "0"
+
+        return {
+            "ContentLength": results
         }

@@ -2,6 +2,10 @@ import fire
 import Utils as u
 from Mitmproxy import Mitmproxy
 
+"""
+TODO: MODALITA' INTERATTIVA -i O BRUTE FORCE -b 
+"""
+
 
 # ENTRY POINT MITMPROXY
 def run(url, out):
@@ -13,6 +17,7 @@ def run(url, out):
         Mitmproxy(url, out)
     else:
         print("URL Malformed")
+
 
 # RUN MITMPROXY WITH FIRE LIBRARY
 if __name__ == '__main__':

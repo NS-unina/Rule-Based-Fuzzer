@@ -32,7 +32,8 @@ class Mitmproxy:
             m.addons.add(Interceptor(self.url, self.output_name))
             try:
                 m.run()
-            except KeyboardInterrupt:
                 m.shutdown()
+            except TypeError as e:
+               exit()
         except:
             print("Error starting proxy server")

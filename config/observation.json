@@ -3,22 +3,23 @@
       "Adapter":[
          {
             "StatusCode":{
-               "param":[
-                  200,
-                  400
-               ]
+               "param":[200,400]
             }
          },
          {
             "SearchKeyword":{
-               "param":[
-                  "test",
-                  "test2"
-               ]
+               "param":["test","test2"]
             }
          },
          {
             "TimeDelay":{
+               "param":[
+
+               ]
+            }
+         },
+         {
+            "ContentLength":{
                "param":[
 
                ]
