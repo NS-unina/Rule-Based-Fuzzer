@@ -6,15 +6,12 @@ import requests
 from requests import Request, Session
 from Utils import Utils
 
-"""
-TODO:RISOLVERE IL PROBLEMA DEL TIMEOUT QUANDO HO RICHIESTE TIMEDELAY
-TODO: BUG parametri post con lo spazio non vengono identificati 
-"""
 
 class Intruder:
-    FUZZ_LIST_CONFIG = 'config/fuzz_list.json'
-    #OUT_FILE_PATH = 'results/intruder.json'
-    TIMEOUT_VALUE = 30 #SECOND
+    FUZZ_LIST_CONFIG = 'config/PAYLOAD-PT.json'
+    # OUT_FILE_PATH = 'results/intruder.json'
+    TIMEOUT_VALUE = 30  # SECOND
+    PLACEHOLDER_CHARACTER = '§'
 
     def __init__(self, repeater_file_path, out_file_path):
         """
@@ -58,12 +55,14 @@ class Intruder:
         params = []
         # REGEX FUNCTION
         url_param = self.__scan_placeholders('([\$][^ \ & | ^ \;]+[\$])', request["PlaceholderRequest"]["url"])
+
         if 'Cookie' in dict(request["PlaceholderRequest"]["headers"]):
-            cookie_param = self.__scan_placeholders('([\$][^ \ & | ^ \;]+[\$])', request["PlaceholderRequest"]["headers"]["Cookie"])
+            cookie_param = self.__scan_placeholders('([\$][^ \ & | ^ \;]+[\$])',
+                                                    request["PlaceholderRequest"]["headers"]["Cookie"])
         else:
             cookie_param = ""
-        payload_req = self.__scan_placeholders('([\$][^\§|]+[\$]|\$\$)', request["PlaceholderRequest"]["payload request"])
-
+        payload_req = self.__scan_placeholders('([\$][^\§|]+[\$]|\$\$)',
+                                               request["PlaceholderRequest"]["payload request"])
         # SETTO I PARAMETRI CHE SERVIRANNO A BUILD_CONFIG
         self.__scan_parameters(url_param, params, "Url")
         self.__scan_parameters(cookie_param, params, "Cookie")
@@ -90,10 +89,10 @@ class Intruder:
                 }
             }
             json_out_file.update(out_tmp)
-            i = i+1
+            i = i + 1
         self.finalize_out(json_out_file)
 
-    def build_config(self, request, params_placeholder, url, cookie, payload_req, req_res_dict):
+    def build_config(self, request: dict, params_placeholder: str, url: str, cookie: str, payload_req: str, req_res_dict: list):
         number = 0
         total_len = len(self.fuzz_list["fuzz_list"]) * len(params_placeholder)
         if total_len == 0:
@@ -115,28 +114,31 @@ class Intruder:
                 if type_m == "Post":
                     tmp_payload_req = fuzz_string.join([payload_req[:span[0]], payload_req[span[1]:]])
                 number = number + 1
-
                 # Elimino dalle stringhe i caratteri dei placeholder
                 clear_url = self.clear_param(tmp_url, '$', '')
                 clear_cookie = self.clear_param(tmp_cookie, '$', '')
                 clear_payload_req = self.clear_param(tmp_payload_req, '$', '')
-
                 # COSTRUISCO I DICT DI RICHIESTA E RISPOSTA
                 tmp_dict = self.build_output_file(request, clear_url, clear_cookie, clear_payload_req)
-                req_res_dict.append({"Request": tmp_dict[0], "Response": tmp_dict[1]})
+                req_res_dict.append({"Request": tmp_dict[0], "Response": tmp_dict[1], "Payload_send": fuzz_string})
                 Utils.print_progress_bar(number, total_len, prefix='Progress:', suffix='Complete', length=50)
 
-    def build_output_file(self, request, url, cookie, payload_req):
+    def build_output_file(self, request: dict, url: str, cookie: str, payload_req: dict) -> list:
+        """
+
+        :rtype: list
+        """
         request_dict = copy.deepcopy(request["PlaceholderRequest"])
         request_dict["url"] = url
-        request_dict["headers"]["Cookie"] = cookie
+        request_dict["headers"]["Cookie"] = str(cookie.encode('utf8'))
         request_dict["payload request"] = payload_req
         try:
-            response = self.send_request(request_dict["method"], request_dict["url"].encode(), request_dict["headers"], payload_req)
+            response = self.send_request(request_dict["method"], request_dict["url"], request_dict["headers"],
+                                         payload_req)
             response_dict = {
                 "url": response.request.url,
                 "status_code": response.status_code,
-                "header": dict(response.headers), # QUI DA IL PROBLEMA DEI BYTE
+                "header": dict(response.headers),
                 "time_elapsed": str(response.elapsed),
                 "content_length": len(response.content),
                 "html": response.text
@@ -162,7 +164,7 @@ class Intruder:
 
         return response
 
-    def finalize_out(self, json_dict):
+    def finalize_out(self, json_dict: dict):
         with open(self.out_file_path, 'w', encoding="utf-8") as f:
-            json.dump(json_dict, f, indent=4, ensure_ascii=False)
-            print("### LOG EXPORTED ###")
+            json.dump(json_dict, f, indent=4)
+            print("### LOG JSON INTRUDER EXPORTED ###")

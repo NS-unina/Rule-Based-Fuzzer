@@ -96,7 +96,7 @@ class SearchKeyword(Observation):
         :return:
         """
         for k in keyword_list:
-            match = re.search(re.escape(k), response["html"])
+            match = re.search(re.escape(k), response["html"], re.IGNORECASE)
             if match is not None:
                 results.update({"SearchKeyword_"+k: "1"})
             else:
@@ -123,7 +123,7 @@ class TimeDelay(Observation):
         valid_time = datetime.strptime(arg[1]["time_elapsed"], "%H:%M:%S.%f").time()
         valid_time_int = int(valid_time.strftime("%H%M%S%f"))
 
-        if response_time_int > valid_time_int + ((valid_time_int * self.PERCENTAGE_TIME)/100):
+        """if response_time_int > valid_time_int + ((valid_time_int * self.PERCENTAGE_TIME)/100):
             # Revealed
             results = "1"
         else:
@@ -131,6 +131,9 @@ class TimeDelay(Observation):
             results = "0"
         return {
             "TimeDelay": results
+        }"""
+        return {
+            "TimeDelay": str(arg[3]["time_elapsed"])
         }
 
 
@@ -149,7 +152,7 @@ class ContentLength(Observation):
         """
         valid_cl = arg[3]["content_length"]
         fuzz_cl = arg[1]["content_length"]
-        if fuzz_cl > valid_cl * ((valid_cl * self.PERCENTAGE_LENGTH)/100):
+        """if fuzz_cl > valid_cl * ((valid_cl * self.PERCENTAGE_LENGTH)/100):
             # Revealed
             results = "1"
         else:
@@ -158,4 +161,7 @@ class ContentLength(Observation):
 
         return {
             "ContentLength": results
+        }"""
+        return {
+            "ContentLength": fuzz_cl
         }

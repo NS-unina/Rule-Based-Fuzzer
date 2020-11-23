@@ -73,17 +73,17 @@ class ManagerObs:
     def finalize_out(self, json_out, csv_out_path):
         with open(csv_out_path, 'w', encoding="utf-8") as f:
             json.dump(json_out, f, indent=4, ensure_ascii=False)
-            print("### LOG EXPORTED ###")
+            print("### LOG JSON EXPORTED ###")
 
     def finalize_out_csv(self, json_out, csv_out_path):
-        f = csv.writer(open(csv_out_path, "w", newline=""))
-        row_header = ["id_fuzz", "#", "URL", "Method"]
+        f = csv.writer(open(csv_out_path, "w", newline="", encoding='utf8'))
+        row_header = ["id_fuzz", "#", 'Payload', "URL", "Method"]
         first_iter = False
         num = 1
         row_matrix = []
         for id_fuzz in json_out:
             for r in json_out[id_fuzz]["Results"]:
-                row_list = [num, id_fuzz, r["Request"]["url"],  r["Request"]["method"]]
+                row_list = [id_fuzz, num, r['Payload_send'], r["Request"]["url"], r["Request"]["method"]]
                 obs_value = []
                 for k, v in r["Observation"].items():
                     if first_iter is False:

@@ -20,7 +20,7 @@ def run(url_intercept, out_repeater_file, out_intruder_file, out_obs_file_csv, o
         i.run_intruder()
 
         m = ManagerObs(out_intruder_file)
-        m.evaluation(out_obs_file_csv,out_obs_file_json)
+        m.evaluation(out_obs_file_csv, out_obs_file_json)
     else:
         print("URL Malformed")
 
