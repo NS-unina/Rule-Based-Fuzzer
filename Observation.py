@@ -72,7 +72,7 @@ class SearchKeyword(Observation):
         # CONTROLLO SE IL PAYLOAD E' RIFLESSO NELLA RISPOSTA
         if attack_payload is not None:
             results = self.keywords_search(attack_payload, response, results)
-        return results
+        return {'SearchKeyword': results}
 
     def payload_search(self, request):
         result = []
@@ -98,9 +98,13 @@ class SearchKeyword(Observation):
         for k in keyword_list:
             match = re.search(re.escape(k), response["html"], re.IGNORECASE)
             if match is not None:
-                results.update({"SearchKeyword_"+k: "1"})
+                #results.update({"SearchKeyword_"+k: "1"})
+                results.update({k: 1})
             else:
-                results.update({"SearchKeyword_"+k: "0"})
+                #results.update({"SearchKeyword_"+k: "0"})
+                results.update({k: 0})
+        #return results
+
         return results
 
 

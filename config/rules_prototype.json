@@ -1,0 +1,40 @@
+{
+   "prototype": [
+     {
+       "name": "ruleSQLI1",
+       "parameter": ["StatusCode","SearchKeyword","TimeDelay","ContentLength"]
+     },
+     {
+       "name": "ruleSQLI2",
+       "parameter": ["StatusCode","SearchKeyword","TimeDelay","ContentLength"]
+     },
+     {
+       "name": "ruleSQLI3",
+       "parameter": ["StatusCode","SearchKeyword","TimeDelay","ContentLength"]
+     },
+     {
+       "name": "ruleSQLI4",
+       "parameter": ["StatusCode","SearchKeyword","TimeDelay","ContentLength"]
+     },
+     {
+       "name": "ruleCI1",
+       "parameter": ["StatusCode","SearchKeyword","TimeDelay","ContentLength"]
+     },
+     {
+       "name": "ruleCI2",
+       "parameter": ["StatusCode","SearchKeyword","TimeDelay","ContentLength"]
+     },
+     {
+       "name": "rulePT1",
+       "parameter": ["StatusCode","SearchKeyword","TimeDelay","ContentLength"]
+     },
+     {
+       "name": "rulePT2",
+       "parameter": ["StatusCode","SearchKeyword","TimeDelay","ContentLength"]
+     },
+     {
+       "name": "ruleXSSR1",
+       "parameter": ["StatusCode","SearchKeyword","TimeDelay","ContentLength"]
+     }
+   ]
+}

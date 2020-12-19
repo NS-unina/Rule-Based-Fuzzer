@@ -14,9 +14,6 @@ class Intruder:
     PLACEHOLDER_CHARACTER = '§'
 
     def __init__(self, repeater_file_path, out_file_path):
-        """
-        :param file_name_path: repeater configuration file
-        """
         try:
             with open(repeater_file_path, encoding='utf-8') as json_request:
                 self.repeater_json = json.load(json_request, encoding="utf-8")
