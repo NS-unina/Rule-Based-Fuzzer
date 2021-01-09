@@ -1,19 +1,21 @@
 import json
 from pyswip import Prolog
 import itertools
-from Oracle.FuzzElement import FuzzElement
-from Oracle.FuzzSession import FuzzSession
+from ParserClass.FuzzElement import FuzzElement
+from ParserClass.FuzzSession import FuzzSession
 from Oracle.Observation import Observation
-from Oracle.OracleElement import OracleElement
-from Oracle.OracleSession import OracleSession
+from ParserClass.OracleElement import OracleElement
+from ParserClass.OracleSession import OracleSession
 from Oracle.Query import Query
-from Oracle.utils.Request import Request
-from Oracle.utils.Response import Response
+from ParserClass.Request import Request
+from ParserClass.Response import Response
 
 
 class Oracle:
-    KNOWLEDGE_BASE = './config/knowledge_base.pl'
-    RULES_CONFIG_FILE = '../config/rules_prototype.json'
+    ORACLE_DIR = './results/'
+    DEFAULT_ORACLE_FILE = 'oracle_results.json'
+    KNOWLEDGE_BASE = './Oracle/config/knowledge_base.pl'
+    RULES_CONFIG_FILE = './Oracle/config/rules_prototype.json'
 
     __fuzz_sessions = list
     __prolog = Prolog
@@ -42,6 +44,7 @@ class Oracle:
         for oracle_session in self.__oracle_sessions:
             oracle_session.execute()
         self.print_output()
+        self.build_output_json()
 
     def print_output(self):
         print("### ORACLE RESULTS ###")
@@ -54,6 +57,45 @@ class Oracle:
             print("Number of query on session %s" % query_on_session_count)
             print("Number of query success on session: %s" % query_on_session_success)
             print("Number of query failed on session: %s" % query_on_session_failed)
+
+    def build_output_json(self):
+        print("### BUILD JSON FILE ###")
+        oracle_session_json = dict()
+        oracle_element_json = list()
+        for oracle_session in self.__oracle_sessions:
+            oracle_elements = oracle_session.get_oracle_element()
+            for oracle_element in oracle_elements:
+                query_list = oracle_element.get_query_list()
+                query_list_json = list()
+                # BUILD DICT OF QUERY
+                for query in query_list:
+                    query_list_json.append({
+                        "rule": query.get_rules(),
+                        "value": query.get_value(),
+                        "result": query.get_result()
+                    })
+                fuzz_element = oracle_element.get_fuzz_element()
+                request = fuzz_element.get_request()
+                response = fuzz_element.get_response()
+                observation = fuzz_element.get_observation()
+                # BUILD DICT OF ORACLE ELEMENT
+                oracle_element_json.append({
+                    "Request": request.build_dict(),
+                    "Response": response.build_dict(),
+                    "Observation": observation.get_observation(),
+                    "Oracle": query_list_json
+                })
+            fuzz_session = oracle_session.get_fuzz_session()
+            id_fuzz = fuzz_session.get_id_fuzz()
+            # BUILD DICT OF ORACLE SESSION
+            oracle_session_json.update({
+                id_fuzz: {
+                    "Results": oracle_element_json
+                }
+            })
+        with open(self.ORACLE_DIR+self.DEFAULT_ORACLE_FILE, 'w', encoding="utf-8") as f:
+            json.dump(oracle_session_json, f, indent=4, ensure_ascii=False)
+            print("### LOG JSON EXPORTED ###")
 
     def build_oracle_sessions(self):
         for fuzz_session in self.__fuzz_sessions:
@@ -115,8 +157,8 @@ class Oracle:
             current_fuzz = FuzzSession(id_fuzz)
             for session_request in self.observer_json[id_fuzz]['Results']:
                 current_request = Request(session_request['Request']['method'], session_request['Request']['url'],
-                                          session_request['Request']['headers'],
-                                          session_request['Request']['payload request'])
+                                          session_request['Request']['header'],
+                                          session_request['Request']['payload'])
                 current_response = Response(session_request['Response']['url'],
                                             session_request['Response']['status_code'],
                                             session_request['Response']['header'],

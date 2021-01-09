@@ -36,7 +36,4 @@ class Query:
         return self.__result
 
     def execute(self):
-        # TODO: DA ELIMINARE, BISOGNA CAMBIARE LA MODALITà DI RAPPRESENTAZIONE DELLE OSSERVAZIONI
-        self.__value[2] = 0
-        self.__value[3] = 0
         self.__result = bool(list(self.__prolog.query(self.__rules % tuple(self.__value))))

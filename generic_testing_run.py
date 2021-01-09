@@ -1,10 +1,11 @@
 import fire
 import Utils as u
-from Intruder import Intruder
-from ManagerObs import ManagerObs
-from Mitmproxy import *
+from Intruder.Intruder import Intruder
+from Analyzer.Analyzer import Analyzer
+from Oracle.Oracle import Oracle
+from Repeater.Mitmproxy import *
 
-
+# generic_testing_run.py http://testphp.vulnweb.com/ results/repeater.json results/intruder.json results/observer.csv results/observer.json
 def run(url_intercept, out_repeater_file, out_intruder_file, out_obs_file_csv, out_obs_file_json):
     """
     :param url_intercept: url to intercept ( i.e.: http://testphp.vulnweb.com/)
@@ -16,11 +17,13 @@ def run(url_intercept, out_repeater_file, out_intruder_file, out_obs_file_csv, o
     if u.Utils.url_validation(url_intercept):
         Mitmproxy(url_intercept, out_repeater_file)
 
-        i = Intruder(out_repeater_file, out_intruder_file)
-        i.run_intruder()
+        intruder = Intruder(out_repeater_file, out_intruder_file)
+        intruder.execute()
 
-        m = ManagerObs(out_intruder_file)
-        m.evaluation(out_obs_file_csv, out_obs_file_json)
+        analyzer = Analyzer(out_intruder_file)
+        analyzer.evaluation(out_obs_file_csv, out_obs_file_json)
+        oracle = Oracle(out_obs_file_json)
+        oracle.execute()
     else:
         print("URL Malformed")
 

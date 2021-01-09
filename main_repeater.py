@@ -1,6 +1,6 @@
 import fire
 import Utils as u
-from Mitmproxy import Mitmproxy
+from Repeater.Mitmproxy import Mitmproxy
 
 """
 TODO: MODALITA' INTERATTIVA -i O BRUTE FORCE -b 
@@ -21,4 +21,7 @@ def run(url, out):
 
 # RUN MITMPROXY WITH FIRE LIBRARY
 if __name__ == '__main__':
-    fire.Fire(run)
+    # fire.Fire(run)
+    url = 'http://testphp.vulnweb.com'
+    out = 'results/repeater.json'
+    Mitmproxy(url, out)

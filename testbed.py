@@ -1,7 +1,7 @@
 import os
-from Intruder import Intruder
-from ManagerObs import ManagerObs
-from Repeater import *
+from Intruder.Intruder import Intruder
+from Analyzer.Analyzer import Analyzer
+from Repeater.Repeater import *
 import csv
 from datetime import datetime
 from bs4 import BeautifulSoup
@@ -137,7 +137,7 @@ def wavsep_testbed_run():
         today = today.strftime("%Y-%m-%d-%H-%M-%S")
 
         # RUN OBSERVATION MANAGER
-        m = ManagerObs(INTRUDER_PATH_FILE)
+        m = Analyzer(INTRUDER_PATH_FILE)
         OBS_PATH_FILE_CSV = OBS_PATH_DIR + PREFIX_TESTBED + str(today) + ".CSV"
         OBS_PATH_FILE_JSON = OBS_PATH_DIR + PREFIX_TESTBED + str(today) + ".json"
         m.evaluation(OBS_PATH_FILE_CSV, OBS_PATH_FILE_JSON)
