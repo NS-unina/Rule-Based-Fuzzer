@@ -1,40 +1,192 @@
 {
-   "prototype": [
-     {
-       "name": "ruleSQLI1",
-       "parameter": ["StatusCode","SearchKeyword","TimeDelay","ContentLength"]
-     },
-     {
-       "name": "ruleSQLI2",
-       "parameter": ["StatusCode","SearchKeyword","TimeDelay","ContentLength"]
-     },
-     {
-       "name": "ruleSQLI3",
-       "parameter": ["StatusCode","SearchKeyword","TimeDelay","ContentLength"]
-     },
-     {
-       "name": "ruleSQLI4",
-       "parameter": ["StatusCode","SearchKeyword","TimeDelay","ContentLength"]
-     },
-     {
-       "name": "ruleCI1",
-       "parameter": ["StatusCode","SearchKeyword","TimeDelay","ContentLength"]
-     },
-     {
-       "name": "ruleCI2",
-       "parameter": ["StatusCode","SearchKeyword","TimeDelay","ContentLength"]
-     },
-     {
-       "name": "rulePT1",
-       "parameter": ["StatusCode","SearchKeyword","TimeDelay","ContentLength"]
-     },
-     {
-       "name": "rulePT2",
-       "parameter": ["StatusCode","SearchKeyword","TimeDelay","ContentLength"]
-     },
-     {
-       "name": "ruleXSSR1",
-       "parameter": ["StatusCode","SearchKeyword","TimeDelay","ContentLength"]
-     }
-   ]
+  "mapping_vulnerability": {
+    "SQLi": {
+      "name": "sqlInjection",
+      "parameter": 1
+    },
+    "CI": {
+      "name": "ciInjection",
+      "parameter": 1
+    },
+    "PT/LFI": {
+      "name": "ptInjection",
+      "parameter": 1
+    },
+    "XSSR": {
+      "name": "xssInjection",
+      "parameter": 1
+    }
+  },
+  "prototype": [
+    {
+      "name": "ruleSQLI1",
+      "parameter": [
+        "StatusCode",
+        "SearchKeyword",
+        "ContentLength",
+        "TimeDelay"
+      ],
+      "type": "SQLi"
+    },
+    {
+      "name": "ruleSQLI2",
+      "parameter": [
+        "StatusCode",
+        "SearchKeyword",
+        "ContentLength",
+        "TimeDelay"
+      ],
+      "type": "SQLi"
+    },
+    {
+      "name": "ruleSQLI3",
+      "parameter": [
+        "StatusCode",
+        "SearchKeyword",
+        "ContentLength",
+        "TimeDelay"
+      ],
+      "type": "SQLi"
+    },
+    {
+      "name": "ruleSQLI4",
+      "parameter": [
+        "StatusCode",
+        "SearchKeyword",
+        "ContentLength",
+        "TimeDelay"
+      ],
+      "type": "SQLi"
+    },
+    {
+      "name": "ruleSQLI5",
+      "parameter": [
+        "StatusCode",
+        "SearchKeyword",
+        "ContentLength",
+        "TimeDelay"
+      ],
+      "type": "SQLi"
+    },
+    {
+      "name": "ruleSQLI6",
+      "parameter": [
+        "StatusCode",
+        "SearchKeyword",
+        "ContentLength",
+        "TimeDelay"
+      ],
+      "type": "SQLi"
+    },
+    {
+      "name": "ruleSQLI7",
+      "parameter": [
+        "StatusCode",
+        "SearchKeyword",
+        "ContentLength",
+        "TimeDelay"
+      ],
+      "type": "SQLi"
+    },
+    {
+      "name": "ruleCI1",
+      "parameter": [
+        "StatusCode",
+        "SearchKeyword",
+        "ContentLength",
+        "TimeDelay"
+      ],
+      "type": "CI"
+    },
+    {
+      "name": "ruleCI2",
+      "parameter": [
+        "StatusCode",
+        "SearchKeyword",
+        "ContentLength",
+        "TimeDelay"
+      ],
+      "type": "CI"
+    },
+    {
+      "name": "rulePT1",
+      "parameter": [
+        "StatusCode",
+        "SearchKeyword",
+        "ContentLength",
+        "TimeDelay"
+      ],
+      "type": "PT/LFI"
+    },
+    {
+      "name": "rulePT2",
+      "parameter": [
+        "StatusCode",
+        "SearchKeyword",
+        "ContentLength",
+        "TimeDelay"
+      ],
+      "type": "PT/LFI"
+    },
+    {
+      "name": "rulePT3",
+      "parameter": [
+        "StatusCode",
+        "SearchKeyword",
+        "ContentLength",
+        "TimeDelay"
+      ],
+      "type": "PT/LFI"
+    },
+    {
+      "name": "rulePT4",
+      "parameter": [
+        "StatusCode",
+        "SearchKeyword",
+        "ContentLength",
+        "TimeDelay"
+      ],
+      "type": "PT/LFI"
+    },
+    {
+      "name": "rulePT5",
+      "parameter": [
+        "StatusCode",
+        "SearchKeyword",
+        "ContentLength",
+        "TimeDelay"
+      ],
+      "type": "PT/LFI"
+    },
+    {
+      "name": "rulePT6",
+      "parameter": [
+        "StatusCode",
+        "SearchKeyword",
+        "ContentLength",
+        "TimeDelay"
+      ],
+      "type": "PT/LFI"
+    },
+    {
+      "name": "rulePT7",
+      "parameter": [
+        "StatusCode",
+        "SearchKeyword",
+        "ContentLength",
+        "TimeDelay"
+      ],
+      "type": "PT/LFI"
+    },
+    {
+      "name": "ruleXSSR1",
+      "parameter": [
+        "StatusCode",
+        "SearchKeyword",
+        "ContentLength",
+        "TimeDelay"
+      ],
+      "type": "XSSR"
+    }
+  ]
 }

@@ -38,7 +38,7 @@ class Interceptor:
                 """self.repeater.setting_request(flow.request.method, flow.request.url, flow.request.headers,
                                               flow.request.urlencoded_form)"""
                 self.repeater.setting_request(flow.request.method, flow.request.url, dict_header,
-                                                              dict_form)
+                                              dict_form, '')
                 break
             if choice.lower() == "n":
                 break
@@ -55,18 +55,17 @@ class Interceptor:
 
     @staticmethod
     def print_request(flow):
-        print(Bcolors.WARNING+"=" * 50+Bcolors.ENDC)
+        print(Bcolors.WARNING + "=" * 50 + Bcolors.ENDC)
         print(Bcolors.WARNING + flow.request.method + " " + flow.request.path + " " + flow.request.http_version
               + Bcolors.ENDC)
         print(Bcolors.WARNING + "-" * 50 + "request headers:" + Bcolors.ENDC)
         for k, v in flow.request.headers.items():
-            print(Bcolors.WARNING+"%-20s: %s" % (k.upper(), v) + Bcolors.ENDC)
+            print(Bcolors.WARNING + "%-20s: %s" % (k.upper(), v) + Bcolors.ENDC)
         param_post = ""
         for k in flow.request.urlencoded_form:
-            param_post = param_post + k + "=" + flow.request.urlencoded_form[k]+ " "
+            param_post = param_post + k + "=" + flow.request.urlencoded_form[k] + " "
         if param_post != "":
             print(Bcolors.WARNING + param_post + Bcolors.ENDC)
-
 
     @staticmethod
     def print_response(flow):

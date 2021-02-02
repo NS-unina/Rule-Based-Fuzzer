@@ -11,6 +11,9 @@ class OracleSession:
     __number_of_query_success_on_session: int
     __number_of_query_failed_on_session: int
 
+    __number_of_anomaly_found: int
+    __number_of_fuzz_string: int
+
     def __init__(self, fuzz_session: FuzzSession):
         self.__fuzz_session = fuzz_session
         self.__oracle_elements = list()

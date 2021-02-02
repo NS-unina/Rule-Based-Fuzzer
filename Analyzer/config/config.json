@@ -1,0 +1,4 @@
+{
+    "observation_config": "./config/observation.json",
+    "fuzz_list_config": "./config/fuzz_list_all.json"
+}

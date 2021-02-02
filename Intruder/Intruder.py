@@ -14,10 +14,10 @@ from Utils import Utils
 
 
 class Intruder:
-    FUZZ_LIST_CONFIG = 'config/PAYLOAD-PT.json'
+    CONFIG_FILE_PATH = './Intruder/config/config.json'
     TIMEOUT_VALUE = 30  # SECOND
-    PLACEHOLDER_CHARACTER = '§'
 
+    __config_json: dict
     __repeater_json: dict
     __fuzz_list: dict
     __repeater_sessions: List[RepeaterSession]
@@ -26,8 +26,13 @@ class Intruder:
         try:
             with open(repeater_file_path, encoding='utf-8') as json_request:
                 self.__repeater_json = json.load(json_request, encoding="utf-8")
-            with open(self.FUZZ_LIST_CONFIG, encoding='utf-8') as json_fuzz:
+
+            with open(self.CONFIG_FILE_PATH, encoding='utf-8') as json_config:
+                self.__config_json = json.load(json_config, encoding="utf-8")
+
+            with open(self.__config_json['fuzz_list_config'], encoding='utf-8') as json_fuzz:
                 self.__fuzz_list = json.load(json_fuzz, encoding="utf-8")
+
         except FileNotFoundError as e:
             exit(e)
         self.out_file_path = out_file_path
@@ -40,6 +45,7 @@ class Intruder:
             request_json = self.__repeater_json[id_fuzz]['Request']
             response_json = self.__repeater_json[id_fuzz]['Response']
             placeholder_request_json = self.__repeater_json[id_fuzz]['PlaceholderRequest']
+            type_vulnerability = self.__repeater_json[id_fuzz]['TypeVulnerability']
             request = GenericRequest(request_json['method'], request_json['url'], request_json['header'],
                                      request_json['payload'])
             response = GenericResponse(response_json['url'], response_json['status_code'], response_json['header'],
@@ -48,7 +54,7 @@ class Intruder:
             placeholder_request = GenericRequest(placeholder_request_json['method'], placeholder_request_json['url'],
                                                  placeholder_request_json['header'],
                                                  placeholder_request_json['payload'])
-            repeater_element = RepeaterElement(request, response, placeholder_request)
+            repeater_element = RepeaterElement(request, response, placeholder_request, type_vulnerability)
             repeater_session = RepeaterSession(repeater_element, id_fuzz)
             self.__repeater_sessions.append(repeater_session)
 
@@ -142,7 +148,8 @@ class Intruder:
                 clear_payload_req = self.clear_param(tmp_payload_req, '$', '')
                 # COSTRUISCO I DICT DI RICHIESTA E RISPOSTA
                 tmp_dict = self.build_output_file(request, clear_url, clear_cookie, clear_payload_req)
-                results.append({"Request": tmp_dict[0], "Response": tmp_dict[1], "Payload": fuzz_string})
+                results.append({"Request": tmp_dict[0], "Response": tmp_dict[1],
+                                "TypeVulnerability": request.get_type_vulnerability(), "Payload": fuzz_string})
                 Utils.print_progress_bar(number, total_len, prefix='Progress:', suffix='Complete', length=50)
 
     def build_output_file(self, request: RepeaterElement, url: str, cookie: str, payload_req: str):
@@ -169,7 +176,7 @@ class Intruder:
         except requests.exceptions.RequestException as e:
             response_dict = {"ERROR": str(e)}
 
-        return [placeholder_request_copy.build_dict(), response_dict]
+        return [placeholder_request_copy.build_dict(1), response_dict]
 
     @staticmethod
     def clear_param(param: str, placeholder_separator: str, replace_string: str) -> str:
@@ -189,6 +196,7 @@ class Intruder:
         return response
 
     def finalize_out(self, json_dict: dict):
+        print("### (INTRUDER) WAITING FOR... ###")
         with open(self.out_file_path, 'w', encoding="utf-8") as f:
             json.dump(json_dict, f, indent=4)
-            print("### LOG JSON INTRUDER EXPORTED ###")
+            print("### LOG INTRUDER CREATED ###\n")

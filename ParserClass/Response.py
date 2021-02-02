@@ -50,12 +50,20 @@ class Response:
     def set_html(self, html: str):
         self.__html = html
 
-    def build_dict(self):
-        return {
-            "url": self.__url,
-            "status_code": self.__status_code,
-            "header": self.__header,
-            "time_elapsed": self.__time_elapsed,
-            "content_length": self.__content_length,
-            "html": self.__html
-        }
+    def build_dict(self, verbose:int):
+        if verbose == 1:
+            return {
+                "url": self.__url,
+                "status_code": self.__status_code,
+                "header": self.__header,
+                "time_elapsed": self.__time_elapsed,
+                "content_length": self.__content_length,
+                "html": self.__html
+            }
+        else:
+            return {
+                "url": self.__url,
+                "status_code": self.__status_code,
+                "time_elapsed": self.__time_elapsed,
+                "content_length": self.__content_length,
+            }

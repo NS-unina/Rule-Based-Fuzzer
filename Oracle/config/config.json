@@ -1,0 +1,5 @@
+{
+    "knowledge_base_path": "./Oracle/config/knowledge_base.pl",
+    "rules_config_path": "./Oracle/config/rules_prototype.json",
+    "fuzz_list_config": "./config/fuzz_list_all.json"
+}

@@ -13,7 +13,7 @@ class Repeater:
         self.num = 1
         self.INTERACTIVE = interactive
 
-    def setting_request(self, method: str, url: str, headers: dict, urlencoded_form: dict):
+    def setting_request(self, method: str, url: str, headers: dict, urlencoded_form: dict, type_vulnerability: str):
 
         url_split_array = url.split("?")
         base_url = url_split_array[0]
@@ -68,10 +68,10 @@ class Repeater:
         }
 
         # CREATE JSON OUTPUT
-        self.__build_output(response, placeholder_string_dict, param_post_string, self.num)
+        self.__build_output(response, placeholder_string_dict, param_post_string, self.num, type_vulnerability)
         self.num += 1
 
-    def __build_output(self, response, placeholder_string_dict, param_post_string, num):
+    def __build_output(self, response, placeholder_string_dict, param_post_string, num, type_vulnerability: str):
 
         tmp = dict(response.request.headers)
         if 'Cookie' in tmp:
@@ -92,6 +92,7 @@ class Repeater:
                     "content_length": len(response.content),
                     "html": response.text
                 },
+                "TypeVulnerability": type_vulnerability,
                 "PlaceholderRequest": {
                     "method": response.request.method,
                     "url": placeholder_string_dict["URL"],
@@ -104,8 +105,10 @@ class Repeater:
 
     def finalizing_out(self):
         try:
+            print("### (REPEATER) WAITING FOR... ###")
             with open(self.output_name, 'w', encoding="utf-8") as f:
                 json.dump(self.json_out, f, indent=4, ensure_ascii=False)
+                print("### LOG REPEATER CREATED ###\n")
         except FileNotFoundError as e:
             exit(e)
 

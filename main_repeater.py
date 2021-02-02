@@ -2,26 +2,14 @@ import fire
 import Utils as u
 from Repeater.Mitmproxy import Mitmproxy
 
-"""
-TODO: MODALITA' INTERATTIVA -i O BRUTE FORCE -b 
-"""
 
-
-# ENTRY POINT MITMPROXY
-def run(url, out):
-    """
-    :param url: url to intercept
-    :param out: name of the output file
-    """
+def run(url, output_file_path):
     if u.Utils.url_validation(url):
-        Mitmproxy(url, out)
+        Mitmproxy(url, output_file_path)
     else:
         print("URL Malformed")
 
 
 # RUN MITMPROXY WITH FIRE LIBRARY
 if __name__ == '__main__':
-    # fire.Fire(run)
-    url = 'http://testphp.vulnweb.com'
-    out = 'results/repeater.json'
-    Mitmproxy(url, out)
+    fire.Fire(run)

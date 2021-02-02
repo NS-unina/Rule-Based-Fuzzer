@@ -2,24 +2,10 @@ import fire
 from Intruder.Intruder import Intruder
 
 
-# ENTRY POINT INTRUDER
-def run(inp, out):
-    """
-    :param out:
-    :param inp: repeater output file
-    """
-    i = Intruder(inp, out)
-    i.run_intruder()
-
-
-# RUN INTRUDER WITH FIRE LIBRARY
-if __name__ == '__main__':
-    #fire.Fire(run)
-    inp = 'results/repeater.json'
-    out = 'results/intruder.json'
-    i = Intruder(inp, out)
+def run(repeater_file_path, out_file_path):
+    i = Intruder(repeater_file_path, out_file_path)
     i.execute()
-    #i.run_intruder()
 
 
-
+if __name__ == '__main__':
+    fire.Fire(run)

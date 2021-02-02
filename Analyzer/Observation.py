@@ -56,6 +56,7 @@ class SearchKeyword(Observation):
         arg[1]: intruder_response
         arg[2]: repeater_request
         arg[3]: repeater_response
+        arg[4]: payload
         """
         response = arg[1]
         intruder_request = arg[0]
@@ -68,8 +69,8 @@ class SearchKeyword(Observation):
         # CONTROLLO SE I PARAMETRI SONO RIFLESSI NELLA RISPOSTA
         results = self.keywords_search(self.params, response, results)
         # CONTROLLO SE IL PAYLOAD E' RIFLESSO NELLA RISPOSTA
-        if attack_payload is not None:
-            results = self.keywords_search(attack_payload, response, results)
+        if arg[4] is not None:
+            results = self.keywords_search([arg[4]], response, results)
         return {'SearchKeyword': results}
 
     def payload_search(self, request: Request):
@@ -95,7 +96,7 @@ class SearchKeyword(Observation):
         :return:
         """
         for k in keyword_list:
-            match = re.search(re.escape(k), response.get_html(), re.IGNORECASE)
+            match = re.search('\\b' + re.escape(k) + '\\b', response.get_html(), re.IGNORECASE)
             if match is not None:
                 results.update({k: 1})
             else:
@@ -105,7 +106,7 @@ class SearchKeyword(Observation):
 
 
 class TimeDelay(Observation):
-    PERCENTAGE_TIME = 30
+    PERCENTAGE_TIME = 200
 
     def __init__(self, params):
         self.params = params
@@ -120,13 +121,14 @@ class TimeDelay(Observation):
         intruder_response = arg[1]
         repeater_response = arg[3]
         repeater_response.get_time_elapsed()
-        response_time = datetime.strptime(repeater_response.get_time_elapsed(), "%H:%M:%S.%f").time()
-        response_time_int = int(response_time.strftime("%H%M%S%f"))
+        repeater_response_time = datetime.strptime(repeater_response.get_time_elapsed(), "%H:%M:%S.%f").time()
+        repeater_response_time_int = int(repeater_response_time.strftime("%H%M%S%f"))
 
-        valid_time = datetime.strptime(intruder_response.get_time_elapsed(), "%H:%M:%S.%f").time()
-        valid_time_int = int(valid_time.strftime("%H%M%S%f"))
+        intruder_response_time = datetime.strptime(intruder_response.get_time_elapsed(), "%H:%M:%S.%f").time()
+        intruder_response_time_int = int(intruder_response_time.strftime("%H%M%S%f"))
 
-        if response_time_int > valid_time_int + ((valid_time_int * self.PERCENTAGE_TIME) / 100):
+        if intruder_response_time_int > repeater_response_time_int + (
+                (repeater_response_time_int * self.PERCENTAGE_TIME) / 100):
             # Revealed
             results = 1
         else:
@@ -138,7 +140,7 @@ class TimeDelay(Observation):
 
 
 class ContentLength(Observation):
-    PERCENTAGE_LENGTH = 30
+    PERCENTAGE_LENGTH = 500
 
     def __init__(self, params):
         self.params = params
@@ -155,7 +157,7 @@ class ContentLength(Observation):
 
         valid_cl = repeater_response.get_content_length()
         fuzz_cl = intruder_response.get_content_length()
-        if fuzz_cl > valid_cl * ((valid_cl * self.PERCENTAGE_LENGTH) / 100):
+        if fuzz_cl > valid_cl + ((valid_cl * self.PERCENTAGE_LENGTH) / 100):
             # Revealed
             results = 1
         else:

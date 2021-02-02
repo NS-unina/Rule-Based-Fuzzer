@@ -34,10 +34,17 @@ class Request:
     def set_payload(self, payload: str):
         self.__payload = payload
 
-    def build_dict(self):
-        return {
-            "method": self.__method,
-            "url": self.__url,
-            "header": self.__headers,
-            "payload": self.__payload
-        }
+    def build_dict(self, verbose: int):
+        if verbose == 1:
+            return {
+                "method": self.__method,
+                "url": self.__url,
+                "header": self.__headers,
+                "payload": self.__payload
+            }
+        else:
+            return {
+                "method": self.__method,
+                "url": self.__url,
+                "payload": self.__payload
+            }
