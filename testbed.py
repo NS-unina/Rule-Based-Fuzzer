@@ -24,7 +24,7 @@ def extract_form_fields(soup):
             continue
 
         # single element nome/value fields
-        if input['type'] in ('text', 'hidden', 'password', 'submit', 'image','search','email','url'):
+        if input['type'] in ('text', 'hidden', 'password', 'submit', 'image', 'search', 'email', 'url'):
             value = ''
             if 'value' in input:
                 value = input['value']
@@ -68,7 +68,7 @@ def extract_form_fields(soup):
             selected_options = [options[0]]
 
         if not is_multiple:
-            assert(len(selected_options) < 2)
+            assert (len(selected_options) < 2)
             if len(selected_options) == 1:
                 value = selected_options[0]['value']
         else:
@@ -90,49 +90,78 @@ def init_session(session, url):
 
 
 def build_testbed_results(oracle_json_file: str, testbed_csv: str):
+    true_positive = 0
+    true_negative = 0
+    false_positive = 0
+    false_negative = 0
+
     csv_out_path = 'testbed/results/testbed.csv'
-    # OPEN ORACLE JSON
-    with open(oracle_json_file, encoding='utf-8') as json_oracle_input:
-        oracle_json_results = json.load(json_oracle_input)
+    # OPEN ORACLE CSV
+    oracle_csv_results = csv.reader(open(oracle_json_file), delimiter=';', quotechar='|')
+    # SKIP HEADER ROW
+    next(oracle_csv_results)
     # OPEN TESTBED CSV
     csv_reader = csv.reader(open(testbed_csv), delimiter=';', quotechar='|')
     # SKIP HEADER ROW
     next(csv_reader)
+
     f = csv.writer(open(csv_out_path, "w", newline="", encoding='utf8'))
-    row_header = ["ID_REQ_TESTBED", "ID_FUZZ", 'URL', "METHOD", "INJECTION_TYPE", "CONTEXT", "INJECTION POSITION",
-                  "RESULTS TESTBED", "RESULTS GENERIC TESTING", "RESULTS"]
+    row_header = ["ID_REQ_TESTBED", "ID_FUZZ", 'URL', "METHOD", "VULNERABILITY", "CONTEXT", "INJECTION POSITION",
+                  "RESULTS TESTBED", "RULE ACTIVATED", "RESULTS ORACLE","RESULTS", "SPECIFICITY"]
     f.writerow(row_header)
+
     row_matrix = []
-    for id_fuzz in oracle_json_results:
+    for oracle_csv_row in oracle_csv_results:
         csv_row = next(csv_reader)
-        results_generic_testing = list()
-        for r in oracle_json_results[id_fuzz]["Results"]:
-            for rule in r['Oracle']:
-                rule_name = rule['rule']
-                rule_name = rule_name.replace("%s", "")
-                rule_name = rule_name.replace(",", "")
-                rule_name = rule_name.replace("()", "")
-                if rule_name not in results_generic_testing:
-                    results_generic_testing.append(rule_name)
+        rule_activated = oracle_csv_row[1]
+        oracle_results = oracle_csv_row[2]
+        id_fuzz = oracle_csv_row[0]
         id_req_testbed = csv_row[0]
         url = csv_row[4]
         method = csv_row[2]
-        injection_type = csv_row[5]
+        vulnerability = csv_row[5]
         context = csv_row[6]
         injection_position = csv_row[7]
         results_testbed = csv_row[8]
-        if len(results_generic_testing) == 0:
-            testbed_flag = 'FAILED'
-        else:
-            testbed_flag = 'SUCCESS'
+        testbed_flag = 'FAILED'
+        specificity = 0
+        for oracle_result in oracle_results.split(","):
+            if vulnerability.lower() in oracle_result:
+                testbed_flag = 'SUCCESS'
+                specificity = specificity + 1
+            else:
+                specificity = specificity - 0.1
 
         row_matrix.append(
-            [id_req_testbed, id_fuzz, url, method, injection_type, context, injection_position, results_testbed,
-             ','.join(results_generic_testing), testbed_flag])
+            [id_req_testbed, id_fuzz, url, method, vulnerability, context, injection_position, results_testbed,
+             rule_activated, oracle_results, testbed_flag, specificity])
+
+        if vulnerability != 'N/A':
+            if testbed_flag == 'SUCCESS':
+                true_positive = true_positive + 1
+            else:
+                false_negative = false_negative + 1
+        else:
+            if len(oracle_results) == 0:
+                true_negative = true_negative + 1
+            else:
+                if len(oracle_results) != 0:
+                    false_positive = false_positive + 1
 
     # WRITE ON FILE
     for r in row_matrix:
         f.writerow(r)
+
+    print("#### STATISTICS ####")
+    print("TP: %s" % true_positive)
+    print("TN: %s" % true_negative)
+    print("FP: %s" % false_positive)
+    print("FN: %s" % false_negative)
+    print("Precision: %s" % (true_positive / (true_positive + false_positive)))
+    print("Accuracy: %s" % (
+            (true_positive + true_negative) / (true_positive + true_negative + false_positive + false_negative)))
+    print("Recall: %s" % (
+            true_positive / (true_positive + false_negative)))
 
 
 def wavsep_testbed_run():
@@ -164,7 +193,7 @@ def wavsep_testbed_run():
                 response = s.send(prepped)
 
                 if method == "GET":
-                    rep.setting_request(method, r.url, dict(response.request.headers), dict(), injection_type)
+                    rep.setting_request(method, r.url, dict(response.request.headers), dict())
                     rep.finalizing_out()
                 else:
                     dir_name = os.path.dirname(full_url)
@@ -173,15 +202,13 @@ def wavsep_testbed_run():
                     for f in forms:
                         results = extract_form_fields(f)
                         if injection_type == 'PT/LFI':
-                            rep.setting_request(method, full_url, dict(response.request.headers), dict(results),
-                                                injection_type)
+                            rep.setting_request(method, full_url, dict(response.request.headers), dict(results))
                         else:
                             if 'http://' not in f['action']:
                                 url_post = dir_name + '/' + f['action']
                             else:
                                 url_post = f['action']
-                            rep.setting_request(method, url_post, dict(response.request.headers), dict(results),
-                                                injection_type)
+                            rep.setting_request(method, url_post, dict(response.request.headers), dict(results))
                         rep.finalizing_out()
                         break
             header_row = True
@@ -196,11 +223,12 @@ def wavsep_testbed_run():
         analyzer_path_file_json = OBS_PATH_DIR + PREFIX_TESTBED + str(today) + ".json"
         m.evaluation(analyzer_path_file_csv, analyzer_path_file_json)
 
-        oracle_path_file = 'testbed/results/oracle_' + str(today) + ".json"
+        oracle_path_file_json = 'testbed/results/oracle_' + str(today) + ".json"
+        oracle_path_file_csv = 'testbed/results/oracle_' + str(today) + ".csv"
         # RUN ORACLE
-        o = Oracle(analyzer_path_file_json, oracle_path_file)
+        o = Oracle(analyzer_path_file_json, oracle_path_file_json, oracle_path_file_csv)
         o.execute()
-        build_testbed_results(oracle_path_file, PATH_TESTBED + FILE_NAME_TESTBED)
+        build_testbed_results(oracle_path_file_csv, PATH_TESTBED + FILE_NAME_TESTBED)
 
 
 wavsep_testbed_run()

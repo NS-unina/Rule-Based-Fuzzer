@@ -1,18 +1,18 @@
 {
   "mapping_vulnerability": {
-    "SQLi": {
+    "sqli": {
       "name": "sqlInjection",
       "parameter": 1
     },
-    "CI": {
+    "ci": {
       "name": "ciInjection",
       "parameter": 1
     },
-    "PT/LFI": {
+    "pt/lfi": {
       "name": "ptInjection",
       "parameter": 1
     },
-    "XSSR": {
+    "xss": {
       "name": "xssInjection",
       "parameter": 1
     }

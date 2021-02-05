@@ -1,3 +1,16 @@
 {
-    "fuzz_list_config": "./config/fuzz_list_all.json"
+    "payload_mapping": [
+      {
+        "file_name": "./config/sqli_payload.json",
+        "type": "sqli"
+      },
+      {
+        "file_name": "./config/xss_payload.json",
+        "type": "xss"
+      },
+      {
+        "file_name": "./config/pt_lfi_payload.json",
+        "type": "pt/lfi"
+      }
+    ]
 }

@@ -1,5 +1,18 @@
 {
     "knowledge_base_path": "./Oracle/config/knowledge_base.pl",
     "rules_config_path": "./Oracle/config/rules_prototype.json",
-    "fuzz_list_config": "./config/fuzz_list_all.json"
+    "payload_mapping": [
+      {
+        "file_name": "./config/sqli_payload.json",
+        "type": "sqli"
+      },
+      {
+        "file_name": "./config/xss_payload.json",
+        "type": "xss"
+      },
+      {
+        "file_name": "./config/pt_lfi_payload.json",
+        "type": "pt/lfi"
+      }
+    ]
 }

@@ -35,10 +35,8 @@ class Interceptor:
                 for u in flow.request.urlencoded_form:
                     dict_form.update({u: flow.request.urlencoded_form[u]})
 
-                """self.repeater.setting_request(flow.request.method, flow.request.url, flow.request.headers,
-                                              flow.request.urlencoded_form)"""
                 self.repeater.setting_request(flow.request.method, flow.request.url, dict_header,
-                                              dict_form, '')
+                                              dict_form)
                 break
             if choice.lower() == "n":
                 break

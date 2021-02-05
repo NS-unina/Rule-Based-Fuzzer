@@ -21,7 +21,6 @@ class Analyzer:
     __intruder_json: list
     __repeater_json: list
     __analyzer_session: list
-    __fuzz_list: list
 
     def __init__(self, intruder_file_path: str, repeater_file_path: str):
         """
@@ -35,8 +34,6 @@ class Analyzer:
                 self.obs_json = json.load(json_observation)
             with open(intruder_file_path, encoding='utf-8') as json_config_input:
                 self.__intruder_json = json.load(json_config_input)
-            with open(self.__analyzer_config['fuzz_list_config'], encoding='utf-8') as json_fuzz:
-                self.__fuzz_list = json.load(json_fuzz)
             with open(repeater_file_path, encoding='utf-8') as json_repeater:
                 self.__repeater_json = json.load(json_repeater)
         except FileNotFoundError as e:
@@ -77,7 +74,7 @@ class Analyzer:
                                      intruder_request_json['Response']['content_length'],
                                      intruder_request_json['Response']['html'])
         payload = intruder_request_json['Payload']
-        return IntruderElement(intruder_request, intruder_response, payload, intruder_request_json['TypeVulnerability'])
+        return IntruderElement(intruder_request, intruder_response, payload, intruder_request_json['TypePayload'])
 
     def __build_repeater_element(self, repeater_json: dict):
         repeater_request = Request(repeater_json["Request"]['method'],
@@ -90,7 +87,7 @@ class Analyzer:
                                      repeater_json["Response"]['time_elapsed'],
                                      repeater_json["Response"]['content_length'],
                                      repeater_json["Response"]['html'])
-        return RepeaterElement(repeater_request, repeater_response, None, repeater_json['TypeVulnerability'])
+        return RepeaterElement(repeater_request, repeater_response, None)
 
     def __instantiate_adapters(self):
         """
@@ -109,9 +106,8 @@ class Analyzer:
             print("ERROR: The \"Observation.json\" configuration file contains an unimplemented class")
             exit()
 
-    def evaluation(self, csv_out_path: str, json_out_path: str):
+    def evaluation(self, json_out_path: str):
         """
-        :param csv_out_path: csv output file path
         :param json_out_path: json output file path
         """
         analyzer_json = {}
@@ -135,7 +131,7 @@ class Analyzer:
                 current_dict = {
                     'Request': intruder_request.build_dict(0),
                     'Response': intruder_response.build_dict(0),
-                    'TypeVulnerability': intruder_element.get_type_vulnerability(),
+                    'TypePayload': intruder_element.get_type_payload(),
                     'Payload': intruder_element.get_payload(),
                     "Observation": results_observation
                 }

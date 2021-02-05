@@ -28,10 +28,10 @@ class OracleSession:
     def set_fuzz_session(self, fuzz_session: FuzzSession):
         self.__fuzz_session = fuzz_session
 
-    def get_oracle_element(self):
+    def get_oracle_elements(self):
         return self.__oracle_elements
 
-    def set_oracle_element(self, oracle_elements: list):
+    def set_oracle_elements(self, oracle_elements: list):
         self.__oracle_elements = oracle_elements
 
     def get_number_of_oracle_element(self):

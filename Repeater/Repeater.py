@@ -13,7 +13,7 @@ class Repeater:
         self.num = 1
         self.INTERACTIVE = interactive
 
-    def setting_request(self, method: str, url: str, headers: dict, urlencoded_form: dict, type_vulnerability: str):
+    def setting_request(self, method: str, url: str, headers: dict, urlencoded_form: dict):
 
         url_split_array = url.split("?")
         base_url = url_split_array[0]
@@ -68,10 +68,10 @@ class Repeater:
         }
 
         # CREATE JSON OUTPUT
-        self.__build_output(response, placeholder_string_dict, param_post_string, self.num, type_vulnerability)
+        self.__build_output(response, placeholder_string_dict, param_post_string, self.num)
         self.num += 1
 
-    def __build_output(self, response, placeholder_string_dict, param_post_string, num, type_vulnerability: str):
+    def __build_output(self, response, placeholder_string_dict, param_post_string, num):
 
         tmp = dict(response.request.headers)
         if 'Cookie' in tmp:
@@ -92,7 +92,6 @@ class Repeater:
                     "content_length": len(response.content),
                     "html": response.text
                 },
-                "TypeVulnerability": type_vulnerability,
                 "PlaceholderRequest": {
                     "method": response.request.method,
                     "url": placeholder_string_dict["URL"],

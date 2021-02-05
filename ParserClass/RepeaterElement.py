@@ -6,13 +6,11 @@ class RepeaterElement:
     __placeholder_request: Request
     __request: Request
     __response: Response
-    __type_vulnerability: str
 
-    def __init__(self, request: Request, response: Response, placeholder_request: Request, type_vulnerability: str):
+    def __init__(self, request: Request, response: Response, placeholder_request: Request):
         self.__request = request
         self.__response = response
         self.__placeholder_request = placeholder_request
-        self.__type_vulnerability = type_vulnerability
 
     def get_request(self):
         return self.__request
@@ -32,8 +30,3 @@ class RepeaterElement:
     def set_placeholder_request(self, placeholder_request: Request):
         self.__placeholder_request = placeholder_request
 
-    def get_type_vulnerability(self):
-        return self.__type_vulnerability;
-
-    def set_type_vulnerability(self, type_vulnerability: str):
-        self.__type_vulnerability = type_vulnerability

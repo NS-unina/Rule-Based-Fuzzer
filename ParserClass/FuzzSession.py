@@ -18,10 +18,10 @@ class FuzzSession:
     def get_id_fuzz(self):
         return self.__id_fuzz
 
-    def get_fuzz_element(self):
+    def get_fuzz_elements(self):
         return self.__fuzz_elements
 
-    def set_fuzz_element(self, fuzz_list: list):
+    def set_fuzz_elements(self, fuzz_list: list):
         self.__fuzz_elements = fuzz_list
 
     def get_number_of_observation(self):

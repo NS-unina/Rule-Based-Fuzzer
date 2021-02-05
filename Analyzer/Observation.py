@@ -39,8 +39,6 @@ class SearchKeyword(Observation):
         self.params = params
         with open(self.KEYWORD_CONFIG, encoding='utf-8') as json_keyword:
             self.keyword_list = json.load(json_keyword)
-        with open(self.FUZZ_LIST_CONFIG, encoding='utf-8') as json_fuzz:
-            self.fuzz_list = json.load(json_fuzz)
 
     def prepare_keywords(self, valid_response):
         new_keyword_list = []
@@ -63,30 +61,12 @@ class SearchKeyword(Observation):
         results = dict()
 
         keyword_list = self.keyword_list["Keyword"]
-        attack_payload = self.payload_search(intruder_request)
         # CONTROLLO SE LE KEYWORD SONO RIFLESSE NELLA RISPOSTA
         results = self.keywords_search(keyword_list, response, results)
-        # CONTROLLO SE I PARAMETRI SONO RIFLESSI NELLA RISPOSTA
-        results = self.keywords_search(self.params, response, results)
         # CONTROLLO SE IL PAYLOAD E' RIFLESSO NELLA RISPOSTA
         if arg[4] is not None:
             results = self.keywords_search([arg[4]], response, results)
         return {'SearchKeyword': results}
-
-    def payload_search(self, request: Request):
-        result = []
-        for f in self.fuzz_list["fuzz_list"]:
-            result_url = re.search(f, request.get_url())
-            request_header = request.get_header()
-            result_cookie = re.search(f, request_header["Cookie"])
-            result_post = re.search(f, request.get_payload())
-            if (result_url is not None) or (result_cookie is not None) or (result_post is not None):
-                result.append(f)
-                break
-        if len(result) == 0:
-            return None
-        else:
-            return result
 
     def keywords_search(self, keyword_list, response: Response, results: dict):
         """
