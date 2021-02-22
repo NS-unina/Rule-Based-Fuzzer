@@ -28,13 +28,13 @@ class Analyzer:
         :param repeater_file_path: file path repeater
         """
         try:
-            with open(self.ANALYZER_CONFIG, encoding='utf-8') as json_config:
+            with open(self.ANALYZER_CONFIG, encoding='utf8') as json_config:
                 self.__analyzer_config = json.load(json_config)
-            with open(self.__analyzer_config['observation_config'], encoding='utf-8') as json_observation:
+            with open(self.__analyzer_config['observation_config'], encoding='utf8') as json_observation:
                 self.obs_json = json.load(json_observation)
-            with open(intruder_file_path, encoding='utf-8') as json_config_input:
+            with open(intruder_file_path, encoding='utf8') as json_config_input:
                 self.__intruder_json = json.load(json_config_input)
-            with open(repeater_file_path, encoding='utf-8') as json_repeater:
+            with open(repeater_file_path, encoding='utf8') as json_repeater:
                 self.__repeater_json = json.load(json_repeater)
         except FileNotFoundError as e:
             exit(e)

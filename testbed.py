@@ -170,7 +170,7 @@ def wavsep_testbed_run():
     flag_init_session = True
     today = datetime.now()
     today = today.strftime("%Y-%m-%d_%H_%M_%S")
-    with open(PATH_TESTBED + FILE_NAME_TESTBED, newline='') as csv_file:
+    """with open(PATH_TESTBED + FILE_NAME_TESTBED, newline='') as csv_file:
         reader = csv.reader(csv_file, delimiter=';', quotechar='|')
         header_row = False
         rep = Repeater(REPEATER_PATH_FILE + str(today) + ".json", False)
@@ -188,47 +188,50 @@ def wavsep_testbed_run():
 
                 ###########################
                 # RUN REPEATER
-                r = Request('GET', url=full_url, headers=dict(), data=dict())
-                prepped = s.prepare_request(r)
-                response = s.send(prepped)
+                try:
+                    r = Request('GET', url=full_url, headers=dict(), data=dict())
+                    prepped = s.prepare_request(r)
+                    response = s.send(prepped)
 
-                if method == "GET":
-                    rep.setting_request(method, r.url, dict(response.request.headers), dict())
-                    rep.finalizing_out()
-                else:
-                    dir_name = os.path.dirname(full_url)
-                    soup = BeautifulSoup(response.text, 'html.parser')
-                    forms = soup.find_all('form')
-                    for f in forms:
-                        results = extract_form_fields(f)
-                        if injection_type == 'PT/LFI':
-                            rep.setting_request(method, full_url, dict(response.request.headers), dict(results))
-                        else:
-                            if 'http://' not in f['action']:
-                                url_post = dir_name + '/' + f['action']
-                            else:
-                                url_post = f['action']
-                            rep.setting_request(method, url_post, dict(response.request.headers), dict(results))
+                    if method == "GET":
+                        rep.setting_request(method, r.url, dict(response.request.headers), dict())
                         rep.finalizing_out()
-                        break
+                    else:
+                        dir_name = os.path.dirname(full_url)
+                        soup = BeautifulSoup(response.text, 'html.parser')
+                        forms = soup.find_all('form')
+                        for f in forms:
+                            results = extract_form_fields(f)
+                            if injection_type == 'PT/LFI':
+                                rep.setting_request(method, full_url, dict(response.request.headers), dict(results))
+                            else:
+                                if f.get('action'):
+                                    if 'http://' not in f['action']:
+                                        url_post = dir_name + '/' + f['action']
+                                    else:
+                                        url_post = f['action']
+                                    rep.setting_request(method, url_post, dict(response.request.headers), dict(results))
+                            rep.finalizing_out()
+                            break
+                except:
+                    print("Error on build request")
             header_row = True
 
         # RUN INTRUDER
         i = Intruder(REPEATER_PATH_FILE + str(today) + ".json", INTRUDER_PATH_FILE + str(today) + ".json")
-        i.execute()
+        i.execute()"""
+    # RUN ANALYZER
+    m = Analyzer("testbed/results/intruder_2021-02-17_08_49_40.json", "testbed/results/repeater_2021-02-17_08_49_40.json")
+    analyzer_path_file_csv = OBS_PATH_DIR + PREFIX_TESTBED + str(today) + ".CSV"
+    analyzer_path_file_json = OBS_PATH_DIR + PREFIX_TESTBED + str(today) + ".json"
+    m.evaluation(analyzer_path_file_json)
 
-        # RUN ANALYZER
-        m = Analyzer(INTRUDER_PATH_FILE + str(today) + ".json", REPEATER_PATH_FILE + str(today) + ".json")
-        analyzer_path_file_csv = OBS_PATH_DIR + PREFIX_TESTBED + str(today) + ".CSV"
-        analyzer_path_file_json = OBS_PATH_DIR + PREFIX_TESTBED + str(today) + ".json"
-        m.evaluation(analyzer_path_file_csv, analyzer_path_file_json)
-
-        oracle_path_file_json = 'testbed/results/oracle_' + str(today) + ".json"
-        oracle_path_file_csv = 'testbed/results/oracle_' + str(today) + ".csv"
-        # RUN ORACLE
-        o = Oracle(analyzer_path_file_json, oracle_path_file_json, oracle_path_file_csv)
-        o.execute()
-        build_testbed_results(oracle_path_file_csv, PATH_TESTBED + FILE_NAME_TESTBED)
+    oracle_path_file_json = 'testbed/results/oracle_' + str(today) + ".json"
+    oracle_path_file_csv = 'testbed/results/oracle_' + str(today) + ".csv"
+    # RUN ORACLE
+    o = Oracle(analyzer_path_file_json, oracle_path_file_json, oracle_path_file_csv)
+    o.execute()
+    build_testbed_results(oracle_path_file_csv, PATH_TESTBED + FILE_NAME_TESTBED)
 
 
 wavsep_testbed_run()

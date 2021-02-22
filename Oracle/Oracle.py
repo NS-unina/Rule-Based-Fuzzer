@@ -26,12 +26,12 @@ class Oracle:
         :param analyzer_file_path: observer output file
         """
         try:
-            with open(self.CONFIG_FILE, encoding='utf-8') as config_file:
-                self.config_file = json.load(config_file, encoding="utf-8")
-            with open(analyzer_file_path, encoding='utf-8') as json_request:
-                self.analyzer_json = json.load(json_request, encoding="utf-8")
-            with open(self.config_file['rules_config_path'], encoding='utf-8') as json_rules_prototype:
-                self.rules_prototype_json = json.load(json_rules_prototype, encoding="utf-8")
+            with open(self.CONFIG_FILE, encoding='utf8') as config_file:
+                self.config_file = json.load(config_file)
+            with open(analyzer_file_path, encoding='utf8') as json_request:
+                self.analyzer_json = json.load(json_request)
+            with open(self.config_file['rules_config_path'], encoding='utf8') as json_rules_prototype:
+                self.rules_prototype_json = json.load(json_rules_prototype)
         except FileNotFoundError as e:
             exit(e)
         self.__oracle_file_path = oracle_file_path
@@ -57,8 +57,8 @@ class Oracle:
 
         number_of_fuzz_string = 0
         for payload in self.config_file['payload_mapping']:
-            with open(payload['file_name'], encoding='utf-8') as payload_file:
-                payload_list = json.load(payload_file, encoding="utf-8")
+            with open(payload['file_name'], encoding='utf8') as payload_file:
+                payload_list = json.load(payload_file)
                 number_of_fuzz_string = number_of_fuzz_string + len(payload_list['fuzz_list'])
 
         for oracle_session in self.__oracle_sessions:

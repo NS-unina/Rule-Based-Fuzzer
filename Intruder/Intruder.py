@@ -24,11 +24,11 @@ class Intruder:
 
     def __init__(self, repeater_file_path: str, out_file_path: str):
         try:
-            with open(repeater_file_path, encoding='utf-8') as json_request:
-                self.__repeater_json = json.load(json_request, encoding="utf-8")
+            with open(repeater_file_path, encoding='utf8') as json_request:
+                self.__repeater_json = json.load(json_request)
 
-            with open(self.CONFIG_FILE_PATH, encoding='utf-8') as json_config:
-                self.__config_json = json.load(json_config, encoding="utf-8")
+            with open(self.CONFIG_FILE_PATH, encoding='utf8') as json_config:
+                self.__config_json = json.load(json_config)
 
 
         except FileNotFoundError as e:
@@ -120,8 +120,8 @@ class Intruder:
                      results: list):
         for payload_mapping in self.__config_json["payload_mapping"]:
             type_payload = payload_mapping['type']
-            with open(payload_mapping['file_name'], encoding='utf-8') as fuzz_file:
-                fuzz_list = json.load(fuzz_file, encoding="utf-8")
+            with open(payload_mapping['file_name'], encoding='utf8') as fuzz_file:
+                fuzz_list = json.load(fuzz_file)
             total_len = len(fuzz_list["fuzz_list"]) * len(params)
             number = 0
             if total_len == 0:
@@ -198,6 +198,6 @@ class Intruder:
 
     def finalize_out(self, json_dict: dict):
         print("### (INTRUDER) WAITING FOR... ###")
-        with open(self.out_file_path, 'w', encoding="utf-8") as f:
+        with open(self.out_file_path, 'w', encoding="utf8") as f:
             json.dump(json_dict, f, indent=4)
             print("### LOG INTRUDER CREATED ###\n")

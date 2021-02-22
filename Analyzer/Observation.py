@@ -76,7 +76,7 @@ class SearchKeyword(Observation):
         :return:
         """
         for k in keyword_list:
-            match = re.search('\\b' + re.escape(k) + '\\b', response.get_html(), re.IGNORECASE)
+            match = re.search(re.escape(k), response.get_html(), re.IGNORECASE)
             if match is not None:
                 results.update({k: 1})
             else:

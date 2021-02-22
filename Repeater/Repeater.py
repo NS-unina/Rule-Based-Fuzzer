@@ -105,7 +105,7 @@ class Repeater:
     def finalizing_out(self):
         try:
             print("### (REPEATER) WAITING FOR... ###")
-            with open(self.output_name, 'w', encoding="utf-8") as f:
+            with open(self.output_name, 'w', encoding="utf8") as f:
                 json.dump(self.json_out, f, indent=4, ensure_ascii=False)
                 print("### LOG REPEATER CREATED ###\n")
         except FileNotFoundError as e:
@@ -134,17 +134,20 @@ class Repeater:
         """
         placeholder_string = ""
         flag_first = True
-        for k in field_array:
-            parameter_parts = k.split("=", 1)
-            if k in choice["parameters"]:
-                tmp_string = parameter_parts[0] + "=" + "$" + parameter_parts[1] + "$"
-            else:
-                tmp_string = parameter_parts[0] + "=" + parameter_parts[1]
-            if flag_first is True:
-                placeholder_string += tmp_string
-                flag_first = False
-            else:
-                placeholder_string += separator + tmp_string
+        try:
+            for k in field_array:
+                parameter_parts = k.split("=", 1)
+                if k in choice["parameters"]:
+                    tmp_string = parameter_parts[0] + "=" + "$" + parameter_parts[1] + "$"
+                else:
+                    tmp_string = parameter_parts[0] + "=" + parameter_parts[1]
+                if flag_first is True:
+                    placeholder_string += tmp_string
+                    flag_first = False
+                else:
+                    placeholder_string += separator + tmp_string
+        except:
+            print("Error on build placeholder param")
         return placeholder_string
 
     @staticmethod
