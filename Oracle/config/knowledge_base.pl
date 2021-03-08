@@ -74,11 +74,11 @@
 
 /* ##### Role XXSR #####*/
     /* rule 1 [RULE 15 EXCEL] */
-    ruleXSSR1(200, 1, 0, 0) :-
+    ruleXSS1(200, 1, 0, 0) :-
                 statusCode200(200),
                 payloadIsReflected(1),
                 validContentLength(0),
                 timeDelayIsNotVerified(0).
 
     xssInjection(X):-
-        X = ruleXSSR1(200, 1, 0, 0).
+        X = ruleXSS1(200, 1, 0, 0).

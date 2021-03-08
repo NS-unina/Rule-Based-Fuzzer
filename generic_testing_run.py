@@ -24,7 +24,7 @@ def run(url_intercept, repeater_file_path, intruder_file_path, analyzer_file_pat
         intruder.execute()
 
         analyzer = Analyzer(intruder_file_path, repeater_file_path)
-        analyzer.evaluation(analyzer_file_path_csv, analyzer_file_path_json)
+        analyzer.evaluation(analyzer_file_path_json)
         oracle = Oracle(analyzer_file_path_json, oracle_file_path, oracle_file_path_csv)
         oracle.execute()
     else:

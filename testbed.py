@@ -107,7 +107,7 @@ def build_testbed_results(oracle_json_file: str, testbed_csv: str):
 
     f = csv.writer(open(csv_out_path, "w", newline="", encoding='utf8'))
     row_header = ["ID_REQ_TESTBED", "ID_FUZZ", 'URL', "METHOD", "VULNERABILITY", "CONTEXT", "INJECTION POSITION",
-                  "RESULTS TESTBED", "RULE ACTIVATED", "RESULTS ORACLE","RESULTS", "SPECIFICITY"]
+                  "RESULTS TESTBED", "RULE ACTIVATED", "RESULTS ORACLE", "RESULTS", "SPECIFICITY"]
     f.writerow(row_header)
 
     row_matrix = []
@@ -125,12 +125,16 @@ def build_testbed_results(oracle_json_file: str, testbed_csv: str):
         results_testbed = csv_row[8]
         testbed_flag = 'FAILED'
         specificity = 0
-        for oracle_result in oracle_results.split(","):
-            if vulnerability.lower() in oracle_result:
-                testbed_flag = 'SUCCESS'
-                specificity = specificity + 1
-            else:
-                specificity = specificity - 0.1
+
+        if vulnerability == "N/A" and len(oracle_results) == 0:
+            testbed_flag = 'SUCCESS'
+        else:
+            for oracle_result in oracle_results.split(","):
+                if vulnerability.lower() in oracle_result:
+                    testbed_flag = 'SUCCESS'
+                    specificity = specificity + 1
+                else:
+                    specificity = specificity - 0.1
 
         row_matrix.append(
             [id_req_testbed, id_fuzz, url, method, vulnerability, context, injection_position, results_testbed,
@@ -170,7 +174,7 @@ def wavsep_testbed_run():
     flag_init_session = True
     today = datetime.now()
     today = today.strftime("%Y-%m-%d_%H_%M_%S")
-    """with open(PATH_TESTBED + FILE_NAME_TESTBED, newline='') as csv_file:
+    with open(PATH_TESTBED + FILE_NAME_TESTBED, newline='') as csv_file:
         reader = csv.reader(csv_file, delimiter=';', quotechar='|')
         header_row = False
         rep = Repeater(REPEATER_PATH_FILE + str(today) + ".json", False)
@@ -219,19 +223,19 @@ def wavsep_testbed_run():
 
         # RUN INTRUDER
         i = Intruder(REPEATER_PATH_FILE + str(today) + ".json", INTRUDER_PATH_FILE + str(today) + ".json")
-        i.execute()"""
-    # RUN ANALYZER
-    m = Analyzer("testbed/results/intruder_2021-02-17_08_49_40.json", "testbed/results/repeater_2021-02-17_08_49_40.json")
-    analyzer_path_file_csv = OBS_PATH_DIR + PREFIX_TESTBED + str(today) + ".CSV"
-    analyzer_path_file_json = OBS_PATH_DIR + PREFIX_TESTBED + str(today) + ".json"
-    m.evaluation(analyzer_path_file_json)
+        i.execute()
+        # RUN ANALYZER
+        m = Analyzer(INTRUDER_PATH_FILE + str(today) + ".json", REPEATER_PATH_FILE + str(today) + ".json")
+        analyzer_path_file_json = OBS_PATH_DIR + PREFIX_TESTBED + str(today) + ".json"
+        m.evaluation(analyzer_path_file_json)
 
-    oracle_path_file_json = 'testbed/results/oracle_' + str(today) + ".json"
-    oracle_path_file_csv = 'testbed/results/oracle_' + str(today) + ".csv"
-    # RUN ORACLE
-    o = Oracle(analyzer_path_file_json, oracle_path_file_json, oracle_path_file_csv)
-    o.execute()
-    build_testbed_results(oracle_path_file_csv, PATH_TESTBED + FILE_NAME_TESTBED)
+        oracle_path_file_json = 'testbed/results/oracle_' + str(today) + ".json"
+        oracle_path_file_csv = 'testbed/results/oracle_' + str(today) + ".csv"
+        # RUN ORACLE
+        o = Oracle(analyzer_path_file_json, oracle_path_file_json, oracle_path_file_csv)
+        o.execute()
+        build_testbed_results(oracle_path_file_csv, PATH_TESTBED + FILE_NAME_TESTBED)
 
 
 wavsep_testbed_run()
+#build_testbed_results('testbed/results/oracle_2021-02-27_13_56_29.csv', PATH_TESTBED + FILE_NAME_TESTBED)

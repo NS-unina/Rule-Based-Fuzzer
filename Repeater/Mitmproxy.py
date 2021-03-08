@@ -1,4 +1,5 @@
-from mitmproxy import proxy, options
+from mitmproxy.options import Options
+from mitmproxy.proxy import ProxyConfig, ProxyServer
 from mitmproxy.tools.dump import DumpMaster
 from Repeater.Interceptor import Interceptor
 import json
@@ -25,15 +26,15 @@ class Mitmproxy:
 
     def __run(self):
         try:
-            opts = options.Options(listen_host=self.proxy_field["listen_host"], listen_port=self.proxy_field["listen_port"])
-            pconf = proxy.config.ProxyConfig(opts)
+            opts = Options(listen_host=self.proxy_field["listen_host"], listen_port=self.proxy_field["listen_port"])
+            pconf = ProxyConfig(opts)
             m = DumpMaster(opts, with_termlog=True)
-            m.server = proxy.server.ProxyServer(pconf)
-            m.addons.add(Interceptor(self.url, self.output_name))
+            m.server = ProxyServer(pconf)
+            m.addons.add(Interceptor(self.url, self.output_name, m))
             try:
                 m.run()
                 m.shutdown()
             except TypeError as e:
-               exit()
+                exit()
         except:
             print("Error starting proxy server")

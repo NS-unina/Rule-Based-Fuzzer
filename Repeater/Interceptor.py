@@ -1,14 +1,15 @@
 from Utils import Bcolors
 from Repeater.Repeater import Repeater
-from mitmproxy import ctx
+from mitmproxy.tools.dump import DumpMaster
 
 
 class Interceptor:
 
-    def __init__(self, url, output_name):
+    def __init__(self, url, output_name, dumpmaster):
         self.url = url
         self.output_file = output_name
         self.repeater = Repeater(output_name, True)
+        self.dumpmaster = dumpmaster
 
     def done(self):
         print("### RESULTS EXPORTED TO FILE %s ### --> DONE" % self.output_file)
@@ -45,7 +46,7 @@ class Interceptor:
             if choice.lower() == 'y':
                 flow.resume()
                 self.repeater.finalizing_out()
-                ctx.master.shutdown()
+                DumpMaster.shutdown(self.dumpmaster)
                 break
             if choice.lower() == "n":
                 break

@@ -179,14 +179,14 @@
       "type": "PT/LFI"
     },
     {
-      "name": "ruleXSSR1",
+      "name": "ruleXSS1",
       "parameter": [
         "StatusCode",
         "SearchKeyword",
         "ContentLength",
         "TimeDelay"
       ],
-      "type": "XSSR"
+      "type": "XSS"
     }
   ]
 }
