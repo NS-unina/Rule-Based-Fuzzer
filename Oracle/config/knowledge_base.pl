@@ -1,4 +1,4 @@
-/* ##### ATOM CONCEPT ##### */
+/* ##### CONCEPT ##### */
     /* status code */
     statusCode200(200).
     statusCode400(400).
@@ -20,17 +20,17 @@
 /* ##### Rule SQLI ##### */
 
     /* rule 1 [RULE 3 EXCEL] */
-    ruleSQLI1(500, 1, 1, 1) :- statusCode500(500),payloadIsReflected(1),notValidContentLength(1),timeDelayIsVerified(1).
+    ruleSQLI1(X, Y, Z, W) :- statusCode500(X),payloadIsReflected(Y),notValidContentLength(Z),timeDelayIsVerified(W).
     /* rule 2 [RULE 5 EXCEL]*/
-    ruleSQLI2(200, 1, 1, 1) :- statusCode200(200),payloadIsReflected(1),notValidContentLength(1),timeDelayIsVerified(1).
+    ruleSQLI2(X, Y, Z, W) :- statusCode200(X),payloadIsReflected(Y),notValidContentLength(Z),timeDelayIsVerified(W).
     /* rule 3 [RULE 6,7,8 EXCEL]*/
-    ruleSQLI3(200, 1, 0, 0) :- statusCode200(200),payloadIsReflected(1),validContentLength(0),timeDelayIsNotVerified(0).
+    ruleSQLI3(X, Y, Z, W) :- statusCode200(X),payloadIsReflected(Y),validContentLength(Z),timeDelayIsNotVerified(W).
     /* rule 4 [RULE 10 EXCEL]*/
-    ruleSQLI4(200, 0, 0, 1) :- statusCode200(200),payloadIsNotReflected(0),validContentLength(0),timeDelayIsVerified(1).
+    ruleSQLI4(X, Y, Z, W) :- statusCode200(X),payloadIsNotReflected(Y),validContentLength(Z),timeDelayIsVerified(W).
     /* RULE TUNING */
-    ruleSQLI5(500,1,0,0):- statusCode500(500),payloadIsReflected(1),validContentLength(0),timeDelayIsNotVerified(0).
-    ruleSQLI6(200,0,1,0):- statusCode200(200),payloadIsNotReflected(0),notValidContentLength(1),timeDelayIsNotVerified(0).
-    ruleSQLI7(200,0,1,1):- statusCode200(200),payloadIsNotReflected(0),notValidContentLength(1),timeDelayIsVerified(1).
+    ruleSQLI5(X,Y,Z,W):- statusCode500(X),payloadIsReflected(Y),validContentLength(Z),timeDelayIsNotVerified(W).
+    ruleSQLI6(X,Y,Z,W):- statusCode200(X),payloadIsNotReflected(Y),notValidContentLength(Z),timeDelayIsNotVerified(W).
+    ruleSQLI7(X,Y,Z,W):- statusCode200(X),payloadIsNotReflected(Y),notValidContentLength(Z),timeDelayIsVerified(W).
 
     sqlInjection(X):-
         X = ruleSQLI1(500, 1, 1, 1);
@@ -43,9 +43,9 @@
 
 /* ##### Rule CI ##### */
     /* rule 1 [RULE 11 EXCEL] */
-    ruleCI1(200, 1, 0, 0) :- statusCode200(200),payloadIsReflected(1),validContentLength(0),timeDelayIsNotVerified(0).
+    ruleCI1(X, Y, Z, W) :- statusCode200(X),payloadIsReflected(Y),validContentLength(Z),timeDelayIsNotVerified(W).
     /* rule 2 [RULE 12 EXCEL] */
-    ruleCI2(200, 0, 0, 1) :- statusCode200(200),payloadIsNotReflected(0),validContentLength(0),timeDelayIsVerified(1).
+    ruleCI2(X, Y, Z, W) :- statusCode200(X),payloadIsNotReflected(Y),validContentLength(Z),timeDelayIsVerified(W).
 
     ciInjection(X):-
         X = ruleCI1(200, 1, 0, 0);
@@ -53,15 +53,15 @@
 
 /* ##### Role PT ##### */
     /* rule 1 [RULE 13 EXCEL] */
-     rulePT1(400, 1, 0, 0) :- statusCode400(400),payloadIsReflected(1),validContentLength(0),timeDelayIsNotVerified(0).
+     rulePT1(X, Y, Z, W) :- statusCode400(X),payloadIsReflected(Y),validContentLength(Z),timeDelayIsNotVerified(W).
     /* rule 2 [RULE 14 EXCEL] */
-    rulePT2(200, 1, 1, 0) :- statusCode200(200),payloadIsReflected(1),notValidContentLength(1),timeDelayIsNotVerified(0).
+    rulePT2(X, Y, Z, W) :- statusCode200(X),payloadIsReflected(Y),notValidContentLength(Z),timeDelayIsNotVerified(W).
     /* TUNING RULE */
-    rulePT3(404, 1, 0, 0) :- statusCode404(404),payloadIsReflected(1),validContentLength(0),timeDelayIsNotVerified(0).
-    rulePT4(200, 1, 0, 0) :- statusCode200(200),payloadIsReflected(1),validContentLength(0),timeDelayIsNotVerified(0).
-    rulePT5(500, 1, 0, 0) :- statusCode500(500),payloadIsReflected(1),validContentLength(0),timeDelayIsNotVerified(0).
-    rulePT6(200, 0, 1, 0) :- statusCode200(200),payloadIsNotReflected(0),notValidContentLength(1),timeDelayIsNotVerified(0).
-    rulePT7(200, 0, 1, 1) :- statusCode200(200),payloadIsNotReflected(0),notValidContentLength(1),timeDelayIsVerified(1).
+    rulePT3(X, Y, Z, W) :- statusCode404(X),payloadIsReflected(Y),validContentLength(Z),timeDelayIsNotVerified(W).
+    rulePT4(X, Y, Z, W) :- statusCode200(X),payloadIsReflected(Y),validContentLength(Z),timeDelayIsNotVerified(W).
+    rulePT5(X, Y, Z, W) :- statusCode500(X),payloadIsReflected(Y),validContentLength(Z),timeDelayIsNotVerified(W).
+    rulePT6(X, Y, Z, W) :- statusCode200(X),payloadIsNotReflected(Y),notValidContentLength(Z),timeDelayIsNotVerified(W).
+    rulePT7(X, Y, Z, W) :- statusCode200(X),payloadIsNotReflected(Y),notValidContentLength(Z),timeDelayIsVerified(W).
 
     ptInjection(X):-
         X = rulePT1(400, 1, 0, 0);
@@ -74,11 +74,11 @@
 
 /* ##### Role XXSR #####*/
     /* rule 1 [RULE 15 EXCEL] */
-    ruleXSS1(200, 1, 0, 0) :-
-                statusCode200(200),
-                payloadIsReflected(1),
-                validContentLength(0),
-                timeDelayIsNotVerified(0).
+    ruleXSS1(X, Y, Z, W) :-
+                statusCode200(X),
+                payloadIsReflected(Y),
+                validContentLength(Z),
+                timeDelayIsNotVerified(W).
 
     xssInjection(X):-
         X = ruleXSS1(200, 1, 0, 0).
