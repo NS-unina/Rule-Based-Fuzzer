@@ -1,5 +1,5 @@
-# Generic-Testing
-Thesis Ciro Brandi.
+# Rule-Based Fuzzer
+by Ciro Brandi.
 
 Rule-Based fuzzer is a fuzzer that allows you to identify anomalies on a web application. This technique is implemented by a blackbox fuzzer allowing to identify anomalies of the type: SQLi, XSS, Path traversal and LFI.
 # Installation
