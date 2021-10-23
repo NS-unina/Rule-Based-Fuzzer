@@ -1,7 +1,7 @@
 # Generic-Testing
 Thesis Ciro Brandi.
 
-Generic testing is a technique that allows you to identify anomalies on a web application. This technique is implemented by a blackbox fuzzer allowing to identify anomalies of the type: SQLi, XSS, Path traversal and LFI.
+Rule-Based fuzzer is a fuzzer that allows you to identify anomalies on a web application. This technique is implemented by a blackbox fuzzer allowing to identify anomalies of the type: SQLi, XSS, Path traversal and LFI.
 # Installation
 Install the packages using the command:
 ```bash 
