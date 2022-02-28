@@ -42,3 +42,12 @@ To use generic testing on the testbed run:
 ```bash
 testbed.py
 ```
+
+
+### Testbed usage 
+Run `docker-compose up` the first time and install wordpress. 
+Then you can run the attacks to reproduce the experiments. 
+
+
+#### Data acquisition  
+``` python main_repeater.py --url 
