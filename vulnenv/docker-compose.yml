@@ -3,7 +3,7 @@ services:
   webapp:
     image: owaspvwad/wavsep
     ports: 
-      - 8000:8080
+      - 8080:8080
   db:
     image: mysql:5.7
     volumes:
@@ -23,7 +23,7 @@ services:
     volumes:
       - wordpress_data:/var/www/html
     ports:
-      - "8001:80"
+      - "8000:80"
     restart: always
     environment:
       WORDPRESS_DB_HOST: db

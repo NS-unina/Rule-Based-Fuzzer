@@ -46,8 +46,23 @@ testbed.py
 
 ### Testbed usage 
 Run `docker-compose up` the first time and install wordpress. 
-Then you can run the attacks to reproduce the experiments. 
+Then you can run the attacks to reproduce the experiments.   
+``` 
+cd vulnenv 
+docker-compose up 
+``` 
+
+Wavsep and wordpress will be run on the following urls:   
+* http://127.0.0.1:8000/wavsep/ . 
+* http://127.0.0.1:8080/     
+
+
+python testbed.py
+
+
 
 
 #### Data acquisition  
-``` python main_repeater.py --url 
+``` 
+python main_repeater.py --url j
+``` 

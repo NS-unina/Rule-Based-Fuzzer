@@ -4,5 +4,7 @@
 /.idea
 /__pycache__
 /testbed
-/results
+testbed/results/**
+!testbed/results/.keep
+
 .DS_Store

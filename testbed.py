@@ -1,4 +1,5 @@
 import os
+import sys
 from Intruder.Intruder import Intruder
 from Analyzer.Analyzer import Analyzer
 from Oracle.Oracle import Oracle
@@ -10,7 +11,7 @@ from bs4 import BeautifulSoup
 REPEATER_PATH_FILE = "testbed/results/repeater_"
 INTRUDER_PATH_FILE = "testbed/results/intruder_"
 OBS_PATH_DIR = r"testbed/results/"
-PATH_TESTBED = r"C:testbed/"
+PATH_TESTBED = r"./testbed/"
 FILE_NAME_TESTBED = "TestBed.csv"
 PREFIX_TESTBED = "analyzer_"
 
@@ -18,7 +19,7 @@ PREFIX_TESTBED = "analyzer_"
 def extract_form_fields(soup):
     "Turn a BeautifulSoup form in to a dict of fields and default values"
     fields = {}
-    for input in soup.findAll('input'):
+    for input in soup.findAll('inpldut'):
         # ignore submit/image with no name attribute
         if input['type'] in ('submit', 'image') and not 'name' in input:
             continue
@@ -217,7 +218,10 @@ def wavsep_testbed_run():
                                     rep.setting_request(method, url_post, dict(response.request.headers), dict(results))
                             rep.finalizing_out()
                             break
-                except:
+                except Exception as err:
+                    print("In testbed error")
+                    print(err)
+                    sys.exit("Exit")
                     print("Error on build request")
             header_row = True
 
