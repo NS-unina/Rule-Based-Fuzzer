@@ -1,0 +1,27 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "repeater",
+            "type": "shell",
+            "command": "mitmdump -s repeater.py  -q"
+        },
+        {
+            "label": "intruder",
+            "type": "shell",
+            "command": "python  intruder.py --repeater_file_path=repeater.json --out_file_path=intruder.json"
+        },
+        {
+            "label": "analyzer",
+            "type": "shell",
+            "command": "python analyzer.py --intruder_file_path=intruder.json --repeater_file_path=repeater.json --analyzer_file_path=analyzer.json "
+        }, 
+        {
+            "label": "oracle",
+            "type":  "shell",
+            "command" : "python oracle.py --anaylzer_file_path=analyzer.json, --oracle_file_path=oracle.json, oracle_file_path_csv=oracle.csv"
+        }
+    ]
+}

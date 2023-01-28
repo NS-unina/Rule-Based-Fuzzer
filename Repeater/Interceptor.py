@@ -1,28 +1,77 @@
 from Utils import Bcolors
 from Repeater.Repeater import Repeater
-from mitmproxy.tools.dump import DumpMaster
+from mitmproxy import ctx
+from mitmproxy import addonmanager
+import Utils as u
+
+
+
+def e(s):
+    print("[-] {}".format(s))
+    ctx.master.shutdown()
 
 
 class Interceptor:
 
-    def __init__(self, url, output_name, dumpmaster):
-        self.url = url
-        self.output_file = output_name
-        self.repeater = Repeater(output_name, True)
-        self.dumpmaster = dumpmaster
+    def __init__(self):
+        pass
+
+    def load(self, loader: addonmanager.Loader):
+        loader.add_option(
+            name="url",
+            typespec=str,
+            default="http://127.0.0.1:18080/wavsep",
+            help="Add a target url",
+        )
+
+        loader.add_option(
+            name="output_file_path",
+            typespec=str,
+            default="repeater.json",
+            help="The output json containing the repeater requests",
+        )
+
+
+    def running(self):
+        if u.Utils.url_validation(ctx.options.url):
+            self.url = ctx.options.url
+            self.output_file = ctx.options.output_file_path
+            self.repeater = Repeater(self.output_file, False)
+
+        else:
+            e("Invalid url")
 
     def done(self):
+        self.repeater.finalizing_out()
         print("### RESULTS EXPORTED TO FILE %s ### --> DONE" % self.output_file)
 
     def request(self, flow):
         if flow.request.url.find(self.url) != -1:
-            self.interceptor_interactive(flow)
+            self.interceptor(flow)
 
     def response(self, flow):
         if flow.request.url.find(self.url) != -1:
             self.print_response(flow)
 
+    def interceptor(self, flow):
+        self.print_request(flow)
+        dict_header = dict()
+        dict_form = dict()
+
+        for h in flow.request.headers:
+            dict_header.update({h: flow.request.headers[h]})
+        for u in flow.request.urlencoded_form:
+            dict_form.update({u: flow.request.urlencoded_form[u]})
+
+        self.repeater.setting_request(flow.request.method, flow.request.url, dict_header,
+                                        dict_form)
+
     def interceptor_interactive(self, flow):
+        """ Intercept requests by asking
+
+        Args:
+            flow (mitmdump flow): The flow
+        """
         self.print_request(flow)
         flow.intercept()
         while True:
@@ -46,7 +95,7 @@ class Interceptor:
             if choice.lower() == 'y':
                 flow.resume()
                 self.repeater.finalizing_out()
-                DumpMaster.shutdown(self.dumpmaster)
+                ctx.master.shutdown()
                 break
             if choice.lower() == "n":
                 break

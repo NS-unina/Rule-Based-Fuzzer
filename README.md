@@ -7,27 +7,44 @@ Install the packages using the command:
 ```bash 
 pip install -r requirements.txt
 ```
-Also you need to install Pyswig: https://www.swi-prolog.org/
+Also you need to install Pyswig: https://www.swi-prolog.org/  
+You can use the following guide to install it: 
+https://wwu-pi.github.io/tutorials/lectures/lsp/010_install_swi_prolog.html  
+
+
 # Modules
 The repeater intercepts the desired request, placing the placeholders in the chosen parameters, producing in output a JSON file containing: HTTP request, HTTP response, Placeholder Request.
-Repeater:
+## Repeater   
+The repeater is a mitmdump script that intercepts the http requests and places placeholders.   
+
 ```bash 
-main_repeater.py --url=<url_to_intercept> --output_file_path=<name_output_file.json>
-```
+mitmdump -s repeater.py  -q
+```  
+Default values: 
+- url: http://127.0.0.1:18080/wavsep 
+- output_file_path: repeater.json  
+
+
+## Intruder  
 The intruder sends a payload list to the target application, retrieving its HTTP response. The module takes the repeater's output file as input and performs a sniper attack on each placeholder placed by the repeater. The generated output file is a list of fuzzing sessions.
 Intruder:
 ```bash 
-main_intruder.py --repeater_file_path=<repeater_file_name> --out_file_path=<name_output_file.json>
-```
+intruder.py --repeater_file_path=<repeater_file_name> --out_file_path=<name_output_file.json>
+```   
+
+## Analyzer  
 the Analyzer analyzes the intruder's output file to make observations on the HTTP responses resulting from a sniper attack.
 Analyzer:
 ```bash 
-main_analyzer.py --intruder_file_path=<intruder_file_name> --repeater_file_path=<repeater_file_name> --analyzer_file_path=<analyzer_output_file>
+analyzer.py --intruder_file_path=<intruder_file_name> --repeater_file_path=<repeater_file_name> --analyzer_file_path=<analyzer_output_file>
 ```
+
+
+## Oracle 
 The oracle identifies if in the observations made by the analyzer there is an anomaly in the response.
 Oracle:
 ```bash 
-main_oracle.py --anaylzer_file_path=<anaylzer_file_path>, --oracle_file_path=<oracle_output_file_path>, oracle_file_path_csv=<oracle_output_file_path>
+oracle.py --anaylzer_file_path=<anaylzer_file_path>, --oracle_file_path=<oracle_output_file_path>, oracle_file_path_csv=<oracle_output_file_path>
 ```
 To use all modules consecutively run:
 ```bash 

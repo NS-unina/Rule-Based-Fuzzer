@@ -42,6 +42,14 @@ class Utils:
 
     @staticmethod
     def url_validation(url):
+        """Check if a given url is valid
+
+        Args:
+            url (str): An url to be checked
+
+        Returns:
+            Bool: True if the url is valid
+        """
         regex = re.compile(
             r'^(?:http|ftp)s?://'  # http:// or https://
             r'(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+(?:[A-Z]{2,6}\.?|[A-Z0-9-]{2,}\.?)|'  # domain...

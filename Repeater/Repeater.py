@@ -103,6 +103,8 @@ class Repeater:
         self.json_out.update(dict_out)
 
     def finalizing_out(self):
+        """Complete the acquisition and save
+        """
         try:
             print("### (REPEATER) WAITING FOR... ###")
             with open(self.output_name, 'w', encoding="utf8") as f:

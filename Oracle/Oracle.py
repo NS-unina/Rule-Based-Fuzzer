@@ -34,6 +34,9 @@ class Oracle:
                 self.rules_prototype_json = json.load(json_rules_prototype)
         except FileNotFoundError as e:
             exit(e)
+
+
+
         self.__oracle_file_path = oracle_file_path
         self.__oracle_file_path_csv = oracle_file_path_csv
         self.__prolog = Prolog()
@@ -42,7 +45,9 @@ class Oracle:
         self.__oracle_sessions = list()
 
     def execute(self):
+        print("parse")
         self.parser()
+        print("build oracle")
         self.build_oracle_sessions()
         for oracle_session in self.__oracle_sessions:
             oracle_session.execute()
