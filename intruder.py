@@ -2,8 +2,8 @@ import fire
 from Intruder.Intruder import Intruder
 
 
-def run(repeater_file_path, out_file_path):
-    i = Intruder(repeater_file_path, out_file_path)
+def run(repeater, output):
+    i = Intruder(repeater, output)
     i.execute()
 
 

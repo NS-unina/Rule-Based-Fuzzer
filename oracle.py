@@ -3,8 +3,8 @@ import fire
 from Oracle.Oracle import Oracle
 
 
-def run(analyzer_file_path, oracle_file_path, oracle_file_path_csv):
-    oracle = Oracle(analyzer_file_path, oracle_file_path, oracle_file_path_csv)
+def run(analyzer, oracle, csv):
+    oracle = Oracle(analyzer, oracle, csv)
     oracle.execute()
 
 

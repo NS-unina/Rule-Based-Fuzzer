@@ -1,0 +1,2592 @@
+{
+    "id_fuzz_1": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00007",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "BenchmarkTest00007": "FOO=echo Injection",
+                "Host": "localhost:8443",
+                "Content-Length": "1"
+            },
+            "payload": "="
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00007",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "403",
+                "Date": "Fri, 10 Feb 2023 13:38:49 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.054154",
+            "content_length": 403,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>Your original string&#x3a;<br>Injection<br>Your string reversed value is&#x3a;<br>noitcejnI ohce<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00007",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "BenchmarkTest00007": "FOO=echo Injection",
+                "Host": "localhost:8443",
+                "Content-Length": "1"
+            },
+            "payload": "=$$"
+        }
+    },
+    "id_fuzz_2": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00015",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "BenchmarkTest00015": "ECHOOO",
+                "Host": "localhost:8443",
+                "Content-Length": "1"
+            },
+            "payload": "="
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00015",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "313",
+                "Date": "Fri, 10 Feb 2023 13:38:49 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.003990",
+            "content_length": 313,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>ECHOOO<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00015",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "BenchmarkTest00015": "ECHOOO",
+                "Host": "localhost:8443",
+                "Content-Length": "1"
+            },
+            "payload": "=$$"
+        }
+    },
+    "id_fuzz_3": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00051",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "52",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00051=ECHOOO§foo=foo§productID=§secure="
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00051",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "310",
+                "Date": "Fri, 10 Feb 2023 13:38:49 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.002713",
+            "content_length": 310,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>bar<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00051",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "52",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00051=$ECHOOO$§foo=$foo$§productID=$$§secure=$$"
+        }
+    },
+    "id_fuzz_4": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00093",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Cookie": "BenchmarkTest00093=ls",
+                "Host": "localhost:8443",
+                "Content-Length": "1"
+            },
+            "payload": "="
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00093",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "91",
+                "Date": "Fri, 10 Feb 2023 13:38:49 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.007577",
+            "content_length": 91,
+            "html": "Cannot run program &quot;moresafe&quot;&#x3a; error&#x3d;2, File o directory non esistente\n"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00093",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Cookie": "BenchmarkTest00093=$ls$",
+                "Host": "localhost:8443",
+                "Content-Length": "1"
+            },
+            "payload": "=$$"
+        }
+    },
+    "id_fuzz_5": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00159",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "BenchmarkTest00159": "ECHOOO",
+                "Host": "localhost:8443",
+                "Content-Length": "1"
+            },
+            "payload": "="
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00159",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "313",
+                "Date": "Fri, 10 Feb 2023 13:38:49 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.003592",
+            "content_length": 313,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>ECHOOO<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00159",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "BenchmarkTest00159": "ECHOOO",
+                "Host": "localhost:8443",
+                "Content-Length": "1"
+            },
+            "payload": "=$$"
+        }
+    },
+    "id_fuzz_6": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00171",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "BenchmarkTest00171": ".",
+                "Host": "localhost:8443",
+                "Content-Length": "1"
+            },
+            "payload": "="
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00171",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "381",
+                "Date": "Fri, 10 Feb 2023 13:38:49 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.006351",
+            "content_length": 381,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br><br>Here is the std err of the command (if any):<br>ls&#x3a; cannot access &#x27;a_Value&#x27;&#x3a; No such file or directory<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00171",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "BenchmarkTest00171": ".",
+                "Host": "localhost:8443",
+                "Content-Length": "1"
+            },
+            "payload": "=$$"
+        }
+    },
+    "id_fuzz_7": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00176",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "BenchmarkTest00176": "ls",
+                "Host": "localhost:8443",
+                "Content-Length": "1"
+            },
+            "payload": "="
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00176",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "514",
+                "Date": "Fri, 10 Feb 2023 13:38:49 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.005311",
+            "content_length": 514,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>benchmarkDataBase.lck<br>benchmarkDataBase.log<br>benchmarkDataBase.properties<br>benchmarkDataBase.script<br>benchmarkDataBase.tmp<br>common<br>conf<br>logs<br>shared<br>temp<br>testfiles<br>webapps<br>work<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00176",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "BenchmarkTest00176": "ls",
+                "Host": "localhost:8443",
+                "Content-Length": "1"
+            },
+            "payload": "=$$"
+        }
+    },
+    "id_fuzz_8": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00177",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "BenchmarkTest00177": "ls",
+                "Host": "localhost:8443",
+                "Content-Length": "1"
+            },
+            "payload": "="
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00177",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "259",
+                "Date": "Fri, 10 Feb 2023 13:38:49 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.003681",
+            "content_length": 259,
+            "html": "Cannot run program &quot;This_should_always_happen&quot; &#x28;in directory &quot;&#x2f;home&#x2f;gx1&#x2f;git&#x2f;unina&#x2f;web-scanners&#x2f;owasp&#x2f;BenchmarkJava&#x2f;target&#x2f;tomcat8x&quot;&#x29;&#x3a; error&#x3d;2, File o directory non esistente\n"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00177",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "BenchmarkTest00177": "ls",
+                "Host": "localhost:8443",
+                "Content-Length": "1"
+            },
+            "payload": "=$$"
+        }
+    },
+    "id_fuzz_9": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00305",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "BenchmarkTest00305": ".",
+                "Host": "localhost:8443",
+                "Content-Length": "1"
+            },
+            "payload": "="
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00305",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "396",
+                "Date": "Fri, 10 Feb 2023 13:38:49 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.006205",
+            "content_length": 396,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br><br>Here is the std err of the command (if any):<br>ls&#x3a; cannot access &#x27;barbarians_at_the_gate&#x27;&#x3a; No such file or directory<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00305",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "BenchmarkTest00305": ".",
+                "Host": "localhost:8443",
+                "Content-Length": "1"
+            },
+            "payload": "=$$"
+        }
+    },
+    "id_fuzz_10": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00308",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "BenchmarkTest00308": "ls",
+                "Host": "localhost:8443",
+                "Content-Length": "1"
+            },
+            "payload": "="
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00308",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "108",
+                "Date": "Fri, 10 Feb 2023 13:38:49 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.002999",
+            "content_length": 108,
+            "html": "Cannot run program &quot;This_should_always_happen&quot;&#x3a; error&#x3d;2, File o directory non esistente\n"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00308",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "BenchmarkTest00308": "ls",
+                "Host": "localhost:8443",
+                "Content-Length": "1"
+            },
+            "payload": "=$$"
+        }
+    },
+    "id_fuzz_11": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00310",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "BenchmarkTest00310": "ls",
+                "Host": "localhost:8443",
+                "Content-Length": "1"
+            },
+            "payload": "="
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00310",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "237",
+                "Date": "Fri, 10 Feb 2023 13:38:49 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.006592",
+            "content_length": 237,
+            "html": "Cannot run program &quot;bob&quot; &#x28;in directory &quot;&#x2f;home&#x2f;gx1&#x2f;git&#x2f;unina&#x2f;web-scanners&#x2f;owasp&#x2f;BenchmarkJava&#x2f;target&#x2f;tomcat8x&quot;&#x29;&#x3a; error&#x3d;2, File o directory non esistente\n"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00310",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "BenchmarkTest00310": "ls",
+                "Host": "localhost:8443",
+                "Content-Length": "1"
+            },
+            "payload": "=$$"
+        }
+    },
+    "id_fuzz_12": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00396",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "25",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00396=ECHOOO"
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00396",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "332",
+                "Date": "Fri, 10 Feb 2023 13:38:50 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.003596",
+            "content_length": 332,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>This_should_always_happen<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00396",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "25",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00396=$ECHOOO$"
+        }
+    },
+    "id_fuzz_13": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00409",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "47",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00409=.§foo=foo§productID=§secure="
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00409",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "514",
+                "Date": "Fri, 10 Feb 2023 13:38:50 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.004203",
+            "content_length": 514,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>benchmarkDataBase.lck<br>benchmarkDataBase.log<br>benchmarkDataBase.properties<br>benchmarkDataBase.script<br>benchmarkDataBase.tmp<br>common<br>conf<br>logs<br>shared<br>temp<br>testfiles<br>webapps<br>work<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00409",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "47",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00409=$.$§foo=$foo$§productID=$$§secure=$$"
+        }
+    },
+    "id_fuzz_14": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00495",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "39",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00495=FOO=echo Injection"
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00495",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "403",
+                "Date": "Fri, 10 Feb 2023 13:38:50 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.004483",
+            "content_length": 403,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>Your original string&#x3a;<br>Injection<br>Your string reversed value is&#x3a;<br>noitcejnI ohce<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00495",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "39",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00495=$FOO=echo Injection$"
+        }
+    },
+    "id_fuzz_15": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00498",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "56",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00498=FOO=echo Injection§email=§password="
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00498",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "403",
+                "Date": "Fri, 10 Feb 2023 13:38:50 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.008731",
+            "content_length": 403,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>Your original string&#x3a;<br>Injection<br>Your string reversed value is&#x3a;<br>noitcejnI ohce<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00498",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "56",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00498=$FOO=echo Injection$§email=$$§password=$$"
+        }
+    },
+    "id_fuzz_16": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00499",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "48",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00499=ls§foo=foo§productID=§secure="
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00499",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "514",
+                "Date": "Fri, 10 Feb 2023 13:38:50 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.003285",
+            "content_length": 514,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>benchmarkDataBase.lck<br>benchmarkDataBase.log<br>benchmarkDataBase.properties<br>benchmarkDataBase.script<br>benchmarkDataBase.tmp<br>common<br>conf<br>logs<br>shared<br>temp<br>testfiles<br>webapps<br>work<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00499",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "48",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00499=$ls$§foo=$foo$§productID=$$§secure=$$"
+        }
+    },
+    "id_fuzz_17": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00500",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "21",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00500=ls"
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00500",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "514",
+                "Date": "Fri, 10 Feb 2023 13:38:50 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.008149",
+            "content_length": 514,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>benchmarkDataBase.lck<br>benchmarkDataBase.log<br>benchmarkDataBase.properties<br>benchmarkDataBase.script<br>benchmarkDataBase.tmp<br>common<br>conf<br>logs<br>shared<br>temp<br>testfiles<br>webapps<br>work<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00500",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "21",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00500=$ls$"
+        }
+    },
+    "id_fuzz_18": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00568",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "28",
+                "Host": "localhost:8443"
+            },
+            "payload": ".=BenchmarkTest00568§answer="
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00568",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "514",
+                "Date": "Fri, 10 Feb 2023 13:38:50 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.003808",
+            "content_length": 514,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>benchmarkDataBase.lck<br>benchmarkDataBase.log<br>benchmarkDataBase.properties<br>benchmarkDataBase.script<br>benchmarkDataBase.tmp<br>common<br>conf<br>logs<br>shared<br>temp<br>testfiles<br>webapps<br>work<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00568",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "28",
+                "Host": "localhost:8443"
+            },
+            "payload": ".=$BenchmarkTest00568$§answer=$$"
+        }
+    },
+    "id_fuzz_19": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00572",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "29",
+                "Host": "localhost:8443"
+            },
+            "payload": "answer=§ls=BenchmarkTest00572"
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00572",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "108",
+                "Date": "Fri, 10 Feb 2023 13:38:50 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.005454",
+            "content_length": 108,
+            "html": "Cannot run program &quot;This_should_always_happen&quot;&#x3a; error&#x3d;2, File o directory non esistente\n"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00572",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "29",
+                "Host": "localhost:8443"
+            },
+            "payload": "answer=$$§ls=$BenchmarkTest00572$"
+        }
+    },
+    "id_fuzz_20": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00576",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "29",
+                "Host": "localhost:8443"
+            },
+            "payload": "answer=§ls=BenchmarkTest00576"
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00576",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "514",
+                "Date": "Fri, 10 Feb 2023 13:38:50 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.009976",
+            "content_length": 514,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>benchmarkDataBase.lck<br>benchmarkDataBase.log<br>benchmarkDataBase.properties<br>benchmarkDataBase.script<br>benchmarkDataBase.tmp<br>common<br>conf<br>logs<br>shared<br>temp<br>testfiles<br>webapps<br>work<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00576",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "29",
+                "Host": "localhost:8443"
+            },
+            "payload": "answer=$$§ls=$BenchmarkTest00576$"
+        }
+    },
+    "id_fuzz_21": {
+        "Request": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00659?password=&username=&BenchmarkTest00659=ls",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00659?password=&username=&BenchmarkTest00659=ls",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "237",
+                "Date": "Fri, 10 Feb 2023 13:38:50 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.008698",
+            "content_length": 237,
+            "html": "Cannot run program &quot;bob&quot; &#x28;in directory &quot;&#x2f;home&#x2f;gx1&#x2f;git&#x2f;unina&#x2f;web-scanners&#x2f;owasp&#x2f;BenchmarkJava&#x2f;target&#x2f;tomcat8x&quot;&#x29;&#x3a; error&#x3d;2, File o directory non esistente\n"
+        },
+        "PlaceholderRequest": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00659?password=$$&username=$$&BenchmarkTest00659=$ls$",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        }
+    },
+    "id_fuzz_22": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00731",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "52",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00731=ECHOOO§foo=foo§productID=§secure="
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00731",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "313",
+                "Date": "Fri, 10 Feb 2023 13:38:50 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.003569",
+            "content_length": 313,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>ECHOOO<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00731",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "52",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00731=$ECHOOO$§foo=$foo$§productID=$$§secure=$$"
+        }
+    },
+    "id_fuzz_23": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00738",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "20",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00738=."
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00738",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "399",
+                "Date": "Fri, 10 Feb 2023 13:38:52 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.004760",
+            "content_length": 399,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br><br>Here is the std err of the command (if any):<br>ls&#x3a; cannot access &#x27;This_should_always_happen&#x27;&#x3a; No such file or directory<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00738",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "20",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00738=$.$"
+        }
+    },
+    "id_fuzz_24": {
+        "Request": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00739?password=&username=&BenchmarkTest00739=.",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00739?password=&username=&BenchmarkTest00739=.",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "399",
+                "Date": "Fri, 10 Feb 2023 13:38:52 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.039341",
+            "content_length": 399,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br><br>Here is the std err of the command (if any):<br>ls&#x3a; cannot access &#x27;This_should_always_happen&#x27;&#x3a; No such file or directory<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00739?password=$$&username=$$&BenchmarkTest00739=$.$",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        }
+    },
+    "id_fuzz_25": {
+        "Request": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00739?password=&username=&BenchmarkTest00739=.",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00739?password=&username=&BenchmarkTest00739=.",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "399",
+                "Date": "Fri, 10 Feb 2023 13:38:52 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.003743",
+            "content_length": 399,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br><br>Here is the std err of the command (if any):<br>ls&#x3a; cannot access &#x27;This_should_always_happen&#x27;&#x3a; No such file or directory<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00739?password=$$&username=$$&BenchmarkTest00739=$.$",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        }
+    },
+    "id_fuzz_26": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00740",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "56",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00740=FOO=echo Injection§email=§password="
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00740",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "403",
+                "Date": "Fri, 10 Feb 2023 13:38:52 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.004554",
+            "content_length": 403,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>Your original string&#x3a;<br>Injection<br>Your string reversed value is&#x3a;<br>noitcejnI ohce<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00740",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "56",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00740=$FOO=echo Injection$§email=$$§password=$$"
+        }
+    },
+    "id_fuzz_27": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00741",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "48",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00741=ls§foo=foo§productID=§secure="
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00741",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "91",
+                "Date": "Fri, 10 Feb 2023 13:38:52 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.003785",
+            "content_length": 91,
+            "html": "Cannot run program &quot;moresafe&quot;&#x3a; error&#x3d;2, File o directory non esistente\n"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00741",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "48",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00741=$ls$§foo=$foo$§productID=$$§secure=$$"
+        }
+    },
+    "id_fuzz_28": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00742",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "21",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00742=ls"
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00742",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "241",
+                "Date": "Fri, 10 Feb 2023 13:38:52 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.003085",
+            "content_length": 241,
+            "html": "Cannot run program &quot;a_Value&quot; &#x28;in directory &quot;&#x2f;home&#x2f;gx1&#x2f;git&#x2f;unina&#x2f;web-scanners&#x2f;owasp&#x2f;BenchmarkJava&#x2f;target&#x2f;tomcat8x&quot;&#x29;&#x3a; error&#x3d;2, File o directory non esistente\n"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00742",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "21",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00742=$ls$"
+        }
+    },
+    "id_fuzz_29": {
+        "Request": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00814?password=&username=&BenchmarkTest00814=ECHOOO",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00814?password=&username=&BenchmarkTest00814=ECHOOO",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "332",
+                "Date": "Fri, 10 Feb 2023 13:38:52 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.007394",
+            "content_length": 332,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>This_should_always_happen<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00814?password=$$&username=$$&BenchmarkTest00814=$ECHOOO$",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        }
+    },
+    "id_fuzz_30": {
+        "Request": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00815?password=&username=&BenchmarkTest00815=ECHOOO",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00815?password=&username=&BenchmarkTest00815=ECHOOO",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "313",
+                "Date": "Fri, 10 Feb 2023 13:38:52 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.003263",
+            "content_length": 313,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>ECHOOO<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00815?password=$$&username=$$&BenchmarkTest00815=$ECHOOO$",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        }
+    },
+    "id_fuzz_31": {
+        "Request": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00816?password=&username=&BenchmarkTest00816=ECHOOO",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00816?password=&username=&BenchmarkTest00816=ECHOOO",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "313",
+                "Date": "Fri, 10 Feb 2023 13:38:52 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.002940",
+            "content_length": 313,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>ECHOOO<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00816?password=$$&username=$$&BenchmarkTest00816=$ECHOOO$",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        }
+    },
+    "id_fuzz_32": {
+        "Request": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00823?password=&username=&BenchmarkTest00823=FOO%3Decho+Injection",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00823?password=&username=&BenchmarkTest00823=FOO%3Decho+Injection",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "403",
+                "Date": "Fri, 10 Feb 2023 13:38:52 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.004911",
+            "content_length": 403,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>Your original string&#x3a;<br>Injection<br>Your string reversed value is&#x3a;<br>noitcejnI ohce<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00823?password=$$&username=$$&BenchmarkTest00823=$FOO%3Decho+Injection$",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        }
+    },
+    "id_fuzz_33": {
+        "Request": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00823?password=&username=&BenchmarkTest00823=FOO%3Decho+Injection",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00823?password=&username=&BenchmarkTest00823=FOO%3Decho+Injection",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "403",
+                "Date": "Fri, 10 Feb 2023 13:38:53 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.004046",
+            "content_length": 403,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>Your original string&#x3a;<br>Injection<br>Your string reversed value is&#x3a;<br>noitcejnI ohce<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00823?password=$$&username=$$&BenchmarkTest00823=$FOO%3Decho+Injection$",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        }
+    },
+    "id_fuzz_34": {
+        "Request": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00824?password=&username=&BenchmarkTest00824=.",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00824?password=&username=&BenchmarkTest00824=.",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "514",
+                "Date": "Fri, 10 Feb 2023 13:38:53 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.004184",
+            "content_length": 514,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>benchmarkDataBase.lck<br>benchmarkDataBase.log<br>benchmarkDataBase.properties<br>benchmarkDataBase.script<br>benchmarkDataBase.tmp<br>common<br>conf<br>logs<br>shared<br>temp<br>testfiles<br>webapps<br>work<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00824?password=$$&username=$$&BenchmarkTest00824=$.$",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        }
+    },
+    "id_fuzz_35": {
+        "Request": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00824?password=&username=&BenchmarkTest00824=.",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00824?password=&username=&BenchmarkTest00824=.",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "514",
+                "Date": "Fri, 10 Feb 2023 13:38:53 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.016841",
+            "content_length": 514,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>benchmarkDataBase.lck<br>benchmarkDataBase.log<br>benchmarkDataBase.properties<br>benchmarkDataBase.script<br>benchmarkDataBase.tmp<br>common<br>conf<br>logs<br>shared<br>temp<br>testfiles<br>webapps<br>work<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00824?password=$$&username=$$&BenchmarkTest00824=$.$",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        }
+    },
+    "id_fuzz_36": {
+        "Request": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00825?password=&username=&BenchmarkTest00825=FOO%3Decho+Injection",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00825?password=&username=&BenchmarkTest00825=FOO%3Decho+Injection",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "403",
+                "Date": "Fri, 10 Feb 2023 13:38:53 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.017043",
+            "content_length": 403,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>Your original string&#x3a;<br>Injection<br>Your string reversed value is&#x3a;<br>noitcejnI ohce<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00825?password=$$&username=$$&BenchmarkTest00825=$FOO%3Decho+Injection$",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        }
+    },
+    "id_fuzz_37": {
+        "Request": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00827?password=&username=&BenchmarkTest00827=FOO%3Decho+Injection",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00827?password=&username=&BenchmarkTest00827=FOO%3Decho+Injection",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "376",
+                "Date": "Fri, 10 Feb 2023 13:38:53 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.007225",
+            "content_length": 376,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>Your original string&#x3a;<br>Your string reversed value is&#x3a;<br><br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-00/BenchmarkTest00827?password=$$&username=$$&BenchmarkTest00827=$FOO%3Decho+Injection$",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        }
+    },
+    "id_fuzz_38": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest00896",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "25",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00896=ECHOOO"
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest00896",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "332",
+                "Date": "Fri, 10 Feb 2023 13:38:53 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.014270",
+            "content_length": 332,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>This_should_always_happen<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest00896",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "25",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00896=$ECHOOO$"
+        }
+    },
+    "id_fuzz_39": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest00910",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "21",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00910=ls"
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest00910",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "259",
+                "Date": "Fri, 10 Feb 2023 13:38:53 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.003355",
+            "content_length": 259,
+            "html": "Cannot run program &quot;This_should_always_happen&quot; &#x28;in directory &quot;&#x2f;home&#x2f;gx1&#x2f;git&#x2f;unina&#x2f;web-scanners&#x2f;owasp&#x2f;BenchmarkJava&#x2f;target&#x2f;tomcat8x&quot;&#x29;&#x3a; error&#x3d;2, File o directory non esistente\n"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest00910",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "21",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest00910=$ls$"
+        }
+    },
+    "id_fuzz_40": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest00983",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Cookie": "BenchmarkTest00983=FOO%3Decho%20Injection",
+                "Host": "localhost:8443",
+                "Content-Length": "1"
+            },
+            "payload": "="
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest00983",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "403",
+                "Date": "Fri, 10 Feb 2023 13:38:53 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.011617",
+            "content_length": 403,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>Your original string&#x3a;<br>Injection<br>Your string reversed value is&#x3a;<br>noitcejnI ohce<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest00983",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Cookie": "BenchmarkTest00983=$FOO%3Decho%20Injection$",
+                "Host": "localhost:8443",
+                "Content-Length": "1"
+            },
+            "payload": "=$$"
+        }
+    },
+    "id_fuzz_41": {
+        "Request": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01353?password=&username=&BenchmarkTest01353=ECHOOO",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01353?password=&username=&BenchmarkTest01353=ECHOOO",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "310",
+                "Date": "Fri, 10 Feb 2023 13:38:53 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.002749",
+            "content_length": 310,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>bob<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01353?password=$$&username=$$&BenchmarkTest01353=$ECHOOO$",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        }
+    },
+    "id_fuzz_42": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01362",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "20",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest01362=."
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01362",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "514",
+                "Date": "Fri, 10 Feb 2023 13:38:53 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.005052",
+            "content_length": 514,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>benchmarkDataBase.lck<br>benchmarkDataBase.log<br>benchmarkDataBase.properties<br>benchmarkDataBase.script<br>benchmarkDataBase.tmp<br>common<br>conf<br>logs<br>shared<br>temp<br>testfiles<br>webapps<br>work<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01362",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "20",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest01362=$.$"
+        }
+    },
+    "id_fuzz_43": {
+        "Request": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01363?password=&username=&BenchmarkTest01363=FOO%3Decho+Injection",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01363?password=&username=&BenchmarkTest01363=FOO%3Decho+Injection",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "403",
+                "Date": "Fri, 10 Feb 2023 13:38:53 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.007805",
+            "content_length": 403,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>Your original string&#x3a;<br>Injection<br>Your string reversed value is&#x3a;<br>noitcejnI ohce<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01363?password=$$&username=$$&BenchmarkTest01363=$FOO%3Decho+Injection$",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        }
+    },
+    "id_fuzz_44": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01364",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "56",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest01364=FOO=echo Injection§email=§password="
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01364",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "376",
+                "Date": "Fri, 10 Feb 2023 13:38:54 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.004726",
+            "content_length": 376,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>Your original string&#x3a;<br>Your string reversed value is&#x3a;<br><br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01364",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "56",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest01364=$FOO=echo Injection$§email=$$§password=$$"
+        }
+    },
+    "id_fuzz_45": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01430",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "33",
+                "Host": "localhost:8443"
+            },
+            "payload": "ECHOOO=BenchmarkTest01430§answer="
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01430",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "313",
+                "Date": "Fri, 10 Feb 2023 13:38:54 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.006144",
+            "content_length": 313,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>ECHOOO<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01430",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "33",
+                "Host": "localhost:8443"
+            },
+            "payload": "ECHOOO=$BenchmarkTest01430$§answer=$$"
+        }
+    },
+    "id_fuzz_46": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01446",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "29",
+                "Host": "localhost:8443"
+            },
+            "payload": "answer=§ls=BenchmarkTest01446"
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01446",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "514",
+                "Date": "Fri, 10 Feb 2023 13:38:54 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.003379",
+            "content_length": 514,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>benchmarkDataBase.lck<br>benchmarkDataBase.log<br>benchmarkDataBase.properties<br>benchmarkDataBase.script<br>benchmarkDataBase.tmp<br>common<br>conf<br>logs<br>shared<br>temp<br>testfiles<br>webapps<br>work<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01446",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "29",
+                "Host": "localhost:8443"
+            },
+            "payload": "answer=$$§ls=$BenchmarkTest01446$"
+        }
+    },
+    "id_fuzz_47": {
+        "Request": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01516?password=&username=&BenchmarkTest01516=ECHOOO",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01516?password=&username=&BenchmarkTest01516=ECHOOO",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "329",
+                "Date": "Fri, 10 Feb 2023 13:38:54 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.003302",
+            "content_length": 329,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>barbarians_at_the_gate<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01516?password=$$&username=$$&BenchmarkTest01516=$ECHOOO$",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        }
+    },
+    "id_fuzz_48": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01517",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "42",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest01517=ECHOOO§email=§password="
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01517",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "313",
+                "Date": "Fri, 10 Feb 2023 13:38:54 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.002931",
+            "content_length": 313,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>ECHOOO<br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01517",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "42",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest01517=$ECHOOO$§email=$$§password=$$"
+        }
+    },
+    "id_fuzz_49": {
+        "Request": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01526?password=&username=&BenchmarkTest01526=ls",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01526?password=&username=&BenchmarkTest01526=ls",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "108",
+                "Date": "Fri, 10 Feb 2023 13:38:54 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.005696",
+            "content_length": 108,
+            "html": "Cannot run program &quot;This_should_always_happen&quot;&#x3a; error&#x3d;2, File o directory non esistente\n"
+        },
+        "PlaceholderRequest": {
+            "method": "GET",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01526?password=$$&username=$$&BenchmarkTest01526=$ls$",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "localhost:8443"
+            },
+            "payload": ""
+        }
+    },
+    "id_fuzz_50": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01527",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "38",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest01527=ls§email=§password="
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01527",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "108",
+                "Date": "Fri, 10 Feb 2023 13:38:54 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.024781",
+            "content_length": 108,
+            "html": "Cannot run program &quot;This_should_always_happen&quot;&#x3a; error&#x3d;2, File o directory non esistente\n"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01527",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "38",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest01527=$ls$§email=$$§password=$$"
+        }
+    },
+    "id_fuzz_51": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01528",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "48",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest01528=ls§foo=foo§productID=§secure="
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01528",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "86",
+                "Date": "Fri, 10 Feb 2023 13:38:54 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:00.011345",
+            "content_length": 86,
+            "html": "Cannot run program &quot;bob&quot;&#x3a; error&#x3d;2, File o directory non esistente\n"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01528",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "48",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest01528=$ls$§foo=$foo$§productID=$$§secure=$$"
+        }
+    },
+    "id_fuzz_52": {
+        "Request": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01529",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "28",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest01529=localhost"
+        },
+        "Response": {
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01529",
+            "status_code": 200,
+            "header": {
+                "Content-Security-Policy": "frame-ancestors 'self'; form-action 'self'; default-src 'unsafe-inline' 'unsafe-eval' 'self'; style-src 'unsafe-inline' 'self'; style-src-elem 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Strict-Transport-Security": "max-age=31536000;includeSubDomains",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Length": "546",
+                "Date": "Fri, 10 Feb 2023 13:39:05 GMT",
+                "Keep-Alive": "timeout=20",
+                "Connection": "keep-alive"
+            },
+            "time_elapsed": "0:00:10.149349",
+            "content_length": 546,
+            "html": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n</head>\n<body>\n<p>\nHere is the standard output of the command:<br>PING This_should_always_happen.mshome.net &#x28;35.152.66.6&#x29; 56&#x28;84&#x29; bytes of data.<br><br>--- This_should_always_happen.mshome.net ping statistics ---<br>1 packets transmitted, 0 received, 100&#x25; packet loss, time 0ms<br><br><br>Here is the std err of the command (if any):<br>"
+        },
+        "PlaceholderRequest": {
+            "method": "POST",
+            "url": "https://localhost:8443/benchmark/cmdi-01/BenchmarkTest01529",
+            "header": {
+                "User-Agent": "Apache-HttpClient/5.1.3 (Java/17.0.5)",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Length": "28",
+                "Host": "localhost:8443"
+            },
+            "payload": "BenchmarkTest01529=$localhost$"
+        }
+    }
+}

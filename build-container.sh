@@ -1,2 +1,2 @@
-docker build -t generic-testing .
+docker build -t nsunina/generic-testing .
 

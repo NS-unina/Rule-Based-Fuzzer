@@ -18,25 +18,28 @@ The repeater intercepts the desired request, placing the placeholders in the cho
 The repeater is a mitmdump script that intercepts the http requests and places placeholders.   
 
 ```bash 
-mitmdump -s repeater.py  -q
+mitmdump -s repeater.py  -k -q
 ```  
 Default values: 
 - url: http://127.0.0.1:18080/wavsep 
-- output_file_path: repeater.json  
+- output: repeater.json  
 
-
+### Run with options  
+```bash
+mitmdump -s repeater.py  -k -q --set url=https://127.0.0.1:8443/ --set output=owasp-cmd.json
+```
 ## Intruder  
 The intruder sends a payload list to the target application, retrieving its HTTP response. The module takes the repeater's output file as input and performs a sniper attack on each placeholder placed by the repeater. The generated output file is a list of fuzzing sessions.
 Intruder:
 ```bash 
-intruder.py --repeater_file_path=<repeater_file_name> --out_file_path=<name_output_file.json>
+intruder.py --repeater=<repeater_file_name> --output=<name_output_file.json>
 ```   
 
 ## Analyzer  
 the Analyzer analyzes the intruder's output file to make observations on the HTTP responses resulting from a sniper attack.
 Analyzer:
 ```bash 
-analyzer.py --intruder_file_path=<intruder_file_name> --repeater_file_path=<repeater_file_name> --analyzer_file_path=<analyzer_output_file>
+analyzer.py --intruder=<intruder_file_name> --repeater=<repeater_file_name> --analyzer=<analyzer_output_file>
 ```
 
 
@@ -44,7 +47,7 @@ analyzer.py --intruder_file_path=<intruder_file_name> --repeater_file_path=<repe
 The oracle identifies if in the observations made by the analyzer there is an anomaly in the response.
 Oracle:
 ```bash 
-oracle.py --anaylzer_file_path=<anaylzer_file_path>, --oracle_file_path=<oracle_output_file_path>, oracle_file_path_csv=<oracle_output_file_path>
+oracle.py --analyzer=<anaylzer_file_path>, --oracle=<oracle_output_file_path> --csv=<oracle_output_file_path>
 ```
 To use all modules consecutively run:
 ```bash 

@@ -193,7 +193,7 @@ class Intruder:
         req = Request(method=method, url=url, headers=header, data=payload_dict)
         prepped = self.s.prepare_request(req)
         # SET TIMEOUT PARAMETERS
-        response = self.s.send(prepped, timeout=self.TIMEOUT_VALUE)
+        response = self.s.send(prepped, verify=False, timeout=self.TIMEOUT_VALUE)
         return response
 
     def finalize_out(self, json_dict: dict):

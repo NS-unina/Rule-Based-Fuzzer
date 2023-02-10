@@ -25,7 +25,7 @@ class Interceptor:
         )
 
         loader.add_option(
-            name="output_file_path",
+            name="output",
             typespec=str,
             default="repeater.json",
             help="The output json containing the repeater requests",
@@ -35,7 +35,7 @@ class Interceptor:
     def running(self):
         if u.Utils.url_validation(ctx.options.url):
             self.url = ctx.options.url
-            self.output_file = ctx.options.output_file_path
+            self.output_file = ctx.options.output
             self.repeater = Repeater(self.output_file, False)
 
         else:
@@ -46,11 +46,16 @@ class Interceptor:
         print("### RESULTS EXPORTED TO FILE %s ### --> DONE" % self.output_file)
 
     def request(self, flow):
-        if flow.request.url.find(self.url) != -1:
+        # Fix the localhost 127.0.0.1 conflict
+        to_check = self.url.replace("localhost", "127.0.0.1")
+        the_url = flow.request.url.replace("localhost", "127.0.0.1")
+        if the_url.find(to_check) != -1:
             self.interceptor(flow)
 
     def response(self, flow):
-        if flow.request.url.find(self.url) != -1:
+        to_check = self.url.replace("localhost", "127.0.0.1")
+        the_url = flow.request.url.replace("localhost", "127.0.0.1")
+        if the_url.find(to_check) != -1:
             self.print_response(flow)
 
     def interceptor(self, flow):

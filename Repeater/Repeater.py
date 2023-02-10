@@ -72,6 +72,7 @@ class Repeater:
         self.num += 1
 
     def __build_output(self, response, placeholder_string_dict, param_post_string, num):
+        print("BUILD OUTPUT")
 
         tmp = dict(response.request.headers)
         if 'Cookie' in tmp:
@@ -100,6 +101,7 @@ class Repeater:
                 }
             }
         }
+        print(self.json_out)
         self.json_out.update(dict_out)
 
     def finalizing_out(self):
@@ -119,7 +121,7 @@ class Repeater:
         """
         req = Request(method=method, url=url, headers=headers, data=data)
         prepped = self.s.prepare_request(req)
-        response = self.s.send(prepped)
+        response = self.s.send(prepped, verify=False)
         return response
 
     # BUILD A HEADER STRING
