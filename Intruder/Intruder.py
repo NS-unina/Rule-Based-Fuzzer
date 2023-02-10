@@ -15,6 +15,13 @@ from ParserClass.Response import Response as GenericResponse
 from ParserClass.RepeaterSession import RepeaterSession
 from Utils import Utils
 
+verbose = False
+
+def debug(msg):
+    global verbose
+    if verbose:
+        print("[+] {}".format(str(msg)))
+
 
 class Intruder:
     CONFIG_FILE_PATH = './Intruder/config/config.json'
@@ -25,7 +32,9 @@ class Intruder:
     __payload_mapping: dict
     __repeater_sessions: List[RepeaterSession]
 
-    def __init__(self, repeater_file_path: str, out_file_path: str):
+    def __init__(self, repeater_file_path: str, out_file_path: str, v: bool):
+        global verbose 
+        verbose = v
         try:
             with open(repeater_file_path, encoding='utf8') as json_request:
                 self.__repeater_json = json.load(json_request)
@@ -157,6 +166,19 @@ class Intruder:
                     Utils.print_progress_bar(number, total_len, prefix='Progress:', suffix='Complete', length=50)
 
     def build_output_file(self, request: RepeaterElement, url: str, cookie: str, payload_req: str):
+        """Build the output file and send the request
+
+        Args:
+            request (RepeaterElement): A request element
+            url (str): the url to send
+            cookie (str): cookie string
+            payload_req (str): payload req
+
+        Returns:
+            Arr of requests
+        """
+        debug("Fuzz \nURL: {}\n payload: {}".format(url, payload_req))
+
         placeholder_request = request.get_placeholder_request()
         placeholder_request_copy = copy.deepcopy(placeholder_request)
         placeholder_request_copy.set_url(url)
