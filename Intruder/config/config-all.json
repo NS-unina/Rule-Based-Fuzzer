@@ -1,0 +1,20 @@
+{
+    "payload_mapping": [
+      {
+        "file_name": "./config/sqli_payload.json",
+        "type": "sqli"
+      },
+      {
+        "file_name": "./config/xss_payload.json",
+        "type": "xss"
+      },
+      {
+        "file_name": "./config/pt_lfi_payload.json",
+        "type": "pt/lfi"
+      },
+      {
+        "file_name": "./config/cmdi_payload.json",
+        "type": "cmdi"
+      }
+    ]
+}

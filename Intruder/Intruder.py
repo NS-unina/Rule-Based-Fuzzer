@@ -2,6 +2,9 @@ import json
 import re
 import copy
 from typing import List
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
 
 import requests
 from requests import Request, Session
