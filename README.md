@@ -32,7 +32,7 @@ mitmdump -s repeater.py  -k -q --set url=https://127.0.0.1:8443/ --set output=ow
 The intruder sends a payload list to the target application, retrieving its HTTP response. The module takes the repeater's output file as input and performs a sniper attack on each placeholder placed by the repeater. The generated output file is a list of fuzzing sessions.
 Intruder:
 ```bash 
-intruder.py --repeater=<repeater_file_name> --output=<name_output_file.json>
+intruder.py --repeater=<repeater_file_name> --output=<name_output_file.json> (--verbose=True)
 ```   
 
 ## Analyzer  

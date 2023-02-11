@@ -32,6 +32,7 @@ class Repeater:
         # Cookie control
         cookie_string_placeholder = ""
         cookie_dict_value = headers.get("Cookie")
+        print(headers)
         if cookie_dict_value is not None:
             cookie_array = cookie_dict_value.split(";")
             if self.INTERACTIVE is True:

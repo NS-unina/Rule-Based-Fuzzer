@@ -81,4 +81,8 @@
                 timeDelayIsNotVerified(W).
 
     xssInjection(X):-
-        X = ruleXSS1(200, 1, 0, 0).
+        X = ruleXSS1(200, 1, 0, 0). 
+
+
+
+/* #### Role CMDi ###### */

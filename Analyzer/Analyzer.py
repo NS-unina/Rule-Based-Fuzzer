@@ -107,8 +107,11 @@ class Analyzer:
             exit()
 
     def evaluation(self, json_out_path: str):
-        """
-        :param json_out_path: json output file path
+        """ Take req, resp, valid req, valid rep, used payload and generate evvaluations. 
+        For each observation element verify the elements. 
+
+        Args:
+            json_out_path (str): The JSON path where should be stored the results. 
         """
         analyzer_json = {}
         for analyzer_session in self.__analyzer_session:
@@ -129,8 +132,8 @@ class Analyzer:
                         o.evaluation(intruder_request, intruder_response, repeater_request, repeater_response, payload))
 
                 current_dict = {
-                    'Request': intruder_request.build_dict(0),
-                    'Response': intruder_response.build_dict(0),
+                    'Request': intruder_request.build_dict(1),
+                    'Response': intruder_response.build_dict(1),
                     'TypePayload': intruder_element.get_type_payload(),
                     'Payload': intruder_element.get_payload(),
                     "Observation": results_observation
@@ -149,6 +152,12 @@ class Analyzer:
 
     @staticmethod
     def finalize_out(analyzer_json: dict, csv_out_path: str):
+        """Write the JSON 
+
+        Args:
+            analyzer_json (dict): The json containing the results of analysis
+            csv_out_path (str): The csv output
+        """
         print("### (ANALYZER) WAITING FOR... ###")
         with open(csv_out_path, 'w', encoding="utf-8") as f:
             json.dump(analyzer_json, f, indent=4, ensure_ascii=False)

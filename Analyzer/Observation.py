@@ -33,7 +33,7 @@ class StatusCode(Observation):
 
 class SearchKeyword(Observation):
     KEYWORD_CONFIG = 'config/keyword.json'
-    FUZZ_LIST_CONFIG = 'config/fuzz_list_short.json'
+    # FUZZ_LIST_CONFIG = 'config/fuzz_list_short.json'
 
     def __init__(self, params):
         self.params = params

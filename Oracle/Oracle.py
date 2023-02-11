@@ -55,6 +55,9 @@ class Oracle:
         self.build_output_json()
 
     def print_output(self):
+        """
+            Print the results by binding the fuzz string with the results
+        """
         file = csv.writer(open(self.__oracle_file_path_csv, "w", newline="", encoding='utf8'), delimiter=";")
         row_header = ["ID_FUZZ", "RULE ACTIVATED", "RESULTS", "NUM_FUZZ_STRING",
                       "NUM_OBSERVATION"]
@@ -149,6 +152,15 @@ class Oracle:
             self.__oracle_sessions.append(oracle_session)
 
     def build_query_list(self, observation: list, type_payload: str):
+        """Generate a list of "Query" objects from the list of observation and the type of payload.
+
+        Args:
+            observation (list): The list of observations
+            type_payload (str): The type of payload
+
+        Returns:
+            _type_: _description_
+        """
         query_oracle_list = list()
         for rules in self.rules_prototype_json['prototype']:
             # GET TYPE OF VULNERABILITY
@@ -157,7 +169,7 @@ class Oracle:
             # BUILD PROTOTYPE NAME OF RULES
             query_parameter = list(map(lambda x: '%s', rules['parameter']))
             query_parameter = ",".join(query_parameter)  # return %s,%s,%s,...
-            prototype_rules = '' + query_name + '(' + query_parameter + ')'
+            prototype_rules = '' + query_name + '(' + query_parameter + ')' # (param1, param2, param3, ...)
 
             observation_element_primitive = list()
             observation_element_dict = list()
@@ -194,6 +206,7 @@ class Oracle:
                 if type_payload:
                     if type_payload.lower() == type_vulnerability_on_prototype.lower():
                         query_oracle_list.append(
+                            # (p1,p2,p3) 
                             Query(prototype_rules, observation_dict_query, value_query, type_payload,
                                   type_mapping_rule))
                 else:
@@ -203,6 +216,9 @@ class Oracle:
         return query_oracle_list
 
     def parser(self):
+        """
+            Generate a list of fuzz sessions (List<FuzzSession>)
+        """
         for id_fuzz in self.analyzer_json:
             current_fuzz = FuzzSession(id_fuzz)
             for session_request in self.analyzer_json[id_fuzz]['Results']:
