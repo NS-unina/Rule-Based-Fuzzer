@@ -77,6 +77,14 @@ Wavsep and wordpress will be run on the following urls:
 * http://127.0.0.1:8080/     
 
 
+To configure the environments:
+- Go to `http://127.0.0.1:8080/wavsep/wavsep-install/install.jsp` and put the following data:
+  - username: `root` 
+  - password `pass`
+  - host: `wavsep-db`
+
+  For Wordpress, put
+
 python testbed.py
 
 

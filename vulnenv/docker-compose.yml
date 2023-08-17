@@ -1,9 +1,13 @@
 version: "3.9"
 services:
-  webapp:
-    image: owaspvwad/wavsep
-    ports: 
-      - 8080:8080
+  wavsep:
+    # image: owaspvwad/wavsep
+    build: ./wavsep
+    ports:
+      - 18080:8080
+  wavsep-db:
+    image: nsunina/wavsep-db:v1.5
+    platform: linux/amd64
   db:
     image: mysql:5.7
     volumes:
@@ -15,7 +19,7 @@ services:
       MYSQL_DATABASE: wordpress
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
-    
+
   wordpress:
     depends_on:
       - db
@@ -30,14 +34,14 @@ services:
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
       WORDPRESS_DB_NAME: wordpress
-
-  # mitmproxy:
-  #   tty: true        
-  #   image: mitmproxy/mitmproxy
-  #   # command: mitmweb --web-iface 0.0.0.0
-  #   command: mitmweb 
-  #   ports: 
-  #     - 8080:8080
 volumes:
-  db_data: {}
-  wordpress_data: {}
+    db_data: {}
+    wordpress_data: {}
+
+        # mitmproxy:
+        #   tty: true        
+        #   image: mitmproxy/mitmproxy
+        #   # command: mitmweb --web-iface 0.0.0.0
+        #   command: mitmweb 
+        #   ports: 
+        #     - 8080:8080
